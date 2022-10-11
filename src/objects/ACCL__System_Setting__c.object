@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Custom Setting to store all the system settings attributes as a Key value pair</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ACCL__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the Description of the System Setting attribute</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the Description of the System Setting attribute</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the value of respective System Setting</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the value of respective System Setting</inlineHelpText>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>System Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

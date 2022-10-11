@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>ACCL__Sales_Folder_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>ACCL__Sales_Folder_Compact_Layout</fullName>
+        <fields>ACCL__Description__c</fields>
+        <fields>ACCL__Sales_Folder_Template__c</fields>
+        <fields>ACCL__Account__c</fields>
+        <fields>ACCL__Org_Unit__c</fields>
+        <fields>ACCL__Valid_From__c</fields>
+        <fields>ACCL__Valid_Thru__c</fields>
+        <fields>ACCL__Sales_Org__c</fields>
+        <label>Sales Folder Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This object contains the attributes associated with the Sales Folder.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__MobilityRelevant</fullName>
+        <description>Field set used to restrict the amount of data on the mobility device.</description>
+        <displayedFields>
+            <field>MDLZ_Customer_Sets__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Description_Language_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Description_Language_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Description_Language_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Description_Language_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Note__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Org_Unit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Attachment_Catalogue__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Sales_Folder_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_From__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_Thru__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Sales_Org__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MobilityRelevant</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__Sales_Folder_Identification</fullName>
+        <description>CreateEditSalesFolder Visualforce Page</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Sales_Folder_Template__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Description_Language_1__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <label>Sales Folder Identification</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACCL__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the customer.</description>
+        <externalId>false</externalId>
+        <label>Customer</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.ACCL__Sales_Org__c</field>
+                <operation>equals</operation>
+                <valueField>Account.ACCL__Sales_Org__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Sales Folders</relationshipLabel>
+        <relationshipName>Sales_Folders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Active flag.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Attachment_Catalogue__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Attachment Catalogue.</description>
+        <externalId>false</externalId>
+        <label>Sales Folder Icon</label>
+        <referenceTo>ACCL__Attachment_Catalogue__c</referenceTo>
+        <relationshipLabel>Sales Folders</relationshipLabel>
+        <relationshipName>Sales_Folders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 1.</description>
+        <externalId>false</externalId>
+        <label>Description Language 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 2.</description>
+        <externalId>false</externalId>
+        <label>Description Language 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 3.</description>
+        <externalId>false</externalId>
+        <label>Description Language 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 4.</description>
+        <externalId>false</externalId>
+        <label>Description Language 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Sell_Sheet_Count__c</fullName>
+        <description>This field will have Sell sheet count</description>
+        <externalId>false</externalId>
+        <label>Sell Sheet Count</label>
+        <summaryForeignKey>ACCL__Sales_Folder_Sell_Sheet__c.ACCL__Sales_Folder__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description based on the user specific language.</description>
+        <externalId>false</externalId>
+        <formula>CASE($User.ACCL__Language_Postfix__c, 
+&quot;Language1&quot;, ACCL__Description_Language_1__c, 
+&quot;Language2&quot;, BLANKVALUE(ACCL__Description_Language_2__c,ACCL__Description_Language_1__c), 
+&quot;Language3&quot;, BLANKVALUE(ACCL__Description_Language_3__c,ACCL__Description_Language_1__c), 
+&quot;Language4&quot;, BLANKVALUE(ACCL__Description_Language_4__c,ACCL__Description_Language_1__c),ACCL__Description_Language_1__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Note__c</fullName>
+        <deprecated>false</deprecated>
+        <description>General Notes about the Sales Folder.</description>
+        <externalId>false</externalId>
+        <label>Note</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the org unit.</description>
+        <externalId>false</externalId>
+        <label>Org Unit</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.ACCL__Sales_Org__c</field>
+                <operation>equals</operation>
+                <valueField>ACCL__Org_Unit__c.ACCL__Sales_Org__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Sales Folders</relationshipLabel>
+        <relationshipName>Sales_Folders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Sales_Folder_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Sales Folder Template</description>
+        <externalId>false</externalId>
+        <label>Sales Folder Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>No matches found or Sales Folder Template is not active.</errorMessage>
+            <filterItems>
+                <field>ACCL__Sales_Folder_Template__c.ACCL__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ACCL__Sales_Folder_Template__c</referenceTo>
+        <relationshipLabel>Sales Folders</relationshipLabel>
+        <relationshipName>Sales_Folders</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Sales_Org__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes the sales org which the sales folder belongs to.</description>
+        <externalId>false</externalId>
+        <label>Sales Org</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ACCL__Sales_Org</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Valid_From__c</fullName>
+        <deprecated>false</deprecated>
+        <description>First date of validity period of the sales folder.</description>
+        <externalId>false</externalId>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Valid_Thru__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last date of validity period of the sales folder.</description>
+        <externalId>false</externalId>
+        <label>Valid Thru</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_AccTeam__c</fullName>
+        <description>Indicates the team information of the account. Used for filtering.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Account__r.MDLZ_AccountTeam__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Team</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_AccTerritory__c</fullName>
+        <description>Indicates the territory information of the account. Used for filtering.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Account__r.MDLZ_AccountTerritory__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_AccountTeam__c</fullName>
+        <description>Indicates the team information of the account</description>
+        <externalId>false</externalId>
+        <label>Account Team</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_AccountTerritory__c</fullName>
+        <description>Indicates the territory information of the account</description>
+        <externalId>false</externalId>
+        <label>Account Territory</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Customer_Sets__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Sets</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_KeyAccount__c</fullName>
+        <externalId>false</externalId>
+        <label>KeyAccount</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Master_Record__c</fullName>
+        <externalId>false</externalId>
+        <label>Master Record</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Parent_RecordId__c</fullName>
+        <externalId>false</externalId>
+        <label>Parent RecordId</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Unique_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Unique Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sales Folder</label>
+    <listViews>
+        <fullName>ACCL__All</fullName>
+        <columns>NAME</columns>
+        <columns>MDLZ_Master_Record__c</columns>
+        <columns>MDLZ_Customer_Sets__c</columns>
+        <columns>ACCL__Sales_Folder_Template__c</columns>
+        <columns>ACCL__Account__c</columns>
+        <columns>ACCL__Active__c</columns>
+        <columns>ACCL__Valid_From__c</columns>
+        <columns>ACCL__Valid_Thru__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Mondelez_Sales_Folders</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Active__c</columns>
+        <columns>MDLZ_Customer_Sets__c</columns>
+        <columns>ACCL__Org_Unit__c</columns>
+        <columns>ACCL__Sales_Folder_Template__c</columns>
+        <columns>ACCL__Valid_From__c</columns>
+        <columns>ACCL__Valid_Thru__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MDLZ_Parent_RecordId__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Mondelez Sales Folders</label>
+    </listViews>
+    <nameField>
+        <label>Sales Folder Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Sales Folders</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ACCL__Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Sales_Folder_Template__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Valid_From__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Valid_Thru__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Sales_Org__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Sales_Folder_Template__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Org_Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Valid_From__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Valid_Thru__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Sales_Org__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Sales_Folder_Template__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Org_Unit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Valid_From__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Valid_Thru__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Sales_Org__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ACCL__Description__c</searchFilterFields>
+        <searchFilterFields>ACCL__Sales_Folder_Template__c</searchFilterFields>
+        <searchFilterFields>ACCL__Account__c</searchFilterFields>
+        <searchFilterFields>ACCL__Org_Unit__c</searchFilterFields>
+        <searchFilterFields>ACCL__Valid_From__c</searchFilterFields>
+        <searchFilterFields>ACCL__Valid_Thru__c</searchFilterFields>
+        <searchFilterFields>ACCL__Sales_Org__c</searchFilterFields>
+        <searchResultsAdditionalFields>ACCL__Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Sales_Folder_Template__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Valid_From__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Valid_Thru__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Sales_Org__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>ACCL__Check_If_Customer_Is_Empty</fullName>
+        <active>true</active>
+        <description>If Sales_Folder_Template has field Anchor_Type as BusinessPartner then Account__c cannot be empty.</description>
+        <errorConditionFormula>ISPICKVAL(ACCL__Sales_Folder_Template__r.ACCL__Anchor_Type__c, &apos;BusinessPartner&apos;) &amp;&amp; ISBLANK(ACCL__Account__c)</errorConditionFormula>
+        <errorMessage>The Customer cannot be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Check_If_Customer_Sales_Org_Matches</fullName>
+        <active>true</active>
+        <description>The Customer and the Sales Folder must have the same Sales Org.</description>
+        <errorConditionFormula>ISPICKVAL(ACCL__Sales_Folder_Template__r.ACCL__Anchor_Type__c, &apos;BusinessPartner&apos;) &amp;&amp; NOT(ISBLANK(ACCL__Account__c)) &amp;&amp; ACCL__Account__r.ACCL__Sales_Org__c &lt;&gt; TEXT(ACCL__Sales_Org__c)</errorConditionFormula>
+        <errorMessage>The Customer and the Sales Folder must have the same Sales Org.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Check_If_Org_Unit_Is_Empty</fullName>
+        <active>true</active>
+        <description>If Sales_Folder_Template has field Anchor_Type as OrgUnit then Org_Unit__c cannot be empty.</description>
+        <errorConditionFormula>ISPICKVAL(ACCL__Sales_Folder_Template__r.ACCL__Anchor_Type__c, &apos;OrgUnit&apos;) &amp;&amp; ISBLANK(ACCL__Org_Unit__c)</errorConditionFormula>
+        <errorMessage>The Org Unit cannot be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Check_If_Org_Unit_Sales_Org_Matches</fullName>
+        <active>true</active>
+        <description>The Org Unit and the Sales Folder must have the same Sales Org.</description>
+        <errorConditionFormula>ISPICKVAL(ACCL__Sales_Folder_Template__r.ACCL__Anchor_Type__c, &apos;OrgUnit&apos;) &amp;&amp; NOT(ISBLANK(ACCL__Org_Unit__c)) &amp;&amp; TEXT(ACCL__Org_Unit__r.ACCL__Sales_Org__c) &lt;&gt; TEXT(ACCL__Sales_Org__c)</errorConditionFormula>
+        <errorMessage>The Org Unit and the Sales Folder must have the same Sales Org.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Check_If_Sales_Org_Is_Changed</fullName>
+        <active>true</active>
+        <description>The Sales Org cannot be edited after Sales Folder creation.</description>
+        <errorConditionFormula>ISCHANGED(ACCL__Sales_Org__c)</errorConditionFormula>
+        <errorMessage>The Sales Org can&apos;t be edited after Sales Folder creation.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Check_If_Valid_From_More_Than_Valid_Thru</fullName>
+        <active>true</active>
+        <description>Valid From can&apos;t be later than Valid Thru.</description>
+        <errorConditionFormula>ACCL__Valid_From__c  &gt;  ACCL__Valid_Thru__c</errorConditionFormula>
+        <errorMessage>Valid From can&apos;t be later than Valid Thru.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Check_Sales_Folder_Template_Sales_Org</fullName>
+        <active>true</active>
+        <description>The Sales Folder and the Sales Folder Template must have the same Sales Org.</description>
+        <errorConditionFormula>TEXT(ACCL__Sales_Org__c)!= TEXT(ACCL__Sales_Folder_Template__r.ACCL__Sales_Org__c)</errorConditionFormula>
+        <errorMessage>The Sales Folder and the Sales Folder Template must have the same Sales Org.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Add_Customer_Sets</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Add Customer Sets</masterLabel>
+        <openType>sidebar</openType>
+        <page>MDLZ_CustomersetPicklist</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

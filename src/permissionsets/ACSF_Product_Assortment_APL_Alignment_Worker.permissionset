@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>ACSF Product Assortment APL Alignment Worker</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ACSF Product Assortment APL Alignment Worker</label>
+    <objectPermissions>
+        <object>ACCL__Product_Assortment__c</object>
+        <allowCreate>false</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+</PermissionSet>

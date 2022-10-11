@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- FilterCriteria --></label>
+        <name>ACCL__FilterCriteria</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- FundingGrid --></label>
+        <name>ACCL__FundingGrid</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Grid Hierarchy Fieldset --></label>
+        <name>ACCL__GridHierarchyFieldset</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- MobilityRelevant --></label>
+        <name>ACCL__MobilityRelevant</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- PaymentTacticGrid --></label>
+        <name>ACCL__PaymentTacticGrid</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ProductDescriptionFields --></label>
+        <name>ACCL__ProductDescriptionFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ProductSearchDisplayFields --></label>
+        <name>ACCL__ProductSearchDisplayFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- REAssortmentGridFields --></label>
+        <name>ACCL__REAssortmentGridFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- RateBasedFundingGrid --></label>
+        <name>ACCL__RateBasedFundingGrid</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- TPMAssortmentGridFields --></label>
+        <name>ACCL__TPMAssortmentGridFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Tactic Filter Criteria --></label>
+        <name>ACCL__TacticFilterCriteria</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Asset Template --></label>
+        <name>ACCL__Asset_Template__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>ACCL__Category__c</name>
+        <picklistValues>
+            <masterLabel>Beverages</masterLabel>
+            <translation><!-- Beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chips</masterLabel>
+            <translation><!-- Chips --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Detergent</masterLabel>
+            <translation><!-- Detergent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frozen</masterLabel>
+            <translation>Frozen Goods</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hygiene</masterLabel>
+            <translation><!-- Hygiene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snacks</masterLabel>
+            <translation><!-- Snacks --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor&apos;s Product --></label>
+        <name>ACCL__Competitive_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Container Size Unit --></label>
+        <name>ACCL__Container_Size_Unit__c</name>
+        <picklistValues>
+            <masterLabel>gal</masterLabel>
+            <translation><!-- gal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>l</masterLabel>
+            <translation><!-- l --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>lb</masterLabel>
+            <translation><!-- lb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ml</masterLabel>
+            <translation><!-- ml --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>m³</masterLabel>
+            <translation><!-- m³ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>oz</masterLabel>
+            <translation><!-- oz --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Container Size --></label>
+        <name>ACCL__Container_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Container Type --></label>
+        <name>ACCL__Container_Type__c</name>
+        <picklistValues>
+            <masterLabel>Bottle</masterLabel>
+            <translation><!-- Bottle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Can</masterLabel>
+            <translation><!-- Can --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plastic</masterLabel>
+            <translation><!-- Plastic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_0 --></label>
+        <name>ACCL__Criteria_Text_0__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_1 --></label>
+        <name>ACCL__Criteria_Text_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_2 --></label>
+        <name>ACCL__Criteria_Text_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_3 --></label>
+        <name>ACCL__Criteria_Text_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_4 --></label>
+        <name>ACCL__Criteria_Text_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_5 --></label>
+        <name>ACCL__Criteria_Text_5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_6 --></label>
+        <name>ACCL__Criteria_Text_6__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_7 --></label>
+        <name>ACCL__Criteria_Text_7__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_8 --></label>
+        <name>ACCL__Criteria_Text_8__c</name>
+    </fields>
+    <fields>
+        <help><!-- Improve loading performance of product for the filter criteria which  falls in non groupable filter category --></help>
+        <label><!-- Criteria_Text_9 --></label>
+        <name>ACCL__Criteria_Text_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 1 Product Code --></label>
+        <name>ACCL__Criterion_1_Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 1 Product Description --></label>
+        <name>ACCL__Criterion_1_Product_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only product with &apos;Category&apos; product level can be selected --></help>
+        <label>Main Group</label>
+        <name>ACCL__Criterion_1_Product__c</name>
+        <relationshipLabel><!-- Products (Criterion 1 Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Criterion 2 Product Code --></label>
+        <name>ACCL__Criterion_2_Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 2 Product Description --></label>
+        <name>ACCL__Criterion_2_Product_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only product with &apos;Sub Category&apos; product level can be selected --></help>
+        <label>Category</label>
+        <name>ACCL__Criterion_2_Product__c</name>
+        <relationshipLabel><!-- Products (Criterion 2 Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Criterion 3 Product Code --></label>
+        <name>ACCL__Criterion_3_Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 3 Product Description --></label>
+        <name>ACCL__Criterion_3_Product_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only product with &apos;Brand&apos; product level can be selected --></help>
+        <label>Brand</label>
+        <name>ACCL__Criterion_3_Product__c</name>
+        <relationshipLabel><!-- Products (Criterion 3 Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Criterion 4 Product Code --></label>
+        <name>ACCL__Criterion_4_Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 4 Product Description --></label>
+        <name>ACCL__Criterion_4_Product_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only product with &apos;Flavor&apos; product level can be selected --></help>
+        <label>PPG</label>
+        <name>ACCL__Criterion_4_Product__c</name>
+        <relationshipLabel><!-- Products (Criterion 4 Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Criterion 5 Product Code --></label>
+        <name>ACCL__Criterion_5_Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 5 Product Description --></label>
+        <name>ACCL__Criterion_5_Product_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only product with &apos;Package&apos; product level can be selected --></help>
+        <label>Case Config</label>
+        <name>ACCL__Criterion_5_Product__c</name>
+        <relationshipLabel><!-- Products (Criterion 5 Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Criterion 6 Product Code --></label>
+        <name>ACCL__Criterion_6_Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criterion 6 Product Description --></label>
+        <name>ACCL__Criterion_6_Product_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only product with &apos;Product&apos; product level can be selected --></help>
+        <label><!-- Criterion 6 Product --></label>
+        <name>ACCL__Criterion_6_Product__c</name>
+        <relationshipLabel><!-- Products (Criterion 6 Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Field reserved for sorting in product listings --></help>
+        <label><!-- Custom Sort --></label>
+        <name>ACCL__Custom_Sort__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Valid From --></label>
+        <name>ACCL__Delivery_Valid_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Valid Thru --></label>
+        <name>ACCL__Delivery_Valid_Thru__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 1 Language 1 --></label>
+        <name>ACCL__Description_1_Language_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 1 Language 2 --></label>
+        <name>ACCL__Description_1_Language_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 1 Language 3 --></label>
+        <name>ACCL__Description_1_Language_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 1 Language 4 --></label>
+        <name>ACCL__Description_1_Language_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 1 --></label>
+        <name>ACCL__Description_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 2 Language 1 --></label>
+        <name>ACCL__Description_2_Language_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 2 Language 2 --></label>
+        <name>ACCL__Description_2_Language_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 2 Language 3 --></label>
+        <name>ACCL__Description_2_Language_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 2 Language 4 --></label>
+        <name>ACCL__Description_2_Language_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 2 --></label>
+        <name>ACCL__Description_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Value --></label>
+        <name>ACCL__Estimated_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>ACCL__ExternalId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Valid From --></label>
+        <name>ACCL__Field_Valid_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Valid Thru --></label>
+        <name>ACCL__Field_Valid_Thru__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund Valid From --></label>
+        <name>ACCL__Fund_Valid_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund Valid Thru --></label>
+        <name>ACCL__Fund_Valid_Thru__c</name>
+    </fields>
+    <fields>
+        <label><!-- Height --></label>
+        <name>ACCL__Height__c</name>
+    </fields>
+    <fields>
+        <label><!-- KAM Product --></label>
+        <name>ACCL__KAM_Product__c</name>
+        <relationshipLabel><!-- Products (KAM Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- KAM Valid From --></label>
+        <name>ACCL__KAM_Valid_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- KAM Valid Thru --></label>
+        <name>ACCL__KAM_Valid_Thru__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manufacturer Item Number --></label>
+        <name>ACCL__Manufacturer_Item_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manufacturer --></label>
+        <name>ACCL__Manufacturer__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Item Valid From --></label>
+        <name>ACCL__New_Item_Valid_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Item Valid Thru --></label>
+        <name>ACCL__New_Item_Valid_Thru__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Ability --></label>
+        <name>ACCL__Order_Ability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pack Size Unit --></label>
+        <name>ACCL__Pack_Size_Unit__c</name>
+        <picklistValues>
+            <masterLabel>box</masterLabel>
+            <translation><!-- box --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>pk</masterLabel>
+            <translation><!-- pk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pack Size --></label>
+        <name>ACCL__Pack_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Power Supply Connected --></label>
+        <name>ACCL__Power_Supply_Connected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>ACCL__Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Form --></label>
+        <name>ACCL__Product_Form__c</name>
+        <picklistValues>
+            <masterLabel>Liquid</masterLabel>
+            <translation><!-- Liquid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solid</masterLabel>
+            <translation><!-- Solid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Level --></label>
+        <name>ACCL__Product_Level__c</name>
+        <picklistValues>
+            <masterLabel>Brand</masterLabel>
+            <translation><!-- Brand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case Config</masterLabel>
+            <translation><!-- Case Config --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Category</masterLabel>
+            <translation><!-- Category --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flavor</masterLabel>
+            <translation>Sub Brand</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Main Group</masterLabel>
+            <translation><!-- Main Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPG</masterLabel>
+            <translation><!-- PPG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package</masterLabel>
+            <translation>Product Price Group</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sub Category</masterLabel>
+            <translation>Sub Category</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Short Code --></label>
+        <name>ACCL__Product_Short_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Template --></label>
+        <name>ACCL__Product_Template__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>ACCL__Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>Advertising</masterLabel>
+            <translation>Advertising Material</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetType</masterLabel>
+            <translation>Asset Type</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commodity</masterLabel>
+            <translation><!-- Commodity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CountingGroup</masterLabel>
+            <translation>Counting Group</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Empty</masterLabel>
+            <translation><!-- Empty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rounding Rule Validation --></label>
+        <name>ACCL__Rounding_Rule_Validation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Org --></label>
+        <name>ACCL__Sales_Org__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description Language 1 --></label>
+        <name>ACCL__Short_Description_Language_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description Language 2 --></label>
+        <name>ACCL__Short_Description_Language_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description Language 3 --></label>
+        <name>ACCL__Short_Description_Language_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description Language 4 --></label>
+        <name>ACCL__Short_Description_Language_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description --></label>
+        <name>ACCL__Short_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Size --></label>
+        <name>ACCL__Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>ACCL__State__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation>Preparation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation>Plan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation>Check</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation>Startup</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation>Active</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation>Paused</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation>Phase Out</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation>Remainders</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation>Passive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation>Deleted</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax Classification --></label>
+        <name>ACCL__Tax_Classification__c</name>
+        <picklistValues>
+            <masterLabel>f</masterLabel>
+            <translation>Full</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>n</masterLabel>
+            <translation>Normal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>r</masterLabel>
+            <translation>Reduced</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GTIN --></label>
+        <name>ACCL__UPC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weight --></label>
+        <name>ACCL__Weight__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocation --></label>
+        <name>MLZ_Allocation__c</name>
+    </fields>
+    <recordTypes>
+        <description><!-- This record type is for creating ACSF Products --></description>
+        <label><!-- Product --></label>
+        <name>ACCL__Product</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This record type is for creating ACSF Product Groups --></description>
+        <label><!-- Product Group --></label>
+        <name>ACCL__Product_Group</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The Asset Template and the Product must have the same Sales Org. --></errorMessage>
+        <name>ACCL__AssetTemplate_Sales_Org_same_Product_Org</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Asset Template can&apos;t be empty if the Product is an Asset Type. --></errorMessage>
+        <name>ACCL__Asset_Type_must_have_Asset_Template</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ExternalId can&apos;t be edited if it has an existent value. --></errorMessage>
+        <name>ACCL__Avoid_Change_External_ID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only products with &apos;Category&apos; Product Level can be selected. --></errorMessage>
+        <name>ACCL__Criterion_1_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only products with &apos;Sub Category&apos; Product Level can be selected. --></errorMessage>
+        <name>ACCL__Criterion_2_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only products with &apos;Brand&apos; Product Level can be selected. --></errorMessage>
+        <name>ACCL__Criterion_3_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only products with &apos;Flavor&apos; Product Level can be selected. --></errorMessage>
+        <name>ACCL__Criterion_4_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only products with &apos;Package&apos; Product Level can be selected. --></errorMessage>
+        <name>ACCL__Criterion_5_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only products with &apos;Product&apos; Product Level can be selected. --></errorMessage>
+        <name>ACCL__Criterion_6_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Product Template can&apos;t be edited after Product creation. --></errorMessage>
+        <name>ACCL__Prevent_Product_Template_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid From and Valid Thru can&apos;t be empty and Valid From can&apos;t be later than Valid Thru if the Product State &apos;Delivery&apos; is assigned to the Product. --></errorMessage>
+        <name>ACCL__Product_Delivery_State_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid From and Valid Thru can&apos;t be empty and Valid From can&apos;t be later than Valid Thru if the Product State &apos;Field&apos; is assigned to the Product. --></errorMessage>
+        <name>ACCL__Product_Field_State_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid From and Valid Thru can&apos;t be empty and Valid From can&apos;t be later than Valid Thru if the Product State &apos;Fund&apos; is assigned to the Product. --></errorMessage>
+        <name>ACCL__Product_Fund_Role_State_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid From and Valid Thru can&apos;t be empty and Valid From can&apos;t be later than Valid Thru if the Product State &apos;KAM&apos; is assigned to the Product. --></errorMessage>
+        <name>ACCL__Product_KAM_State_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid From and Valid Thru can&apos;t be empty and Valid From can&apos;t be later than Valid Thru if the Product State &apos;New Item&apos; is assigned to the Product. --></errorMessage>
+        <name>ACCL__Product_New_Item_State_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Product and the Product Template must have the same Sales Org. --></errorMessage>
+        <name>ACCL__Sales_Org_should_be_same_for_all_lookups</name>
+    </validationRules>
+</CustomObjectTranslation>

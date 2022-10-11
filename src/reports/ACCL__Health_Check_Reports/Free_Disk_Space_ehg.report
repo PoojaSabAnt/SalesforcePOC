@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_7982464</developerName>
+        <masterLabel>Free Disk Space</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>ACCL__TQ_App_Installation__c.ACCL__Free_Persistent_Storage_Space__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>Unknown</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+                <to>100,000,000</to>
+            </sourceValues>
+            <value>Low (&lt; 100 MB)</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>100,000,000</from>
+                <to>1,000,000,000</to>
+            </sourceValues>
+            <value>(100 MB to 1 GB)</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,000,000,000</from>
+            </sourceValues>
+            <value>High (&gt; 1 GB)</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__User__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__DeviceId__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Device_Model__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Device_OS_Version__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Link_to_Device_Details__c</field>
+    </columns>
+    <description>Free Disk Space</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_7982464</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Free_Persistent_Storage_Space__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Free Disk Space</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$ACCL__TQ_App_Installation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ACCL__TQ_App_Installation__c.ACCL__Installation_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

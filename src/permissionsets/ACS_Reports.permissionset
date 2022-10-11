@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ACS Reports</label>
+    <tabSettings>
+        <tab>Device_Detailed_Health</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Device_Monitoring</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

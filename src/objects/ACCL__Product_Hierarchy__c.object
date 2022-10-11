@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>ACCL__Product_Hierarchy_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>ACCL__Product_Hierarchy_Compact_Layout</fullName>
+        <fields>ACCL__Parent_Product_Description__c</fields>
+        <fields>ACCL__Parent_Product_Code__c</fields>
+        <fields>ACCL__Child_Product__c</fields>
+        <fields>ACCL__Structure_Type__c</fields>
+        <fields>ACCL__Valid_From__c</fields>
+        <fields>ACCL__Valid_Thru__c</fields>
+        <label>Product Hierarchy Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Relation from a product (Child_Product) to its parent. This relation is time framed.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__MobilityRelevant</fullName>
+        <description>Field set used to restrict the amount of data on the mobility device.</description>
+        <displayedFields>
+            <field>ACCL__Child_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Parent_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_From__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_Thru__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MobilityRelevant</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACCL__Child_Product__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reference to the child product.</description>
+        <externalId>false</externalId>
+        <label>Child Product</label>
+        <referenceTo>ACCL__Product__c</referenceTo>
+        <relationshipLabel>Parent Products</relationshipLabel>
+        <relationshipName>Product_Child</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Product_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Unique identifier of parent product.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Parent_Product__r.ACCL__Product_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Product Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Product_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Short description of the parent product.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Parent_Product__r.ACCL__Short_Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Product Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the parent product.</description>
+        <externalId>false</externalId>
+        <label>Parent Product</label>
+        <referenceTo>ACCL__Product__c</referenceTo>
+        <relationshipLabel>Child Products</relationshipLabel>
+        <relationshipName>Product_Parent</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Record_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Link to the detail page of the product (Child_Product) record.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;Id, $Label.accl__record_link, &quot;_top&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Structure_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the structure type of the hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Structure Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>true</default>
+                    <label>Sales</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Valid_From__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>From this date on the entry is valid.</description>
+        <externalId>false</externalId>
+        <label>Valid From</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Valid_Thru__c</fullName>
+        <defaultValue>DATE(2099,12,31)</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Until this date the entry is valid.</description>
+        <externalId>false</externalId>
+        <label>Valid Thru</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ExternalId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>ExternalId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Product Hierarchy</label>
+    <nameField>
+        <displayFormat>PHR-{00000000}</displayFormat>
+        <label>Product Hierarchy Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Hierarchies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ACCL__Child_unequal_parent</fullName>
+        <active>true</active>
+        <description>The Child Product and the Parent Product can&apos;t be the same.</description>
+        <errorConditionFormula>ACCL__Child_Product__c == ACCL__Parent_Product__c</errorConditionFormula>
+        <errorMessage>The Child Product and the Parent Product can&apos;t be the same.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Mandatory_StructureType_is_set</fullName>
+        <active>true</active>
+        <description>The Structure Type can&apos;t be empty.</description>
+        <errorConditionFormula>ISPICKVAL( ACCL__Structure_Type__c , &quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>ACCL__Structure_Type__c</errorDisplayField>
+        <errorMessage>The Structure Type can&apos;t be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Parent_Product_Not_Empty</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR (ISBLANK(ACCL__Parent_Product__c), ISNULL(ACCL__Parent_Product__c))</errorConditionFormula>
+        <errorDisplayField>ACCL__Parent_Product__c</errorDisplayField>
+        <errorMessage>The Parent Product can&apos;t be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Product_Hierarchy_Sales_Org_Mismatch</fullName>
+        <active>true</active>
+        <description>The Child Product and the Parent Product must have the same Sales Org.</description>
+        <errorConditionFormula>ACCL__Child_Product__r.ACCL__Sales_Org__c != ACCL__Parent_Product__r.ACCL__Sales_Org__c</errorConditionFormula>
+        <errorMessage>The Child Product and the Parent Product must have the same Sales Org.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Valid_From_and_Valid_Thru</fullName>
+        <active>true</active>
+        <description>Valid From can&apos;t be later than Valid Thru.</description>
+        <errorConditionFormula>ACCL__Valid_From__c  &gt; ACCL__Valid_Thru__c</errorConditionFormula>
+        <errorDisplayField>ACCL__Valid_Thru__c</errorDisplayField>
+        <errorMessage>Valid From can&apos;t be later than Valid Thru.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

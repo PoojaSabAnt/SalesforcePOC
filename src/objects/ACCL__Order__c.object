@@ -1,0 +1,3318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Holds the header details of the order entry.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__DeliveryDocumentDisplayFields1</fullName>
+        <description>Used in &quot;OrderDisplayDeliveryDocuments&quot; page</description>
+        <displayedFields>
+            <field>ACCL__Order_Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Phase__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>DeliveryDocumentDisplayFields1</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__DeliveryDocumentDisplayFields2</fullName>
+        <description>Used in OrderDisplayDeliveryDocuments page</description>
+        <displayedFields>
+            <field>ACCL__Order_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Delivery_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Initiation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Cancel_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Workflow__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Responsible__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Accountable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Delivery_Recipient__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Payment_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Document_Transaction_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Tour__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>DeliveryDocumentDisplayFields2</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__MobilityRelevant</fullName>
+        <description>Field set used to restrict the amount of data on the
+			mobility device.</description>
+        <displayedFields>
+            <field>MDLZ_SAPInvoiceNumber__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_IsSFAutoGenerated__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_IsUnsaleableCredit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_IsUnsaleablePickup__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_UnsaleablePickupCredit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_PickupLocation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MLZ_OffRouteReasonCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_ReceivedBySAP__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_Approved__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Customer_Order_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Document_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Phase__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Gross_Total_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Receipt_Currency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Call__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Delivery_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Delivery_Note__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Invoice_Note__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Total_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Gross_Total_Value_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Delivery_Recipient__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Cancel_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Responsible__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Bill_Recipient_Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Initiation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Wholesaler__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Mobility_Release__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Merchandise_Value_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Header_Discount_Percentage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Document_Transaction_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Payment_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_5__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Currency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Calculation_Schema__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Calculation_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Calculation_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__ASN__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Payment_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Paid_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Paid_Amount_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Payer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Warehouse__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Total_Shipped_Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Total_Returned_Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Tour__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Print_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Release_Geolocation__Latitude__s</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Release_Geolocation__Longitude__s</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Information__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Release_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Selected_Rewards__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_5__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_6__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_7__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_8__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_9__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_10__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_isOffRoute__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_isChanged__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_LastSavedByUser__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_TotReturnQty__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_AccTerritory__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_AccTeam__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_MobItemsModified__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_ReadyForOutbound__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_InvoiceAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_SAPPONumber__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MobilityRelevant</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__InventoryReference</fullName>
+        <description>This Field Set is used in CreateEditOrderHelper class for
+			stamping Inventory Reference in Order</description>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Inventory_Reference_5__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>InventoryReference</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__OrderDisplayFields</fullName>
+        <description>Display Fields in Create and Edit Order Visualforce Page</description>
+        <displayedFields>
+            <field>MDLZ_ReceivedBySAP__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_Approved__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Date__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Delivery_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Initiation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_SAPInvoiceNumber__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_SAPDeliveryDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_SAPOrderVersion__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_SAPPONumber__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OrderDisplayFields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__OrderDisplayFields2</fullName>
+        <description>CreateEditOrderPage</description>
+        <displayedFields>
+            <field>ACCL__Workflow__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Responsible__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Accountable__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Customer_Order_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OrderDisplayFields2</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__OrderNotes</fullName>
+        <description>CreateEditOrder</description>
+        <displayedFields>
+            <field>ACCL__Delivery_Note__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Invoice_Note__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OrderNotes</label>
+    </fieldSets>
+	<fields>
+        <fullName>MDLZ_SFItemsReceived__c</fullName>
+        <description>Holds the total number of items received in SF that were edited/added by user.</description>
+        <externalId>false</externalId>
+        <label>SF Items Received</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__ASN__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The advanced shipping notice number provided by the supplier for a special delivery.</description>
+        <externalId>false</externalId>
+        <label>ASN</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__ATM_Confirmation_Nr__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contains the confirmation number of the receipt, printed by ATM.</description>
+        <externalId>false</externalId>
+        <label>ATM Confirmation Nr</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Accountable__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The system displays the Initiator of the order as the initial accountable</description>
+        <externalId>false</externalId>
+        <label>Accountable</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AccountableOrders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Actual_Check_Out_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total product check out quantiy for the tour in question as actually counted by the tour executing user.</description>
+        <externalId>false</externalId>
+        <label>Actual Check Out Quantity</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Actual_Check_Out_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Check out type (method) that is to be applied in the produc check out document based on the given template settings.</description>
+        <externalId>false</externalId>
+        <label>Actual Check Out Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Express</fullName>
+                    <default>false</default>
+                    <label>Express</label>
+                </value>
+                <value>
+                    <fullName>Pallets</fullName>
+                    <default>false</default>
+                    <label>Pallets</label>
+                </value>
+                <value>
+                    <fullName>Counting Groups</fullName>
+                    <default>false</default>
+                    <label>Counting Groups</label>
+                </value>
+                <value>
+                    <fullName>SKU</fullName>
+                    <default>false</default>
+                    <label>SKU</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Bank_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contains the name of the bank.</description>
+        <externalId>false</externalId>
+        <label>Bank Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SantanderBank</fullName>
+                    <default>false</default>
+                    <label>SantanderBank</label>
+                </value>
+                <value>
+                    <fullName>CitiBank</fullName>
+                    <default>false</default>
+                    <label>CitiBank</label>
+                </value>
+                <value>
+                    <fullName>Bank_of_Scotland</fullName>
+                    <default>false</default>
+                    <label>Bank_of_Scotland</label>
+                </value>
+                <value>
+                    <fullName>IngDiBa</fullName>
+                    <default>false</default>
+                    <label>IngDiBa</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Bill_Recipient_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the bill to of the order entry</description>
+        <externalId>false</externalId>
+        <label>Bill Recipient Customer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders (Bill Recipient Account)</relationshipLabel>
+        <relationshipName>Orders3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Calculation_Schema__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The schema used to calculate the order with complex
+			pricing.</description>
+        <externalId>false</externalId>
+        <label>Calculation Schema</label>
+        <referenceTo>ACCL__CP_Calculation_Schema__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Calculation_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The complex pricing calculation status.</description>
+        <externalId>false</externalId>
+        <label>Calculation Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>true</default>
+                    <label>0</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Calculation_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time of the last complex pricing calculation for this order.</description>
+        <externalId>false</externalId>
+        <label>Calculation Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Call__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the call in which the sales document has been created.</description>
+        <externalId>false</externalId>
+        <label>Call</label>
+        <referenceTo>ACCL__Call__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Cancel_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies a reason for sales document cancellation.</description>
+        <externalId>false</externalId>
+        <label>Cancel Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Z1 - DSD Production cut -production issues/QC</fullName>
+                    <default>false</default>
+                    <label>Z1 - DSD Production cut -production issues/QC</label>
+                </value>
+                <value>
+                    <fullName>Z2 - DSD Production cut -inbound not received</fullName>
+                    <default>false</default>
+                    <label>Z2 - DSD Production cut -inbound not received</label>
+                </value>
+                <value>
+                    <fullName>Z3 - DSD Production cut -inventory discrepancy</fullName>
+                    <default>false</default>
+                    <label>Z3 - DSD Production cut -inventory discrepancy</label>
+                </value>
+                <value>
+                    <fullName>Z4 - DSD Carrier Issues</fullName>
+                    <default>false</default>
+                    <label>Z4 - DSD Carrier Issues</label>
+                </value>
+                <value>
+                    <fullName>Z5 - DSD Branch Request</fullName>
+                    <default>false</default>
+                    <label>Z5 - DSD Branch Request</label>
+                </value>
+                <value>
+                    <fullName>Z6 - DSD Dist. Planner Request</fullName>
+                    <default>false</default>
+                    <label>Z6 - DSD Dist. Planner Request</label>
+                </value>
+                <value>
+                    <fullName>Z7 - DSD Trailer Size</fullName>
+                    <default>false</default>
+                    <label>Z7 - DSD Trailer Size</label>
+                </value>
+                <value>
+                    <fullName>Z8 - DSD Weight / Cube</fullName>
+                    <default>false</default>
+                    <label>Z8 - DSD Weight / Cube</label>
+                </value>
+                <value>
+                    <fullName>Z9 - DSD Discontinued Item at Plant</fullName>
+                    <default>false</default>
+                    <label>Z9 - DSD Discontinued Item at Plant</label>
+                </value>
+                <value>
+                    <fullName>ZA - DSD Material not authorized</fullName>
+                    <default>false</default>
+                    <label>ZA - DSD Material not authorized</label>
+                </value>
+                <value>
+                    <fullName>ZB - DSD Backorder not allowed</fullName>
+                    <default>false</default>
+                    <label>ZB - DSD Backorder not allowed</label>
+                </value>
+                <value>
+                    <fullName>ZC - DSD CFS Credit Rejection</fullName>
+                    <default>false</default>
+                    <label>ZC - DSD CFS Credit Rejection</label>
+                </value>
+                <value>
+                    <fullName>ZD - DSD Material flagged for deletion</fullName>
+                    <default>false</default>
+                    <label>ZD - DSD Material flagged for deletion</label>
+                </value>
+                <value>
+                    <fullName>ZE - DSD Backorder expired</fullName>
+                    <default>false</default>
+                    <label>ZE - DSD Backorder expired</label>
+                </value>
+                <value>
+                    <fullName>ZF - DSD Display cancelled</fullName>
+                    <default>false</default>
+                    <label>ZF - DSD Display cancelled</label>
+                </value>
+                <value>
+                    <fullName>ZG - DSD Wrong item ordered</fullName>
+                    <default>false</default>
+                    <label>ZG - DSD Wrong item ordered</label>
+                </value>
+                <value>
+                    <fullName>ZH - DSD BOM not set up in plant</fullName>
+                    <default>false</default>
+                    <label>ZH - DSD BOM not set up in plant</label>
+                </value>
+                <value>
+                    <fullName>ZI - DSD Backroom Inventory</fullName>
+                    <default>false</default>
+                    <label>ZI - DSD Backroom Inventory</label>
+                </value>
+                <value>
+                    <fullName>ZJ - DSD Material not released for delivery</fullName>
+                    <default>false</default>
+                    <label>ZJ - DSD Material not released for delivery</label>
+                </value>
+                <value>
+                    <fullName>ZK - DSD Past Dated Orders</fullName>
+                    <default>false</default>
+                    <label>ZK - DSD Past Dated Orders</label>
+                </value>
+                <value>
+                    <fullName>ZL - DSD Duplicate Orders</fullName>
+                    <default>false</default>
+                    <label>ZL - DSD Duplicate Orders</label>
+                </value>
+                <value>
+                    <fullName>ZM - DSD CSR Requested</fullName>
+                    <default>false</default>
+                    <label>ZM - DSD CSR Requested</label>
+                </value>
+                <value>
+                    <fullName>ZN - DSD NOS Cancelled</fullName>
+                    <default>false</default>
+                    <label>ZN - DSD NOS Cancelled</label>
+                </value>
+                <value>
+                    <fullName>ZO - DSD Insufficient Allocation</fullName>
+                    <default>false</default>
+                    <label>ZO - DSD Insufficient Allocation</label>
+                </value>
+                <value>
+                    <fullName>ZP - DSD Material not set up in plant</fullName>
+                    <default>false</default>
+                    <label>ZP - DSD Material not set up in plant</label>
+                </value>
+                <value>
+                    <fullName>ZQ - DSD Demand Adjustment</fullName>
+                    <default>false</default>
+                    <label>ZQ - DSD Demand Adjustment</label>
+                </value>
+                <value>
+                    <fullName>ZR - DSD Component Only Returned Item on BOM</fullName>
+                    <default>false</default>
+                    <label>ZR - DSD Component Only Returned Item on BOM</label>
+                </value>
+                <value>
+                    <fullName>ZS - DSD Suggested Material Substitution</fullName>
+                    <default>false</default>
+                    <label>ZS - DSD Suggested Material Substitution</label>
+                </value>
+                <value>
+                    <fullName>ZU - DSD Suggested Material Sub-Unavailable Qty</fullName>
+                    <default>false</default>
+                    <label>ZU - DSD Suggested Material Sub-Unavailable Qty</label>
+                </value>
+                <value>
+                    <fullName>ZV - DSD BOM substituted - unavailable qty</fullName>
+                    <default>false</default>
+                    <label>ZV - DSD BOM substituted - unavailable qty</label>
+                </value>
+                <value>
+                    <fullName>ZW - DSD Below minimum order qty</fullName>
+                    <default>false</default>
+                    <label>ZW - DSD Below minimum order qty</label>
+                </value>
+                <value>
+                    <fullName>ZX - DSD Material Unavailable/Placeholder Item</fullName>
+                    <default>false</default>
+                    <label>ZX - DSD Material Unavailable/Placeholder Item</label>
+                </value>
+                <value>
+                    <fullName>ZY - DSD BXGY- Free ordered alone</fullName>
+                    <default>false</default>
+                    <label>ZY - DSD BXGY- Free ordered alone</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Check_Out_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total product check out quantity for the tour in question as given by the HOST interface.</description>
+        <externalId>false</externalId>
+        <label>Check Out Quantity</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Check_Out_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Check out type (method) that is to be applied in the product check out document based on the given template settings.</description>
+        <externalId>false</externalId>
+        <label>Check Out Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Express</fullName>
+                    <default>false</default>
+                    <label>Express</label>
+                </value>
+                <value>
+                    <fullName>Pallets</fullName>
+                    <default>false</default>
+                    <label>Pallets</label>
+                </value>
+                <value>
+                    <fullName>Counting Groups</fullName>
+                    <default>false</default>
+                    <label>Counting Groups</label>
+                </value>
+                <value>
+                    <fullName>SKU</fullName>
+                    <default>false</default>
+                    <label>SKU</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the currency of the order based on the sales
+			org currency of the order template object. Must have the same
+			picklist values that the sales org currency field.</description>
+        <externalId>false</externalId>
+        <label>Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>USD</fullName>
+                    <default>false</default>
+                    <label>USD</label>
+                </value>
+                <value>
+                    <fullName>CAD</fullName>
+                    <default>false</default>
+                    <label>CAD</label>
+                </value>
+                <value>
+                    <fullName>JPY</fullName>
+                    <default>false</default>
+                    <label>JPY</label>
+                </value>
+                <value>
+                    <fullName>GBP</fullName>
+                    <default>false</default>
+                    <label>GBP</label>
+                </value>
+                <value>
+                    <fullName>EUR</fullName>
+                    <default>false</default>
+                    <label>EUR</label>
+                </value>
+                <value>
+                    <fullName>NOK</fullName>
+                    <default>false</default>
+                    <label>NOK</label>
+                </value>
+                <value>
+                    <fullName>CHF</fullName>
+                    <default>false</default>
+                    <label>CHF</label>
+                </value>
+                <value>
+                    <fullName>RUB</fullName>
+                    <default>false</default>
+                    <label>RUB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Customer_Order_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Customer Order Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_Item_Switch__c</fullName>
+        <description>Field created to address Jira-2154 sync issue. When this field is marked as &quot;Yes&quot; by Order Before Update trigger. Following fields Order Items will be switched to older values using Workflow on Order Items object:
+MDLZ_ItemStatus__c
+ACCL__Quantity__c
+ACCL__Suggested_Quantity__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field created to address Jira-2154 sync issue. No meant for user entry</inlineHelpText>
+        <label>Order Item Switch</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MDLZ_KeyAccount__c</fullName>
+        <externalId>false</externalId>
+        <label>KeyAccount</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_LastSavedByUser__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Saved By User</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_isOrderAccepted__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Showing if an order was accepted (true) or rejected by SAP (false).</description>
+        <externalId>false</externalId>
+        <label>Is Order Accepted</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_LastupdatedbySAP__c</fullName>
+        <description>This field will be updated with the MDLZ_ReceivedBySAP__c field value and it is referred in MDLZ_OrderTriggerHandler.</description>
+        <externalId>false</externalId>
+        <label>LastupdatedbySAP</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_SAPExternalID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SAP External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Delivery_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>By default next day.Delivery date calculation is
+			customized very often.</description>
+        <externalId>false</externalId>
+        <label>Delivery Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Delivery_Documents_Condition__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( AND(ACCL__Order_Template__r.RecordType.DeveloperName =
+			&apos;Order_Entry&apos; ,
+			ISPICKVAL(ACCL__Order_Template__r.ACCL__Document_Type__c,&apos;Delivery&apos;) ),
+			true, false)</formula>
+        <label>Delivery Documents Condition</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Delivery_Note__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Delivery Note</description>
+        <externalId>false</externalId>
+        <label>Delivery Note</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Delivery_Recipient__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Delivery Recipient of the selected account</description>
+        <externalId>false</externalId>
+        <label>Delivery Recipient</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders (Delivery Recipient)</relationshipLabel>
+        <relationshipName>Orders2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Delivery_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Terms of delivery.</description>
+        <externalId>false</externalId>
+        <label>Delivery Terms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ExWarehouse</fullName>
+                    <default>false</default>
+                    <label>ExWarehouse</label>
+                </value>
+                <value>
+                    <fullName>FreeOnBoard</fullName>
+                    <default>false</default>
+                    <label>FreeOnBoard</label>
+                </value>
+                <value>
+                    <fullName>FreeOfCharge</fullName>
+                    <default>false</default>
+                    <label>FreeOfCharge</label>
+                </value>
+                <value>
+                    <fullName>ScaleOfCharge</fullName>
+                    <default>false</default>
+                    <label>ScaleOfCharge</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Distribution_Relevant__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines whether the orders are relevant for distribution</description>
+        <externalId>false</externalId>
+        <label>Distribution Relevant</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Document_Transaction_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies how to handle a sales document</description>
+        <externalId>false</externalId>
+        <label>Document Transaction Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CashInvoice</fullName>
+                    <default>false</default>
+                    <label>CashInvoice</label>
+                </value>
+                <value>
+                    <fullName>CreditInvoice</fullName>
+                    <default>false</default>
+                    <label>CreditInvoice</label>
+                </value>
+                <value>
+                    <fullName>ValuatedDeliveryNote</fullName>
+                    <default>false</default>
+                    <label>ValuatedDeliveryNote</label>
+                </value>
+                <value>
+                    <fullName>NonValuatedDeliveryNote</fullName>
+                    <default>false</default>
+                    <label>NonValuatedDeliveryNote</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Document_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the type of the order document in order to distinguish DSD and non-DSD order entries.</description>
+        <externalId>false</externalId>
+        <label>Document Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Delivery</fullName>
+                    <default>false</default>
+                    <label>Delivery</label>
+                </value>
+                <value>
+                    <fullName>ProductCheckIn</fullName>
+                    <default>false</default>
+                    <label>ProductCheckIn</label>
+                </value>
+                <value>
+                    <fullName>ProductCheckOut</fullName>
+                    <default>false</default>
+                    <label>ProductCheckOut</label>
+                </value>
+                <value>
+                    <fullName>TruckAudit</fullName>
+                    <default>false</default>
+                    <label>TruckAudit</label>
+                </value>
+                <value>
+                    <fullName>CashCheckIn</fullName>
+                    <default>false</default>
+                    <label>CashCheckIn</label>
+                </value>
+                <value>
+                    <fullName>CashCheckOut</fullName>
+                    <default>false</default>
+                    <label>CashCheckOut</label>
+                </value>
+                <value>
+                    <fullName>OrderEntry</fullName>
+                    <default>false</default>
+                    <label>OrderEntry</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Gross_Total_Value_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of the order entry in the order/receipt
+			currency.</description>
+        <externalId>false</externalId>
+        <label>Gross Total Value(Receipt)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Gross_Total_Value__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Gross total value (domestic currency) of the sales
+			document including relevant sales taxes. Calculated by the system
+			based on the respective sales document item template settings.</description>
+        <externalId>false</externalId>
+        <label>Gross Total Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Header_Discount_Percentage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percentage value of the header discount.</description>
+        <externalId>false</externalId>
+        <label>Header Discount Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Initiation_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Date of initiation of this sales document.</description>
+        <externalId>false</externalId>
+        <label>Initiation Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Inventory_Reference_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>First reference to the inventory as defined in the order template</description>
+        <externalId>false</externalId>
+        <label>Inventory Reference 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Inventory_Reference_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Second reference to the inventory as defined in the order template</description>
+        <externalId>false</externalId>
+        <label>Inventory Reference 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Inventory_Reference_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Third reference to the inventory as defined in the order template</description>
+        <externalId>false</externalId>
+        <label>Inventory Reference 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Inventory_Reference_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fourth reference to the inventory as defined in the order template</description>
+        <externalId>false</externalId>
+        <label>Inventory Reference 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Inventory_Reference_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fifth reference to the inventory as defined in the order template</description>
+        <externalId>false</externalId>
+        <label>Inventory Reference 5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Invoice_Note__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Invoice Note</description>
+        <externalId>false</externalId>
+        <label>Invoice Note</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Merchandise_Value_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Merchandise value (value of goods) in receipt currency
+			not including header discount.</description>
+        <externalId>false</externalId>
+        <label>Merchandise Value Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Mobility_Release__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mobility Release</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup field to capture customer for which Order is
+			created</description>
+        <externalId>false</externalId>
+        <label>Customer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders (Customer)</relationshipLabel>
+        <relationshipName>Order</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The day the customer commited to the sales document. For
+			order entries this is the order date.</description>
+        <externalId>false</externalId>
+        <label>Order Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the user readable number used for print-outs
+			and customer communication</description>
+        <externalId>false</externalId>
+        <label>Order Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Order Template for Order Entry</description>
+        <externalId>false</externalId>
+        <label>Order Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ACCL__Order_Template__c.ACCL__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ACCL__Order_Template__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Paid_Amount_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Paid amount of the order entry in domestic currency. The
+			paid amount is a gross value.</description>
+        <externalId>false</externalId>
+        <label>Paid Amount Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Paid_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Paid Amount of Order</description>
+        <externalId>false</externalId>
+        <label>Paid Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Payer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the payer of the order</description>
+        <externalId>false</externalId>
+        <label>Payer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders (Payer)</relationshipLabel>
+        <relationshipName>Payers</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Payment_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes the manner of the remuneration.</description>
+        <externalId>false</externalId>
+        <label>Payment Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Check</fullName>
+                    <default>false</default>
+                    <label>Check</label>
+                </value>
+                <value>
+                    <fullName>CreditCard</fullName>
+                    <default>false</default>
+                    <label>CreditCard</label>
+                </value>
+                <value>
+                    <fullName>Deduction</fullName>
+                    <default>false</default>
+                    <label>Deduction</label>
+                </value>
+                <value>
+                    <fullName>Multiple</fullName>
+                    <default>false</default>
+                    <label>Multiple</label>
+                </value>
+                <value>
+                    <fullName>Expense</fullName>
+                    <default>false</default>
+                    <label>Expense</label>
+                </value>
+                <value>
+                    <fullName>DebitCard</fullName>
+                    <default>false</default>
+                    <label>DebitCard</label>
+                </value>
+                <value>
+                    <fullName>Cash</fullName>
+                    <default>false</default>
+                    <label>Cash</label>
+                </value>
+                <value>
+                    <fullName>MoneyOrder</fullName>
+                    <default>false</default>
+                    <label>MoneyOrder</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Payment_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies a reason that leads to modifying the document
+			handling regarding payments.</description>
+        <externalId>false</externalId>
+        <label>Payment Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Holiday Week</fullName>
+                    <default>false</default>
+                    <label>Holiday Week</label>
+                </value>
+                <value>
+                    <fullName>Store Inventory</fullName>
+                    <default>false</default>
+                    <label>Store Inventory</label>
+                </value>
+                <value>
+                    <fullName>New Display</fullName>
+                    <default>false</default>
+                    <label>New Display</label>
+                </value>
+                <value>
+                    <fullName>Replace Refused Order</fullName>
+                    <default>false</default>
+                    <label>Replace Refused Order</label>
+                </value>
+                <value>
+                    <fullName>Allowance Not Given</fullName>
+                    <default>false</default>
+                    <label>Allowance Not Given</label>
+                </value>
+                <value>
+                    <fullName>Store Sampling Event</fullName>
+                    <default>false</default>
+                    <label>Store Sampling Event</label>
+                </value>
+                <value>
+                    <fullName>New Store</fullName>
+                    <default>false</default>
+                    <label>New Store</label>
+                </value>
+                <value>
+                    <fullName>Reset</fullName>
+                    <default>false</default>
+                    <label>Reset</label>
+                </value>
+                <value>
+                    <fullName>Low Stock Store</fullName>
+                    <default>false</default>
+                    <label>Low Stock Store</label>
+                </value>
+                <value>
+                    <fullName>Could Not Deliver</fullName>
+                    <default>false</default>
+                    <label>Could Not Deliver</label>
+                </value>
+                <value>
+                    <fullName>Missed Delivery Window</fullName>
+                    <default>false</default>
+                    <label>Missed Delivery Window</label>
+                </value>
+                <value>
+                    <fullName>Quarter Close</fullName>
+                    <default>false</default>
+                    <label>Quarter Close</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Payment_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Terms of payment.</description>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2percent</fullName>
+                    <default>false</default>
+                    <label>2percent</label>
+                </value>
+                <value>
+                    <fullName>net30</fullName>
+                    <default>false</default>
+                    <label>net30</label>
+                </value>
+                <value>
+                    <fullName>COD</fullName>
+                    <default>false</default>
+                    <label>COD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Represents sign of absolute paid amount, that is inpayment (+, debit) or outpayment (-, credit), respectively</description>
+        <externalId>false</externalId>
+        <label>Payment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Debit</fullName>
+                    <default>false</default>
+                    <label>Debit</label>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Phase__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Workflow neutral description of the order Entry status.</description>
+        <externalId>false</externalId>
+        <label>Phase</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Send to SAP</fullName>
+                    <default>false</default>
+                    <label>Sent to SAP</label>
+                </value>
+                <value>
+                    <fullName>Received By SAP</fullName>
+                    <default>false</default>
+                    <label>Received By SAP</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Deleted</fullName>
+                    <default>false</default>
+                    <label>Deleted</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Pending Approval</fullName>
+                    <default>false</default>
+                    <label>Pending Approval</label>
+                </value>
+                <value>
+                    <fullName>Routed</fullName>
+                    <default>false</default>
+                    <label>Routed</label>
+                </value>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enables tracking which conditions were used. By default
+			current day. Can be changed if the order was taken on paper first and
+			was added to the system after a price change</description>
+        <externalId>false</externalId>
+        <label>Pricing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_3__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_4__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_10__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_5__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_6__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_7__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_8__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_9__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Information__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the pricing information (found conditions) which are directly related to the order.</description>
+        <externalId>false</externalId>
+        <label>Pricing Information</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Print_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>--- Attribute no longer used --- Contains information about the successfully initiated print out process on the mobility device.</description>
+        <externalId>false</externalId>
+        <label>Print Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NotPrinted</fullName>
+                    <default>true</default>
+                    <label>NotPrinted</label>
+                </value>
+                <value>
+                    <fullName>Successful</fullName>
+                    <default>false</default>
+                    <label>Successful</label>
+                </value>
+                <value>
+                    <fullName>NotSuccessful</fullName>
+                    <default>false</default>
+                    <label>NotSuccessful</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Receipt_Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Receipt currency of a order.</description>
+        <externalId>false</externalId>
+        <label>Receipt Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>USD</fullName>
+                    <default>false</default>
+                    <label>USD</label>
+                </value>
+                <value>
+                    <fullName>CAD</fullName>
+                    <default>false</default>
+                    <label>CAD</label>
+                </value>
+                <value>
+                    <fullName>Yen</fullName>
+                    <default>false</default>
+                    <label>Yen</label>
+                </value>
+                <value>
+                    <fullName>GBP</fullName>
+                    <default>false</default>
+                    <label>GBP</label>
+                </value>
+                <value>
+                    <fullName>EUR</fullName>
+                    <default>false</default>
+                    <label>EUR</label>
+                </value>
+                <value>
+                    <fullName>NOK</fullName>
+                    <default>false</default>
+                    <label>NOK</label>
+                </value>
+                <value>
+                    <fullName>CHF</fullName>
+                    <default>false</default>
+                    <label>CHF</label>
+                </value>
+                <value>
+                    <fullName>RUB</fullName>
+                    <default>false</default>
+                    <label>RUB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Record_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;Id, $Label.ACCL__record_link,
+			&quot;_self&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Release_Geolocation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Geolocation (Latitute and Longitude) to be fulfilled by mobility devices and not displayed in the order UI.</description>
+        <displayLocationInDecimal>false</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <inlineHelpText>Latitude (-90; 90)
+        Longitude (-180; 180)</inlineHelpText>
+        <label>Release Geolocation</label>
+        <required>false</required>
+        <scale>15</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Release_Platform__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(ACCL__Order_Template__r.ACCL__Release_Platform__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Release Platform</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Release_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date and time the sales document has been released.</description>
+        <externalId>false</externalId>
+        <label>Release Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Responsible__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the responsible user.</description>
+        <externalId>false</externalId>
+        <label>Responsible</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Selected_Rewards__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds mobility selected rewards and related items/products in JSON format.</description>
+        <externalId>false</externalId>
+        <label>Selected Rewards</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Total_Returned_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of all returned quantities</description>
+        <externalId>false</externalId>
+        <label>Total Returned Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Total_Shipped_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of all shipped quantities</description>
+        <externalId>false</externalId>
+        <label>Total Shipped Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Total_Value__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total value (domestic currency) of the order including item discounts, without sales taxes.</description>
+        <externalId>false</externalId>
+        <label>Total Value/Gross</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Tour__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field looks up to Tour</description>
+        <externalId>false</externalId>
+        <label>Tour</label>
+        <referenceTo>ACCL__Tour__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Upload_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Upload Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Value__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Value of the order entry in the order/receipt currency.</description>
+        <externalId>false</externalId>
+        <label>Value(Receipt)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Warehouse__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The warehouse from which the customer will be delivered.</description>
+        <externalId>false</externalId>
+        <label>Warehouse</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>CE</fullName>
+                    <default>false</default>
+                    <label>CE</label>
+                </value>
+                <value>
+                    <fullName>55001</fullName>
+                    <default>false</default>
+                    <label>55001</label>
+                </value>
+                <value>
+                    <fullName>55002</fullName>
+                    <default>false</default>
+                    <label>55002</label>
+                </value>
+                <value>
+                    <fullName>55003</fullName>
+                    <default>false</default>
+                    <label>55003</label>
+                </value>
+                <value>
+                    <fullName>55004</fullName>
+                    <default>false</default>
+                    <label>55004</label>
+                </value>
+                <value>
+                    <fullName>5505</fullName>
+                    <default>false</default>
+                    <label>5505</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Wholesaler__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Wholesaler of the Account</description>
+        <externalId>false</externalId>
+        <label>Wholesaler</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders (Wholesaler)</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Workflow__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>ACCL__Order_Template__r.ACCL__Workflow__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Workflow</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_AccountTeam__c</fullName>
+        <description>Indicates the team information of the account, value will come from the flow</description>
+        <externalId>false</externalId>
+        <label>Account Team</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_AccountTerritory__c</fullName>
+        <description>Indicates the territory information of the account, value will come from the flow</description>
+        <externalId>false</externalId>
+        <label>Account Territory</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_AccTeam__c</fullName>
+        <description>Indicates the team information of the account. Used for filtering.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Order_Account__r.MDLZ_AccountTeam__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_AccTerritory__c</fullName>
+        <description>Indicates the territory information of the account. Used for filtering.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Order_Account__r.MDLZ_AccountTerritory__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Approval_Email_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approval Email Sent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_DeliveredTotal__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivered Quantity Total</label>
+        <summarizedField>ACCL__Order_Item__c.MDLZ_DeliveredQty__c</summarizedField>
+        <summaryForeignKey>ACCL__Order_Item__c.ACCL__Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ExternalId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>ExternalId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_InvoiceAmount__c</fullName>
+        <description>Stores the invoice amount and is updated by the Delivered interface</description>
+        <externalId>false</externalId>
+        <label>Invoice Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_IsSFAutoGenerated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Updated when a CAO wrapper order is created for NOS and EDI order</description>
+        <externalId>false</externalId>
+        <label>Is SF AutoGenerated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_IsUnsaleableCredit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Unsaleable Credit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_IsUnsaleablePickup__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Unsaleable Pickup</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+	 <fields>
+        <fullName>MDLZ_ManualisChanged__c</fullName>
+        <externalId>false</externalId>
+        <label>Manual Is Changed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>true</default>
+                    <label>0</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MDLZ_MobItemsModified__c</fullName>
+        <description>Holds the total number of order items edited/added by user.</description>
+        <externalId>false</externalId>
+        <label>Mobile Items Modified</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_PickupLocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Pickup Location</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pickup Receiving Area</fullName>
+                    <default>false</default>
+                    <label>Pickup Receiving Area</label>
+                </value>
+                <value>
+                    <fullName>Pickup Backstock</fullName>
+                    <default>false</default>
+                    <label>Pickup Backstock</label>
+                </value>
+                <value>
+                    <fullName>Pickup Backroom Receive</fullName>
+                    <default>false</default>
+                    <label>Pickup Backroom Receive</label>
+                </value>
+                <value>
+                    <fullName>Destroyed in Store</fullName>
+                    <default>false</default>
+                    <label>Destroyed in Store</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MDLZ_ReadyForOutbound__c</fullName>
+        <description>Indicates when all items are received in SF and order is ready to send to SAP</description>
+        <externalId>false</externalId>
+        <formula>MDLZ_MobItemsModified__c &gt;= MDLZ_SFItemsReceived__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ready for Outbound</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_RecBySAPTotal__c</fullName>
+        <externalId>false</externalId>
+        <label>Received By SAP Total</label>
+        <summarizedField>ACCL__Order_Item__c.ACCL__Quantity__c</summarizedField>
+        <summaryForeignKey>ACCL__Order_Item__c.ACCL__Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ReceivedBySAP__c</fullName>
+        <externalId>false</externalId>
+        <label>Received By SAP</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPDeliveryDate__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP Delivery Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPFailureReason__c</fullName>
+        <description>Error message from SAP</description>
+        <externalId>false</externalId>
+        <label>SAP Failure Reason</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPInvoiceNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP Invoice Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPOrderVersion__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP Order Version</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPPONumber__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP PO Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPRejectionCode__c</fullName>
+        <description>Rejection code from SAP</description>
+        <externalId>false</externalId>
+        <label>SAP Rejection Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_SubmittedTotal__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitted Total</label>
+        <summarizedField>ACCL__Order_Item__c.MDLZ_MobileQty__c</summarizedField>
+        <summaryForeignKey>ACCL__Order_Item__c.ACCL__Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_TotReturnQty__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This field holds the sum of quantities for returns and unsaleable credits to display on consolidated order overview screen</description>
+        <externalId>false</externalId>
+        <label>Total Return Qty</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_Total_Case_Quantity__c</fullName>
+        <description>Sum of case quantity of all products in the order item</description>
+        <externalId>false</externalId>
+        <label>Total Case Quantity</label>
+        <summarizedField>ACCL__Order_Item__c.ACCL__Quantity__c</summarizedField>
+        <summaryForeignKey>ACCL__Order_Item__c.ACCL__Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_UnsaleablePickupCredit__c</fullName>
+        <externalId>false</externalId>
+        <label>Unsaleable Pickup/Credit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pickup</fullName>
+                    <default>false</default>
+                    <label>Pickup</label>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MDLZ_WF_TimeTrigger__c</fullName>
+        <description>Formula returns date / time in the past 1hr. e.g. if custom label value is 59, formula will return 59 mins before lastmodifieddate. This will be further used in Time based workflow. Defect reference: MRELKXIW-2041.</description>
+        <externalId>false</externalId>
+        <formula>LastModifiedDate -  (Value($Label.MDLZ_Workflow_Min_Control) * 0.00069)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MDLZ WF Time Trigger</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_isChanged__c</fullName>
+        <description>Functionality introduced for RDT pilot for Order Redesign to address following defects:
+MRELKXIW-1925, MRELKXIW-1912, MRELKXIW-1918</description>
+        <externalId>false</externalId>
+        <label>IsChanged</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                    <label>FALSE</label>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                    <label>TRUE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>isChanged__c</fullName>
+        <description>Functionality introduced for RDT pilot for Order Redesign to address following defects:
+MRELKXIW-1925, MRELKXIW-1912, MRELKXIW-1918</description>
+        <externalId>false</externalId>
+        <label>isChanged</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FALSE</fullName>
+                    <default>true</default>
+                    <label>FALSE</label>
+                </value>
+                <value>
+                    <fullName>TRUE</fullName>
+                    <default>false</default>
+                    <label>TRUE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MDLZ_isOffRoute__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Set this field on mobility if the order is an offRoute or not</description>
+        <externalId>false</externalId>
+        <label>is Off Route</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MLZ_OffRouteReasonCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Off Route Reason Code</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Z01 - DSD Holiday Week</fullName>
+                    <default>false</default>
+                    <label>Z01 - DSD Holiday Week</label>
+                </value>
+                <value>
+                    <fullName>Z02 - DSD Store Inventory</fullName>
+                    <default>false</default>
+                    <label>Z02 - DSD Store Inventory</label>
+                </value>
+                <value>
+                    <fullName>Z03 - DSD New Display</fullName>
+                    <default>false</default>
+                    <label>Z03 - DSD New Display</label>
+                </value>
+                <value>
+                    <fullName>Z04 - DSD Replace Refused Order</fullName>
+                    <default>false</default>
+                    <label>Z04 - DSD Replace Refused Order</label>
+                </value>
+                <value>
+                    <fullName>Z05 - DSD Allowance Not Given</fullName>
+                    <default>false</default>
+                    <label>Z05 - DSD Allowance Not Given</label>
+                </value>
+                <value>
+                    <fullName>Z13 - DSD Store Sampling Event</fullName>
+                    <default>false</default>
+                    <label>Z13 - DSD Store Sampling Event</label>
+                </value>
+                <value>
+                    <fullName>Z18 - DSD New Store</fullName>
+                    <default>false</default>
+                    <label>Z18 - DSD New Store</label>
+                </value>
+                <value>
+                    <fullName>Z19 - DSD Reset</fullName>
+                    <default>false</default>
+                    <label>Z19 - DSD Reset</label>
+                </value>
+                <value>
+                    <fullName>Z20 - DSD Low stock - store</fullName>
+                    <default>false</default>
+                    <label>Z20 - DSD Low stock - store</label>
+                </value>
+                <value>
+                    <fullName>Z21 - DSD Could not deliver</fullName>
+                    <default>false</default>
+                    <label>Z21 - DSD Could not deliver</label>
+                </value>
+                <value>
+                    <fullName>Z26 - DSD Missed Delivery Window</fullName>
+                    <default>false</default>
+                    <label>Z26 - DSD Missed Delivery Window</label>
+                </value>
+                <!--<value>
+                    <fullName>Z27 - DSD Quarter Close</fullName>
+                    <default>false</default>
+                    <label>Z27 - DSD Quarter Close</label>
+                </value>-->
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TestPhase__c</fullName>
+        <externalId>false</externalId>
+        <label>TestPhase</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Order</label>
+    <listViews>
+        <fullName>ACCL__All</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Order_Template__c</columns>
+        <columns>ACCL__Order_Account__c</columns>
+        <columns>ACCL__Order_Date__c</columns>
+        <columns>ACCL__Delivery_Date__c</columns>
+        <columns>ACCL__Initiation_Date__c</columns>
+        <columns>ACCL__Phase__c</columns>
+        <columns>TestPhase__c</columns>
+        <columns>MDLZ_Total_Case_Quantity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>ACCL__Order_Id__c</columns>
+        <columns>MDLZ_ExternalId__c</columns>
+        <columns>MDLZ_Approved__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+	<listViews>
+        <fullName>MDLZ_POD_Orders</fullName>
+        <columns>ACCL__Order_Account__c</columns>
+        <columns>ACCL__Delivery_Date__c</columns>
+        <columns>ACCL__Invoice_Note__c</columns>
+        <columns>ACCL__Phase__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCL__Order_Template__c</field>
+            <operation>equals</operation>
+            <value>Proof Of Delivery</value>
+        </filters>
+        <label>POD Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>MDLZ_Wrapper_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Order_Template__c</columns>
+        <columns>ACCL__Order_Account__c</columns>
+        <columns>ACCL__Order_Date__c</columns>
+        <columns>ACCL__Delivery_Date__c</columns>
+        <columns>ACCL__Initiation_Date__c</columns>
+        <columns>ACCL__Phase__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>ACCL__Order_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCL__Order_Template__c</field>
+            <operation>equals</operation>
+            <value>Order Wrapper</value>
+        </filters>
+        <label>Wrapper Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Open_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Order_Id__c</columns>
+        <columns>ACCL__Responsible__c</columns>
+        <columns>ACCL__Order_Account__c</columns>
+        <columns>ACCL__Order_Template__c</columns>
+        <columns>ACCL__Order_Date__c</columns>
+        <columns>ACCL__Phase__c</columns>
+        <columns>ACCL__Value__c</columns>
+        <columns>ACCL__Gross_Total_Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCL__Phase__c</field>
+            <operation>equals</operation>
+            <value>Initial</value>
+        </filters>
+        <label>Open Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Released_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Order_Id__c</columns>
+        <columns>ACCL__Responsible__c</columns>
+        <columns>ACCL__Order_Account__c</columns>
+        <columns>ACCL__Order_Template__c</columns>
+        <columns>ACCL__Order_Date__c</columns>
+        <columns>ACCL__Phase__c</columns>
+        <columns>ACCL__Value__c</columns>
+        <columns>ACCL__Gross_Total_Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCL__Phase__c</field>
+            <operation>equals</operation>
+            <value>Released</value>
+        </filters>
+        <label>Released Orders</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>US01_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Order_Id__c</columns>
+        <columns>ACCL__Order_Account__c</columns>
+        <columns>ACCL__Responsible__c</columns>
+        <columns>ACCL__Accountable__c</columns>
+        <columns>ACCL__Order_Template__c</columns>
+        <columns>ACCL__Phase__c</columns>
+        <columns>MDLZ_Approval_Email_Sent__c</columns>
+        <columns>MDLZ_isOffRoute__c</columns>
+        <columns>ACCL__Delivery_Date__c</columns>
+        <columns>ACCL__Order_Date__c</columns>
+        <columns>ACCL__Value__c</columns>
+        <columns>ACCL__Gross_Total_Value__c</columns>
+        <columns>ACCL__Calculation_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCL__Responsible__c</field>
+            <operation>contains</operation>
+            <value>Nicholas</value>
+        </filters>
+        <label>US01 Orders</label>
+    </listViews>
+    <nameField>
+        <displayFormat>O-{00000}</displayFormat>
+        <label>Order Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Orders</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ACCL__Order_Id__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Responsible__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Order_Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Order_Template__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Order_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Phase__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Gross_Total_Value__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Order_Id__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Order_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Phase__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Order_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Order_Id__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Order_Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Phase__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Order_Date__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ACCL__Order_Id__c</searchFilterFields>
+        <searchFilterFields>ACCL__Order_Account__c</searchFilterFields>
+        <searchFilterFields>ACCL__Phase__c</searchFilterFields>
+        <searchFilterFields>ACCL__Order_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>ACCL__Order_Id__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Responsible__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Order_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Order_Template__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Order_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Phase__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Gross_Total_Value__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>ACCL__Delivery_Recipient_Not_Empty</fullName>
+        <active>true</active>
+        <description>Validates if delivery recipient is empty.</description>
+        <errorConditionFormula>AND(ISBLANK(ACCL__Delivery_Recipient__c),  ISPICKVAL(ACCL__Phase__c, &quot;Released&quot;))</errorConditionFormula>
+        <errorMessage>No valid Delivery Recipients have been found for the Order Customer.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Order_Template_Not_Empty</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( ACCL__Order_Template__c )</errorConditionFormula>
+        <errorDisplayField>ACCL__Order_Template__c</errorDisplayField>
+        <errorMessage>The Order Template can&apos;t be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Wholesaler_Not_Empty</fullName>
+        <active>true</active>
+        <description>Validates if Wholesaler is empty when it is required in order template.</description>
+        <errorConditionFormula>AND(ACCL__Order_Template__r.ACCL__Wholesaler_Required__c, ISBLANK(ACCL__Wholesaler__c), ISPICKVAL( ACCL__Phase__c , &quot;Released&quot;))</errorConditionFormula>
+        <errorMessage>No valid Wholesalers have been found for the Order Customer.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

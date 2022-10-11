@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>ACCL__Flatten_Org_Unit_Hierarchy_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>ACCL__Flatten_Org_Unit_Hierarchy_Compact_Layout</fullName>
+        <fields>ACCL__Org_Unit__c</fields>
+        <fields>ACCL__Node_Level__c</fields>
+        <fields>ACCL__Account__c</fields>
+        <label>Flatten Org Unit Hierarchy Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This SObject holds node org unit hierarchy information for the Customer Segmentation functionality.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ACCL__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Account assigned to the org unit of the hierarchy node.</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Node_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reference to the level of the node in the hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Node Level</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_01__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 01</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 01)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_02__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 02</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 02)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_03__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 03</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 03)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_04__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 04</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 04)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_05__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 05</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 05)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_06__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 06</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 06)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies6</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit_Level_07__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit level hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Org Unit 07</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies (Org Unit 07)</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies7</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Org_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reference to the Org Unit of the hierarchy node.</description>
+        <externalId>false</externalId>
+        <label>Org Unit</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Flatten Org Unit Hierarchies</relationshipLabel>
+        <relationshipName>Flatten_Org_Unit_Hierarchies</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ACCL__Result_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the level to retrieve customers from.</description>
+        <externalId>false</externalId>
+        <label>Result Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Store</fullName>
+                    <default>true</default>
+                    <label>Store</label>
+                </value>
+                <value>
+                    <fullName>Trade Org</fullName>
+                    <default>false</default>
+                    <label>Trade Org</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__UpsertID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique Id to upsert records from Accenture Cloud Processing Service.</description>
+        <externalId>true</externalId>
+        <label>UpsertID</label>
+        <length>36</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Flatten Org Unit Hierarchy</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Account__c</columns>
+        <columns>ACCL__Org_Unit__c</columns>
+        <columns>ACCL__Org_Unit_Level_01__c</columns>
+        <columns>ACCL__Org_Unit_Level_02__c</columns>
+        <columns>ACCL__Org_Unit_Level_03__c</columns>
+        <columns>ACCL__Org_Unit_Level_04__c</columns>
+        <columns>ACCL__Org_Unit_Level_05__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>FOUH-{0000000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Flatten Org Unit Hierarchies</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ACCL__Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit_Level_01__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit_Level_02__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit_Level_03__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit_Level_04__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Org_Unit_Level_05__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit_Level_01__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit_Level_02__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit_Level_03__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit_Level_04__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Org_Unit_Level_05__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

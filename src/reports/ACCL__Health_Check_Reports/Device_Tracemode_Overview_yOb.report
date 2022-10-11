@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__User__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Device_Model__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Device_OS_Version__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Link_to_Device_Details__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Trace_Mode_Duration__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ACCL__TQ_App_Installation__c.ACCL__Trace_Mode_On__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Device Tracemode Overview</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$ACCL__TQ_App_Installation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ACCL__TQ_App_Installation__c.ACCL__Installation_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
