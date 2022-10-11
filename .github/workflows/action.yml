@@ -56,7 +56,7 @@ jobs:
           echo $SFDC_POC_PASSWORD_PROD
         fi
          
-        cat /home/runner/work/SalesforcePOC/Salesforce/sample/build.properties
+        cat /home/runner/work/SalesforcePOC/SalesforcePOC/sample/build.properties
         if [[ $BRANCH == development ]]; then
           sed -i "s/SFDC_POC_PASSWORD/"$SFDC_POC_PASSWORD_DEV"/g" $GITHUB_WORKSPACE/sample/build.properties
           sed -i "s/SFDC_POC_USERNAME/"$SFDC_POC_USERNAME_DEV"/g" $GITHUB_WORKSPACE/sample/build.properties
