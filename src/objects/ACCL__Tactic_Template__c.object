@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>ACCL__Tactic_Template_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>ACCL__Tactic_Template_Compact_Layout</fullName>
+        <fields>ACCL__Description__c</fields>
+        <fields>Name</fields>
+        <fields>ACCL__Tactic_Type__c</fields>
+        <fields>ACCL__Active__c</fields>
+        <fields>ACCL__UI_Contract__c</fields>
+        <fields>ACCL__Sales_Org__c</fields>
+        <label>Tactic Template Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Template which controls the behaviour of a tactic</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__MobilityRelevant</fullName>
+        <description>Field set used to restrict the amount of data on the mobility device.</description>
+        <displayedFields>
+            <field>ACCL__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Tactic_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MobilityRelevant</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACCL__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates wether a tactic template is active or not.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Additional_Condition_KPI_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to additional KPI Definition 1 for Condition</description>
+        <externalId>false</externalId>
+        <label>Additional Condition KPI 1</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Templates (Additional Condition KPI 1)</relationshipLabel>
+        <relationshipName>Tactic_Templates_1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Additional_Condition_KPI_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to additional KPI Definition 2 for Condition</description>
+        <externalId>false</externalId>
+        <label>Additional Condition KPI 2</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Templates (Additional Condition KPI 2)</relationshipLabel>
+        <relationshipName>Tactic_Templates_2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Additional_Condition_KPI_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to additional KPI Definition 3 for Condition</description>
+        <externalId>false</externalId>
+        <label>Additional Condition KPI 3</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Templates (Additional Condition KPI 3)</relationshipLabel>
+        <relationshipName>Tactic_Templates_3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Condition_Change_Rule__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines the rule to handle past conditions.</description>
+        <externalId>false</externalId>
+        <label>Condition Change Rule</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>update</fullName>
+                    <default>false</default>
+                    <label>update</label>
+                </value>
+                <value>
+                    <fullName>finish</fullName>
+                    <default>false</default>
+                    <label>finish</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Condition_Creation_Definition_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines which configuration is used to create conditions out of tactics.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines if tactics of this type generate conditions based on their template or based on their own configuration.</inlineHelpText>
+        <label>Condition Creation Definition Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tactic</fullName>
+                    <default>false</default>
+                    <label>Tactic</label>
+                </value>
+                <value>
+                    <fullName>TacticTemplate</fullName>
+                    <default>false</default>
+                    <label>Tactic Template</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Condition_Product_Group_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the product level at which the condition can be set.</description>
+        <externalId>false</externalId>
+        <label>Condition Product Group Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Category</fullName>
+                    <default>false</default>
+                    <label>Category</label>
+                </value>
+                <value>
+                    <fullName>SubCategory</fullName>
+                    <default>false</default>
+                    <label>SubCategory</label>
+                </value>
+                <value>
+                    <fullName>Brand</fullName>
+                    <default>false</default>
+                    <label>Brand</label>
+                </value>
+                <value>
+                    <fullName>Flavor</fullName>
+                    <default>false</default>
+                    <label>Flavor</label>
+                </value>
+                <value>
+                    <fullName>Package</fullName>
+                    <default>false</default>
+                    <label>Package</label>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                    <label>Product</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Condition_Source_Kpi_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>KPI Source Definition Name</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Condition_Source_Kpi__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Condition Source Kpi Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Condition_Source_Kpi__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to a KPI Definition.</description>
+        <externalId>false</externalId>
+        <label>Condition Source KPI</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Templates</relationshipLabel>
+        <relationshipName>Tactic_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Default_Lift_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Lift Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ACCL__Possible_Lift_Types__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Percentage</fullName>
+                    <default>true</default>
+                    <label>Percentage</label>
+                </value>
+                <value>
+                    <fullName>Absolute</fullName>
+                    <default>false</default>
+                    <label>Absolute</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Percentage</controllingFieldValue>
+                <controllingFieldValue>Percentage/Absolute</controllingFieldValue>
+                <valueName>Percentage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Percentage/Absolute</controllingFieldValue>
+                <valueName>Absolute</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 1.</description>
+        <externalId>false</externalId>
+        <label>Description Language 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 2.</description>
+        <externalId>false</externalId>
+        <label>Description Language 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 3.</description>
+        <externalId>false</externalId>
+        <label>Description Language 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description_Language_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the description of language 4.</description>
+        <externalId>false</externalId>
+        <label>Description Language 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sets the description depending on the current language.</description>
+        <externalId>false</externalId>
+        <formula>CASE($User.ACCL__Language_Postfix__c,
+&quot;Language1&quot;, ACCL__Description_Language_1__c,
+&quot;Language2&quot;, BLANKVALUE(ACCL__Description_Language_2__c,ACCL__Description_Language_1__c),
+&quot;Language3&quot;, BLANKVALUE(ACCL__Description_Language_3__c,ACCL__Description_Language_1__c),
+&quot;Language4&quot;, BLANKVALUE(ACCL__Description_Language_4__c,ACCL__Description_Language_1__c),
+ACCL__Description_Language_1__c)</formula>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Display_KPI_Subset__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subset of kpis that are displayed in the Spend Planning Card</description>
+        <externalId>false</externalId>
+        <label>Display KPI Subset in SPC</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Broker</fullName>
+                    <default>false</default>
+                    <label>Broker</label>
+                </value>
+                <value>
+                    <fullName>Retailer</fullName>
+                    <default>false</default>
+                    <label>Retailer</label>
+                </value>
+                <value>
+                    <fullName>SPC</fullName>
+                    <default>true</default>
+                    <label>SPC</label>
+                </value>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                    <label>Planning</label>
+                </value>
+                <value>
+                    <fullName>Monitoring</fullName>
+                    <default>false</default>
+                    <label>Monitoring</label>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>VPC</fullName>
+                    <default>false</default>
+                    <label>VPC</label>
+                </value>
+                <value>
+                    <fullName>PromotionScenarios</fullName>
+                    <default>false</default>
+                    <label>Promotion Scenarios</label>
+                </value>
+                <value>
+                    <fullName>SPCLumpSum</fullName>
+                    <default>false</default>
+                    <label>SPCLumpSum</label>
+                </value>
+                <value>
+                    <fullName>SPCPR</fullName>
+                    <default>false</default>
+                    <label>SPCPR</label>
+                </value>
+                <value>
+                    <fullName>Adjustment</fullName>
+                    <default>false</default>
+                    <label>Adjustment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Enable_Condition_Creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines if the condition creation is enabled.</description>
+        <externalId>false</externalId>
+        <label>Enable Condition Creation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Number_Of_TT_Cond_Creation_Def__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Number of Tactic Temp Cond Creation Def</label>
+        <summaryForeignKey>ACCL__Tactic_Template_Cond_Creation_Def__c.ACCL__Tactic_Template__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order_Relevant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Order Relevant</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Possible_Lift_Types__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Possible Lift Types</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ACCL__Tactic_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Percentage</fullName>
+                    <default>true</default>
+                    <label>Percentage</label>
+                </value>
+                <value>
+                    <fullName>Percentage/Absolute</fullName>
+                    <default>false</default>
+                    <label>Percentage/Absolute</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Display</controllingFieldValue>
+                <controllingFieldValue>PriceReduction</controllingFieldValue>
+                <valueName>Percentage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DisplayPerAbs</controllingFieldValue>
+                <controllingFieldValue>PriceReductionPerAbs</controllingFieldValue>
+                <valueName>Percentage/Absolute</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Sales_Org__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sales Org</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ACCL__Sales_Org</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Tactic_Total_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the api name of the Tactic field which should provide total amount for a tactic to be used in progress bar or other functional process. Pick list uses translated values</description>
+        <externalId>false</externalId>
+        <label>Tactic Total Amount</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Plan_Spend__c</fullName>
+                    <default>true</default>
+                    <label>Plan Spend</label>
+                </value>
+                <value>
+                    <fullName>LE_Spend__c</fullName>
+                    <default>false</default>
+                    <label>LE Spend</label>
+                </value>
+                <value>
+                    <fullName>100%</fullName>
+                    <default>false</default>
+                    <label>100%</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Tactic_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the type of a tactic</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the type of a tactic</inlineHelpText>
+        <label>Tactic Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>true</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Display</fullName>
+                    <default>false</default>
+                    <label>Display</label>
+                </value>
+                <value>
+                    <fullName>DisplayPerAbs</fullName>
+                    <default>false</default>
+                    <label>DisplayPerAbs</label>
+                </value>
+                <value>
+                    <fullName>PriceReduction</fullName>
+                    <default>false</default>
+                    <label>PriceReduction</label>
+                </value>
+                <value>
+                    <fullName>PriceReductionPerAbs</fullName>
+                    <default>false</default>
+                    <label>PriceReductionPerAbs</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__UI_Contract__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Contract associated with a template</description>
+        <externalId>false</externalId>
+        <label>UI Contract</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ACCL__UI_Contract__c.ACCL__Usage__c</field>
+                <operation>equals</operation>
+                <value>Tactic</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ACCL__UI_Contract__c</referenceTo>
+        <relationshipLabel>Tactic Templates</relationshipLabel>
+        <relationshipName>Tactic_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Tactic Template</label>
+    <listViews>
+        <fullName>ACCL__All</fullName>
+        <columns>NAME</columns>
+        <columns>ACCL__Description__c</columns>
+        <columns>ACCL__Tactic_Type__c</columns>
+        <columns>ACCL__Active__c</columns>
+        <columns>ACCL__UI_Contract__c</columns>
+        <columns>ACCL__Sales_Org__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Tactic Template Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Tactic Templates</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ACCL__Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Tactic_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__UI_Contract__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCL__Sales_Org__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>ACCL__Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Tactic_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Active__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__UI_Contract__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCL__Sales_Org__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>ACCL__Description__c</lookupFilterFields>
+        <lookupFilterFields>ACCL__Tactic_Type__c</lookupFilterFields>
+        <lookupFilterFields>ACCL__Active__c</lookupFilterFields>
+        <lookupFilterFields>ACCL__UI_Contract__c</lookupFilterFields>
+        <lookupFilterFields>ACCL__Sales_Org__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Tactic_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Active__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__UI_Contract__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCL__Sales_Org__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ACCL__Description__c</searchFilterFields>
+        <searchFilterFields>ACCL__Tactic_Type__c</searchFilterFields>
+        <searchFilterFields>ACCL__Active__c</searchFilterFields>
+        <searchFilterFields>ACCL__UI_Contract__c</searchFilterFields>
+        <searchFilterFields>ACCL__Sales_Org__c</searchFilterFields>
+        <searchResultsAdditionalFields>ACCL__Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Tactic_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__UI_Contract__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCL__Sales_Org__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ACCL__ConditionCreationOn_ChangeRuleNotEmpty</fullName>
+        <active>true</active>
+        <description>Condition Change Rule field cannot be empty if Enable Condition Creation is selected.</description>
+        <errorConditionFormula>AND(
+NOT(ISPICKVAL(ACCL__Condition_Creation_Definition_Level__c , &apos;tactic&apos;)),
+ACCL__Enable_Condition_Creation__c = true,
+ISBLANK(TEXT(ACCL__Condition_Change_Rule__c))
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Change_Rule__c</errorDisplayField>
+        <errorMessage>Condition Change Rule field cannot be empty if Enable Condition Creation is selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ConditionCreationOn_CondDefLevelNotEmpty</fullName>
+        <active>true</active>
+        <description>Condition Creation Definition Level field cannot be empty if Enable Condition Creation is selected.</description>
+        <errorConditionFormula>AND(ACCL__Enable_Condition_Creation__c, ISPICKVAL(ACCL__Condition_Creation_Definition_Level__c, &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Creation_Definition_Level__c</errorDisplayField>
+        <errorMessage>Condition Creation Definition Level field cannot be empty if Enable Condition Creation is selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ConditionCreationOn_ProductGroupNotEmpty</fullName>
+        <active>true</active>
+        <description>Condition Product Group Level field cannot be empty if Enable Condition Creation is selected.</description>
+        <errorConditionFormula>AND(
+NOT(ISPICKVAL(ACCL__Condition_Creation_Definition_Level__c , &apos;tactic&apos;)),
+ACCL__Enable_Condition_Creation__c = true,
+ISBLANK(TEXT(ACCL__Condition_Product_Group_Level__c)))</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Product_Group_Level__c</errorDisplayField>
+        <errorMessage>Condition Product Group Level field cannot be empty if Enable Condition Creation is selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ConditionCreationOn_SourceKPINotEmpty</fullName>
+        <active>true</active>
+        <description>Condition Source KPI field cannot be empty if Enable Condition Creation is selected.</description>
+        <errorConditionFormula>AND(
+NOT(ISPICKVAL(ACCL__Condition_Creation_Definition_Level__c , &apos;tactic&apos;)),
+ACCL__Enable_Condition_Creation__c = true,
+ISBLANK(ACCL__Condition_Source_Kpi__c))</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Source_Kpi__c</errorDisplayField>
+        <errorMessage>Condition Source KPI field cannot be empty if Enable Condition Creation is selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ConditionSourceKPI_BoMScope</fullName>
+        <active>true</active>
+        <description>The BOM Scope of Condition Source KPI must contain &apos;Product&apos;</description>
+        <errorConditionFormula>AND( ACCL__Enable_Condition_Creation__c, NOT( ISBLANK(ACCL__Condition_Source_Kpi__c)), NOT(INCLUDES(ACCL__Condition_Source_Kpi__r.ACCL__BoM_Scope__c, &apos;Product&apos;)))</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Source_Kpi__c</errorDisplayField>
+        <errorMessage>The BOM Scope of Condition Source KPI must contain
+&apos;Product&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ConditonSourceKPI_EditableWithTotal</fullName>
+        <active>true</active>
+        <description>The KPI is only allowed to have record type &apos;Editable&apos; and edit mode &apos;Total&apos;.</description>
+        <errorConditionFormula>AND(ACCL__Enable_Condition_Creation__c = true, AND(NOT(ISBLANK(ACCL__Condition_Source_Kpi__c)), OR(ACCL__Condition_Source_Kpi__r.RecordType.DeveloperName &lt;&gt; &apos;editable&apos;,NOT(ISPICKVAL(ACCL__Condition_Source_Kpi__r.ACCL__Editable_Edit_Mode__c, &apos;total&apos;)))))</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Source_Kpi__c</errorDisplayField>
+        <errorMessage>The KPI is only allowed to have record type &apos;Editable&apos; and edit mode &apos;Total&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ConditonSourceKPI_Scope</fullName>
+        <active>true</active>
+        <description>The object scope of the selected KPI must be &apos;Promotion Tactic&apos;</description>
+        <errorConditionFormula>AND(ACCL__Enable_Condition_Creation__c = true, AND(NOT(ISBLANK(ACCL__Condition_Source_Kpi__c)), NOT(ISPICKVAL(ACCL__Condition_Source_Kpi__r.ACCL__Scope__c, &apos;promotiontactic&apos;))))</errorConditionFormula>
+        <errorDisplayField>ACCL__Condition_Source_Kpi__c</errorDisplayField>
+        <errorMessage>The object scope of the selected KPI must be &apos;Promotion Tactic&apos;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

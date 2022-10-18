@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>The use case holds the details of the substitute object used to to specify the basis of a substitution based on a substitution period and user.</description>
+    <icon>ACCL__ACSF_Public_Documents/ACCL__Substitution_Icon_Lex.png</icon>
+    <motif>Custom114: TV Widescreen</motif>
+</CustomTab>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>ACCL__Org_Unit_Hierarchy_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>ACCL__Org_Unit_Hierarchy_Compact_Layout</fullName>
+        <fields>ACCL__Parent_Org_Unit__c</fields>
+        <fields>ACCL__Description__c</fields>
+        <fields>ACCL__Valid_From__c</fields>
+        <fields>ACCL__Valid_Thru__c</fields>
+        <fields>ACCL__Parent_Org_Type__c</fields>
+        <fields>ACCL__Parent_Org_Level__c</fields>
+        <label>Org Unit Hierarchy Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Holds the detail of the relationship between two org units. Usually used for the sales org unit hierarchy.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__MobilityRelevant</fullName>
+        <description>Field set used to restrict the amount of data on the mobility device.</description>
+        <displayedFields>
+            <field>ACCL__Parent_Org_Unit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Child_Org_Unit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_From__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_Thru__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MobilityRelevant</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__OrgUnitHierarchyDisplayFields</fullName>
+        <description>CreateEditOrgUnitHierarchy Page</description>
+        <displayedFields>
+            <field>ACCL__Child_Org_Unit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_From__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Parent_Org_Unit__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Valid_Thru__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OrgUnitHierarchyDisplayFields</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACCL__Child_Org_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Child Org Level.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(ACCL__Child_Org_Unit__r.ACCL__Org_Level__c)</formula>
+        <label>Child Org Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Child_Org_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Child Org Type.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(ACCL__Child_Org_Unit__r.ACCL__Org_Type__c)</formula>
+        <label>Child Org Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Child_Org_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reference to a child org unit in an org unit hierarchy.</description>
+        <externalId>false</externalId>
+        <label>Child Org Unit</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Parent Org Unit Hierarchies</relationshipLabel>
+        <relationshipName>Org_Unit_Hierarchies</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ACCL__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description based on the user specific language.</description>
+        <externalId>false</externalId>
+        <formula>ACCL__Parent_Org_Unit__r.ACCL__Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Org_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Parent Org Level.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(ACCL__Parent_Org_Unit__r.ACCL__Org_Level__c)</formula>
+        <label>Parent Org Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Org_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Parent Org Type.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(ACCL__Parent_Org_Unit__r.ACCL__Org_Type__c)</formula>
+        <label>Parent Org Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Org_Unit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the parent org unit in an org unit hierachy.</description>
+        <externalId>false</externalId>
+        <label>Parent Org Unit</label>
+        <referenceTo>ACCL__Org_Unit__c</referenceTo>
+        <relationshipLabel>Child Org Unit Hierarchies</relationshipLabel>
+        <relationshipName>Org_Unit_Hierarchies1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Record_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Hyperlink to the detail page of the record</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;Id, $Label.accl__record_link, &quot;_top&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Valid_From__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>From this date on the entry is valid.</description>
+        <externalId>false</externalId>
+        <label>Valid From</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Valid_Thru__c</fullName>
+        <defaultValue>DATE(2099,12,31)</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Until this date the entry is valid.</description>
+        <externalId>false</externalId>
+        <label>Valid Thru</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ExternalId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>ExternalId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Org Unit Hierarchy</label>
+    <nameField>
+        <displayFormat>OUH-{0000}</displayFormat>
+        <label>Org Unit Hierarchy Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Org Unit Hierarchies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>ACCL__Sales_Org_should_be_same</fullName>
+        <active>true</active>
+        <description>The Parent Org Unit and the Child Org Unit must have the same Sales Org.</description>
+        <errorConditionFormula>TEXT(ACCL__Child_Org_Unit__r.ACCL__Sales_Org__c) &lt;&gt;  TEXT(ACCL__Parent_Org_Unit__r.ACCL__Sales_Org__c)</errorConditionFormula>
+        <errorMessage>The Parent Org Unit and the Child Org Unit must have the same Sales Org.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Same_Parent_Child_Org_Unit</fullName>
+        <active>true</active>
+        <description>The Child Org Unit and the Parent Org Unit can&apos;t be the same.</description>
+        <errorConditionFormula>ACCL__Child_Org_Unit__c = ACCL__Parent_Org_Unit__c</errorConditionFormula>
+        <errorMessage>The Child Org Unit and the Parent Org Unit can&apos;t be the same.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Valid_From_Valid_Thru_Validation</fullName>
+        <active>true</active>
+        <description>Valid From can&apos;t be later than Valid Thru.</description>
+        <errorConditionFormula>ACCL__Valid_From__c &gt; ACCL__Valid_Thru__c</errorConditionFormula>
+        <errorMessage>Valid From can&apos;t be later than Valid Thru.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

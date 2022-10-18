@@ -1,0 +1,57 @@
+<template>
+
+  <div class="slds-card" style="font-family: 'Open Sans', sans-serif">
+     
+  
+          <div class=" slds-media__body slds-card__header-title slds-text-title_bold " style="font-size: 14px"></div>
+   <!-- Table -->
+      <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer" role="grid">
+        
+          <tbody>
+          <template for:each={listOfTProds} for:item="prod">
+                  <div key={prod} class="slds-grid slds-hint-parent" style="margin-left: 52px; margin-right: 100px">
+                    <div class="slds-col slds-p-vertical_small slds-p-right_small slds-size_1-of-4">
+                        <lightning-combobox class="picklistClass"
+                        required="true"
+                        name="MDLZ_PPG__c"
+                        data-id={prod.index}
+                        variant="label-hidden"
+                        options={PPGOptions}
+                        value={value}
+                        dropdown-alignment="auto"
+                        onchange={handleProdChange}
+                        ></lightning-combobox> 
+                    </div>
+                    <div class="slds-col slds-p-vertical_small slds-p-right_small slds-size_1-of-4">
+                        <lightning-combobox class="picklistClass"
+                        name="MDLZ_SubPPG__c"
+                        options={subPPGOptions}
+                        value={value}
+                        onchange={handleInputChange}
+                        data-id={prod.index}
+                        dropdown-alignment="auto" 
+                        variant="label-hidden"                             
+                        ></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-p-vertical_small slds-p-right_small slds-size_1-of-4">
+                        <lightning-input  required=true type="number" step="0.01" variant="label-hidden" label="" data-id={prod.index} name="MDLZ_Price__c" value={prod.MDLZ_Price__c} onchange={handleInputChange}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-p-vertical_small slds-p-right_small slds-size_1-of-4">
+                        <lightning-input class="set-width" type="text" required = true  variant="label-hidden" label="" data-id={prod.index} name="MDLZ_Location__c" value={prod.MDLZ_Location__c} onchange={handleInputChange}></lightning-input>
+                    </div>
+                  </div>
+          </template>
+          </tbody>
+      </table>
+     <!-- <div class="slds-p-left_small slds-p-vertical_small">
+          <lightning-button class="slds-p-right_small" variant="destructive" label="delete all" title="delete all rows" icon-name="utility:recycle_bin_full" onclick={removeAllRows}></lightning-button>
+          <lightning-button variant="neutral" label="add additional PPG" title="add additional PPG" icon-name="utility:add" onclick={addNewRow}></lightning-button>
+      </div>-->
+  
+      <!-- Footer -->
+      <footer class="slds-modal__footer">
+          <lightning-button variant="brand" label="Save PPG" title="Save PPG" onclick={createTProds}></lightning-button>
+      </footer>
+  </div>
+  
+  </template>

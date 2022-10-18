@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <description>Assign null values to Promotion fields</description>
+        <name>Assign_null_values_to_Promotion_fields</name>
+        <label>Assign null values to Promotion fields</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_KeyAccount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTeam__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTerritory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assign values to Promotion fields</description>
+        <name>Assign_values_to_Promotion_fields</name>
+        <label>Assign values to Promotion fields</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_KeyAccount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Anchor_Account__r.MDLZ_KeyAccount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTeam__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Anchor_Account__r.MDLZ_AccountTeam__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTerritory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Anchor_Account__r.MDLZ_AccountTerritory__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assign values to Promotion fields</description>
+        <name>Assign_values_to_Promotion_fields_0</name>
+        <label>Assign values to Promotion fields</label>
+        <locationX>314</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_KeyAccount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Anchor_Account_Set__r.MDLZ_KeyAccount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTeam__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTerritory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Check if the Promotion is created with Customer or Customer Set</description>
+        <name>Check_if_created_with_Customer_or_Customer_Set</name>
+        <label>Check if created with Customer or Customer Set</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Assign_values_to_Promotion_fields_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>If created with Customer Set</defaultConnectorLabel>
+        <rules>
+            <name>If_created_with_Customer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ACCL__Anchor_Account_Set__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_values_to_Promotion_fields</targetReference>
+            </connector>
+            <label>If created with Customer</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check If customer lookup field is null</description>
+        <name>If_customer_field_is_null</name>
+        <label>If customer field is null</label>
+        <locationX>380</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Assign_null_values_to_Promotion_fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Customer_Account_Is_Not_Null</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ACCL__Anchor_Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ACCL__Anchor_Account_Set__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_if_created_with_Customer_or_Customer_Set</targetReference>
+            </connector>
+            <label>Customer Account Is Not Null</label>
+        </rules>
+    </decisions>
+    <description>Flow to assign key account value from Account Object to Promotion Object</description>
+    <interviewLabel>MDLZ_Promotion_Before_Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MDLZ_Promotion_Before_Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>If_customer_field_is_null</targetReference>
+        </connector>
+        <object>ACCL__Promotion__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Contains the list of account names</description>
+        <name>ListofAccountNames</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

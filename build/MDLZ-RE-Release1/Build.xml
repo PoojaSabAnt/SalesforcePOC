@@ -1,0 +1,545 @@
+<!--    ******************************************************************************************************************* -->
+<!--    Build Script in Ant for Mondelez RE Salesforce Project - BEGIN                                                     -->
+<!--    Authors : Sushmitha MS   Accenture    Last Modified Date :19/11/2021                -->
+<!--    ******************************************************************************************************************* -->
+<project name="Mondelez RE" default="validateRETests" basedir="." xmlns:sf="antlib:com.salesforce">
+
+  <!-- *************************************************************** -->
+  <!--   Properties for Salesforce ANT targets                         -->
+  <!-- *************************************************************** -->
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <!-- Setting default value for username, password and session id properties to empty string 
+         so unset values are treated as empty. Without this, ant expressions such as ${sf.username}
+         will be treated literally.
+    -->
+   <!--condition property="sf.username" value=""> <not> <isset property="sf.username"/> </not> </condition>
+    <condition property="sf.password" value=""> <not> <isset property="sf.password"/> </not> </condition>
+    <condition property="sf.sessionId" value=""> <not> <isset property="sf.sessionId"/> </not> </condition-->
+	<!-- Define required jars for salesforce dataloder CLI-->
+  <path id="taskDependencies">
+    <pathelement location="${basedir}/lib/ant.jar"/>
+    <pathelement location="${basedir}/lib/antutils.jar"/>
+    <pathelement location="${basedir}/lib/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/lib/commons-lang-2.6.jar"/>
+    <pathelement location="${basedir}/lib/commons-logging-1.1.3.jar"/>
+    <pathelement location="${basedir}/lib/gson-2.2.4.jar"/>
+    <pathelement location="${basedir}/lib/httpclient-4.3.5.jar"/>
+    <pathelement location="${basedir}/lib/httpcore-4.3.2.jar"/>
+    <pathelement location="${basedir}/lib/json-20080701.jar"/>
+  </path>
+  <!-- Define salesforce Ant Jar-->
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="${basedir}/lib/ant-salesforce.jar" />        	
+        </classpath>
+    </taskdef>
+	<!-- ***************************************************************************** -->
+  <!-- ANT Import Files for invoking APEX inside ANT Scripts                         -->
+  <!-- ***************************************************************************** -->
+  <import file="${basedir}/lib/exec_anon.xml"/>
+  <import file="${basedir}/lib/deploy.xml"/>
+  <import file="${basedir}/lib/undeploy.xml"/>
+  <import file="${basedir}/lib/run_tests.xml"/>
+  <import file="${basedir}/lib/package_generator.xml"/>
+  <!-- ***************************************************************************** -->
+
+    <!-- Recreate the deployment directory and retrieve  meta-data from your org -->
+   <target name="retrieve" description="Recreate the deployment directory and retrieve all metadata from your org">
+    <echo level="info">Performing a retrieve</echo>
+    <mkdir dir="${basedir}/${sfdc.retrieveTarget}"/>
+    <sf:retrieve username="${sf.username}"
+     password="${sf.password}"
+     serverurl="${sf.serverurl}"
+     retrieveTarget="${basedir}/${sfdc.retrieveTarget}"
+     unpackaged="src/package.xml"
+     pollWaitMillis="${sfdc.pollWaitMillis}"
+     maxPoll="${sfdc.maxPoll}"/>
+     <delete includeemptydirs="true">
+      <fileset dir="src" includes="**/*"/>
+    </delete>
+    <move file="${basedir}/${sfdc.retrieveTarget}" tofile="src"/>
+  </target>
+
+  <target name="retrieve-updates" description="Retrieve update(s)">
+    <echo level="info">Performing a retrieve</echo>
+    <mkdir dir="${basedir}/${sfdc.retrieveTarget}"/>
+    <sf:retrieve username="${sf.username}"
+     password="${sf.password}"
+     serverurl="${sf.serverurl}"
+     retrieveTarget="${basedir}/${sfdc.retrieveTarget}"
+     unpackaged="src/package.xml"
+     pollWaitMillis="${sfdc.pollWaitMillis}"
+     maxPoll="${sfdc.maxPoll}"/>
+    <copy todir="src">
+      <fileset dir="${basedir}/${sfdc.retrieveTarget}"/>
+    </copy>
+  </target>  
+
+  <target name="validate-updates" description="Validate updates">
+    <echo level="info">Performing a validation</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      checkOnly="true"
+      logType="Debugonly"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="${basedir}/${sfdc.retrieveTarget}"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}">
+    </sf:deploy>    
+  </target>  
+  <!-- ***************************************************************************** -->
+  <!-- QuickDeploy the meta-data from code Repository to salesforce your org     -->
+  <!-- ***************************************************************************** -->
+   <target name="quickdeploy">
+        <echo level="info">Performing the deploy</echo>
+        <sf:deploy username="${sf.username}"
+        password="${sf.password}"
+        serverurl="${sf.serverurl}"
+        recentValidationId = "${sf.validationid}"
+        deployRoot="${basedir}/src"
+        pollWaitMillis="${sfdc.pollWaitMillis}"
+        maxPoll="${sfdc.maxPoll}"/>
+    </target>
+  <!-- ***************************************************************************** -->
+  <!-- Deploy the meta-data from code Repository to salesforce Sandboxes     -->
+  <!-- ***************************************************************************** -->
+  <target name="deploy_Sandbox">
+    <echo level="info">Performing the deploy</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      runAllTests="false"
+      testLevel="NoTestRun"
+      logType="Detail"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="${basedir}/src"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}"/>
+  </target>
+  <!-- ***************************************************************************** -->
+  <!-- Deploy the meta-data from code Repository to salesforce Production     -->
+  <!-- ***************************************************************************** -->
+  <target name="deploy_Prod">
+    <echo level="info">Performing the deploy</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      logType="Detail"
+      testLevel="RunSpecifiedTests"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="${basedir}/src"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}">
+        <runTest>MDLZ_AccountTriggerHandler.cls</runTest>
+	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
+	<runTest>MDLZ_AddCustomerSetToCustomerTask.cls</runTest>
+	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
+	<runTest>MDLZ_AddPPG.cls</runTest>
+	<runTest>MDLZ_AddPPGTest.cls</runTest>
+	<runTest>MDLZ_ConstantHelper.cls</runTest>
+	<runTest>MDLZ_CreateWrapperCAOOrder.cls</runTest>
+	<runTest>MDLZ_CreateWrapperCAOTestClass.cls</runTest>
+	<runTest>MDLZ_CreateWrapperOrderBatch.cls</runTest>
+	<runTest>MDLZ_CustomerTaskTriggerHandler.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklist.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListing.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListingBatch.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListingTest.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSync.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSyncBatch.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSyncTest.cls</runTest>
+	<runTest>MDLZ_ErrorExceptionHandler.cls</runTest>
+	<runTest>MDLZ_ErrorExceptionHandlerTest.cls</runTest>
+	<runTest>MDLZ_FundCalculationBatchTest.cls</runTest>
+	<runTest>MDLZ_ITrigger.cls</runTest>
+	<runTest>MDLZ_KPI_Data_Delete_Batch.cls</runTest>
+	<runTest>MDLZ_KPI_Data_Delete_Batch_Test.cls</runTest>
+	<runTest>MDLZ_NewUserSetup.cls</runTest>
+	<runTest>MDLZ_NewUserSetupBatch.cls</runTest>
+	<runTest>MDLZ_NewUserSetupTestClass.cls</runTest>
+	<runTest>MDLZ_OrderConTestClass.cls</runTest>
+	<runTest>MDLZ_OrderConsolidation.cls</runTest>
+	<runTest>MDLZ_OrderFlipBatch.cls</runTest>
+	<runTest>MDLZ_OrderFlipBatchTest.cls</runTest>
+	<runTest>MDLZ_OrderTriggerHandler.cls</runTest>
+	<runTest>MDLZ_OrderTriggerTestClass.cls</runTest>
+	<runTest>MDLZ_OrgUnitUserAssignementTestClass.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_Batch.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_Cleanup.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_TestClass.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranch.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranchBatch.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranchTest.cls</runTest>
+	<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry.cls</runTest>
+	<runTest>MDLZ_ProductUnitFlagChange.cls</runTest>
+	<runTest>MDLZ_ProductUnitFlagTestClass.cls</runTest>
+	<runTest>MDLZ_PromotionExportBatch.cls</runTest>
+	<runTest>MDLZ_PromotionExportBatchTest.cls</runTest>
+	<runTest>MDLZ_PromotionExportDeleteBatch.cls</runTest>
+	<runTest>MDLZ_PromotionExportDeleteBatchTest.cls</runTest>
+	<runTest>MDLZ_PromotionExportHandler.cls</runTest>
+	<runTest>MDLZ_PromotionStoreCreateBatch.cls</runTest>
+	<runTest>MDLZ_PromotionStoreCreateBatchHandler.cls</runTest>
+	<runTest>MDLZ_PromotionStoreDeleteBatch.cls</runTest>
+	<runTest>MDLZ_Queueable_Batch_DML.cls</runTest>
+	<runTest>MDLZ_RDRTeamUserAssignBatch.cls</runTest>
+	<runTest>MDLZ_SystemSettingsFieldSetFilterTest.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryTestClass.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryUserAssignBatch.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryUserAssignment.cls</runTest>
+	<runTest>MDLZ_TestClassSchedulerTest.cls</runTest>
+	<runTest>MDLZ_TestDataFactory.cls</runTest>
+	<runTest>MDLZ_TriggerDispatcher.cls</runTest>
+	<runTest>MDLZ_UpdateCAOOrdersBatch.cls</runTest>
+	<runTest>MDLZ_UpdateNOSEDIOrdersBatch.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidity.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityBatch.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityTest.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry.cls</runTest>
+	<runTest>MDLZ_UpdateTerritoryFlagBatch.cls</runTest>
+	<runTest>MDLZ_UpdateTerritoryFlagBatchTest.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignTestClass.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignment.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignmentBatch.cls</runTest>
+	<runTest>MDLZ_UserTriggerHandler.cls</runTest>
+	<runTest>MDLZ_WOForceSAPReceivedBatch.cls</runTest>
+	<runTest>MDLZ_WOForceSAPTestClass.cls</runTest>
+
+    </sf:deploy>
+  </target>
+
+    <!-- ****************************************************************************************** -->
+
+    <!-- ****************************************************************************************** -->
+    <!-- Performing validate undeploy Salesforce components from Salesforce Org- DESTRUCTIVE CHANGE -->
+    <!-- ****************************************************************************************** -->
+    <target name="validate-undeploy-specific">
+      <echo level="info">Performing validate undeploy - DESTRUCTIVE CHANGE For RE app</echo>
+      <sf:deploy username="${sf.username}"
+        password="${sf.password}"
+        serverurl="${sf.serverurl}"
+        checkOnly="true"
+        logType="Debugonly"
+        testLevel="RunSpecifiedTests"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"
+        deployRoot="${basedir}/undeploy"
+        pollWaitMillis="${sfdc.pollWaitMillis}"
+        maxPoll="${sfdc.maxPoll}">
+      <runTest>CommunitiesLandingControllerTest</runTest>
+      <runTest>CommunitiesLoginControllerTest</runTest>
+      </sf:deploy>
+    </target>
+
+    <!-- **************************************************************************************** -->
+    <!-- Performing deploy undeploy Salesforce components from Salesforce Org- DESTRUCTIVE CHANGE -->
+    <!-- **************************************************************************************** -->
+     <target name="deploy-undeploy-specific">
+      <echo level="info">Performing deploy undeploy - DESTRUCTIVE CHANGE For TPM app</echo>
+      <sf:deploy username="${sf.username}"
+        password="${sf.password}"
+        serverurl="${sf.serverurl}"
+        testLevel="RunSpecifiedTests"
+        logType="Debugonly"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"
+        deployRoot="${basedir}/undeploy"
+        pollWaitMillis="${sfdc.pollWaitMillis}"
+        maxPoll="${sfdc.maxPoll}">
+      <runTest></runTest>
+        </sf:deploy>
+    </target>
+
+  <target name="deployIPM" depends="deploy"/>
+  
+  <!-- ***************************************************************************** -->
+  <!-- Deploy Delta the meta-data from code Repository to salesforce your org      -->
+  <!-- ***************************************************************************** -->
+  <target name="deployDeltaIPM">
+    <echo level="info">Performing the delta deploy</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      runAllTests="false"
+      testLevel="NoTestRun"
+      logType="Detail"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="${basedir}/deploy/src"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}"/>
+  </target> 
+
+  <!-- ***************************************************************************** -->
+  <!-- Validate the  set of meta-data before deployment without Test Classes  -->
+  <!-- ***************************************************************************** -->
+  <target name="validateNoTests">
+  <echo level="info">Validate the deployment without running unit tests</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      checkOnly="true"
+      logType="Debugonly"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="src"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}">
+    </sf:deploy>
+  </target>
+  <!-- ***************************************************************************** -->
+  <!-- Validate and test RE      -->
+  <!-- ***************************************************************************** -->
+  <target name="validateRETests">
+    <echo level="info">RE Validation with Tests</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      checkOnly="true"
+      logType="Debugonly"
+      testLevel="RunSpecifiedTests"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="src"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}">
+         <runTest>MDLZ_AccountTriggerHandler.cls</runTest>
+	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
+	<runTest>MDLZ_AddCustomerSetToCustomerTask.cls</runTest>
+	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
+	<runTest>MDLZ_AddPPG.cls</runTest>
+	<runTest>MDLZ_AddPPGTest.cls</runTest>
+	<runTest>MDLZ_ConstantHelper.cls</runTest>
+	<runTest>MDLZ_CreateWrapperCAOOrder.cls</runTest>
+	<runTest>MDLZ_CreateWrapperCAOTestClass.cls</runTest>
+	<runTest>MDLZ_CreateWrapperOrderBatch.cls</runTest>
+	<runTest>MDLZ_CustomerTaskTriggerHandler.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklist.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListing.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListingBatch.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListingTest.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSync.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSyncBatch.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSyncTest.cls</runTest>
+	<runTest>MDLZ_ErrorExceptionHandler.cls</runTest>
+	<runTest>MDLZ_ErrorExceptionHandlerTest.cls</runTest>
+	<runTest>MDLZ_FundCalculationBatchTest.cls</runTest>
+	<runTest>MDLZ_ITrigger.cls</runTest>
+	<runTest>MDLZ_KPI_Data_Delete_Batch.cls</runTest>
+	<runTest>MDLZ_KPI_Data_Delete_Batch_Test.cls</runTest>
+	<runTest>MDLZ_NewUserSetup.cls</runTest>
+	<runTest>MDLZ_NewUserSetupBatch.cls</runTest>
+	<runTest>MDLZ_NewUserSetupTestClass.cls</runTest>
+	<runTest>MDLZ_OrderConTestClass.cls</runTest>
+	<runTest>MDLZ_OrderConsolidation.cls</runTest>
+	<runTest>MDLZ_OrderFlipBatch.cls</runTest>
+	<runTest>MDLZ_OrderFlipBatchTest.cls</runTest>
+	<runTest>MDLZ_OrderTriggerHandler.cls</runTest>
+	<runTest>MDLZ_OrderTriggerTestClass.cls</runTest>
+	<runTest>MDLZ_OrgUnitUserAssignementTestClass.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_Batch.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_Cleanup.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_TestClass.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranch.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranchBatch.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranchTest.cls</runTest>
+	<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry.cls</runTest>
+	<runTest>MDLZ_ProductUnitFlagChange.cls</runTest>
+	<runTest>MDLZ_ProductUnitFlagTestClass.cls</runTest>
+	<runTest>MDLZ_PromotionExportBatch.cls</runTest>
+	<runTest>MDLZ_PromotionExportBatchTest.cls</runTest>
+	<runTest>MDLZ_PromotionExportDeleteBatch.cls</runTest>
+	<runTest>MDLZ_PromotionExportDeleteBatchTest.cls</runTest>
+	<runTest>MDLZ_PromotionExportHandler.cls</runTest>
+	<runTest>MDLZ_PromotionStoreCreateBatch.cls</runTest>
+	<runTest>MDLZ_PromotionStoreCreateBatchHandler.cls</runTest>
+	<runTest>MDLZ_PromotionStoreDeleteBatch.cls</runTest>
+	<runTest>MDLZ_Queueable_Batch_DML.cls</runTest>
+	<runTest>MDLZ_RDRTeamUserAssignBatch.cls</runTest>
+	<runTest>MDLZ_SystemSettingsFieldSetFilterTest.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryTestClass.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryUserAssignBatch.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryUserAssignment.cls</runTest>
+	<runTest>MDLZ_TestClassSchedulerTest.cls</runTest>
+	<runTest>MDLZ_TestDataFactory.cls</runTest>
+	<runTest>MDLZ_TriggerDispatcher.cls</runTest>
+	<runTest>MDLZ_UpdateCAOOrdersBatch.cls</runTest>
+	<runTest>MDLZ_UpdateNOSEDIOrdersBatch.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidity.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityBatch.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityTest.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry.cls</runTest>
+	<runTest>MDLZ_UpdateTerritoryFlagBatch.cls</runTest>
+	<runTest>MDLZ_UpdateTerritoryFlagBatchTest.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignTestClass.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignment.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignmentBatch.cls</runTest>
+	<runTest>MDLZ_UserTriggerHandler.cls</runTest>
+	<runTest>MDLZ_WOForceSAPReceivedBatch.cls</runTest>
+	<runTest>MDLZ_WOForceSAPTestClass.cls</runTest>
+
+    </sf:deploy>
+  </target>
+  <!-- ***************************************************************************** -->
+  <!-- Validate and test RE      -->
+  <!-- ***************************************************************************** -->
+  <target name="ValidatenDeploy">
+    <echo level="info">RE Validation with Tests</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      checkOnly="false"
+      logType="Debugonly"
+      testLevel="RunSpecifiedTests"
+      allowMissingFiles="true"
+      autoUpdatePackage="true"
+      ignoreWarnings="true"
+      deployRoot="src"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}">
+         <runTest>MDLZ_AccountTriggerHandler.cls</runTest>
+	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
+	<runTest>MDLZ_AddCustomerSetToCustomerTask.cls</runTest>
+	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
+	<runTest>MDLZ_AddPPG.cls</runTest>
+	<runTest>MDLZ_AddPPGTest.cls</runTest>
+	<runTest>MDLZ_ConstantHelper.cls</runTest>
+	<runTest>MDLZ_CreateWrapperCAOOrder.cls</runTest>
+	<runTest>MDLZ_CreateWrapperCAOTestClass.cls</runTest>
+	<runTest>MDLZ_CreateWrapperOrderBatch.cls</runTest>
+	<runTest>MDLZ_CustomerTaskTriggerHandler.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklist.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListing.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListingBatch.cls</runTest>
+	<runTest>MDLZ_DeleteProdAssortBranchListingTest.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSync.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSyncBatch.cls</runTest>
+	<runTest>MDLZ_EffectiveAccountManagerSyncTest.cls</runTest>
+	<runTest>MDLZ_ErrorExceptionHandler.cls</runTest>
+	<runTest>MDLZ_ErrorExceptionHandlerTest.cls</runTest>
+	<runTest>MDLZ_FundCalculationBatchTest.cls</runTest>
+	<runTest>MDLZ_ITrigger.cls</runTest>
+	<runTest>MDLZ_KPI_Data_Delete_Batch.cls</runTest>
+	<runTest>MDLZ_KPI_Data_Delete_Batch_Test.cls</runTest>
+	<runTest>MDLZ_NewUserSetup.cls</runTest>
+	<runTest>MDLZ_NewUserSetupBatch.cls</runTest>
+	<runTest>MDLZ_NewUserSetupTestClass.cls</runTest>
+	<runTest>MDLZ_OrderConTestClass.cls</runTest>
+	<runTest>MDLZ_OrderConsolidation.cls</runTest>
+	<runTest>MDLZ_OrderFlipBatch.cls</runTest>
+	<runTest>MDLZ_OrderFlipBatchTest.cls</runTest>
+	<runTest>MDLZ_OrderTriggerHandler.cls</runTest>
+	<runTest>MDLZ_OrderTriggerTestClass.cls</runTest>
+	<runTest>MDLZ_OrgUnitUserAssignementTestClass.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_Batch.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_Cleanup.cls</runTest>
+	<runTest>MDLZ_ProdAssortProd_TestClass.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranch.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranchBatch.cls</runTest>
+	<runTest>MDLZ_ProdAssortment_ByCustBranchTest.cls</runTest>
+	<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry.cls</runTest>
+	<runTest>MDLZ_ProductUnitFlagChange.cls</runTest>
+	<runTest>MDLZ_ProductUnitFlagTestClass.cls</runTest>
+	<runTest>MDLZ_PromotionExportBatch.cls</runTest>
+	<runTest>MDLZ_PromotionExportBatchTest.cls</runTest>
+	<runTest>MDLZ_PromotionExportDeleteBatch.cls</runTest>
+	<runTest>MDLZ_PromotionExportDeleteBatchTest.cls</runTest>
+	<runTest>MDLZ_PromotionExportHandler.cls</runTest>
+	<runTest>MDLZ_PromotionStoreCreateBatch.cls</runTest>
+	<runTest>MDLZ_PromotionStoreCreateBatchHandler.cls</runTest>
+	<runTest>MDLZ_PromotionStoreDeleteBatch.cls</runTest>
+	<runTest>MDLZ_Queueable_Batch_DML.cls</runTest>
+	<runTest>MDLZ_RDRTeamUserAssignBatch.cls</runTest>
+	<runTest>MDLZ_SystemSettingsFieldSetFilterTest.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryTestClass.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryUserAssignBatch.cls</runTest>
+	<runTest>MDLZ_TeamTerritoryUserAssignment.cls</runTest>
+	<runTest>MDLZ_TestClassSchedulerTest.cls</runTest>
+	<runTest>MDLZ_TestDataFactory.cls</runTest>
+	<runTest>MDLZ_TriggerDispatcher.cls</runTest>
+	<runTest>MDLZ_UpdateCAOOrdersBatch.cls</runTest>
+	<runTest>MDLZ_UpdateNOSEDIOrdersBatch.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidity.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityBatch.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityTest.cls</runTest>
+	<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry.cls</runTest>
+	<runTest>MDLZ_UpdateTerritoryFlagBatch.cls</runTest>
+	<runTest>MDLZ_UpdateTerritoryFlagBatchTest.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignTestClass.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignment.cls</runTest>
+	<runTest>MDLZ_UserPermissionSetAssignmentBatch.cls</runTest>
+	<runTest>MDLZ_UserTriggerHandler.cls</runTest>
+	<runTest>MDLZ_WOForceSAPReceivedBatch.cls</runTest>
+	<runTest>MDLZ_WOForceSAPTestClass.cls</runTest>
+    </sf:deploy>
+  </target>
+   <!-- ***************************************************************************** -->
+    <!-- Performing undeploy Salesforce components from Salesforce Org- DESTRUCTIVE CHANGE       -->
+  <!-- *************************************************************************************** -->
+  <target name="undeploy">
+    <echo level="info">Performing undeploy - DESTRUCTIVE CHANGE</echo>
+    <sf:deploy username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      checkOnly="true"
+      ignoreWarnings="true"
+      deployRoot="${basedir}/undeploy"
+      pollWaitMillis="${sfdc.pollWaitMillis}"
+      maxPoll="${sfdc.maxPoll}"/>
+  </target>
+  <!-- *************************************************************************************** -->
+  <!-- Performing validate undeploy Salesforce components from Salesforce Org- DESTRUCTIVE CHANGE       -->
+  <!-- *************************************************************************************** -->  
+    <target name="validate-undeploy">
+      <echo level="info">Performing validate undeploy - DESTRUCTIVE CHANGE</echo>  
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        checkOnly="true"
+        runAllTests="true"
+        logType="Debugonly"
+        testLevel="RunLocalTests"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"       
+        deployRoot="${basedir}/undeploy"
+        pollWaitMillis="${sfdc.pollWaitMillis}"
+        maxPoll="${sfdc.maxPoll}"/>        
+    </target><!-- *************************************************************************************** -->
+  <!-- Performing deploy undeploy Salesforce components from Salesforce Org- DESTRUCTIVE CHANGE       -->
+  <!-- *************************************************************************************** -->  
+    <target name="deploy-undeploy">
+      <echo level="info">Performing validate undeploy - DESTRUCTIVE CHANGE</echo>  
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        runAllTests="false"
+        testLevel="NoTestRun"
+        logType="Debugonly"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"       
+        deployRoot="${basedir}/undeploy"
+        pollWaitMillis="${sfdc.pollWaitMillis}"
+        maxPoll="${sfdc.maxPoll}"/>        
+    </target>
+  <!-- ******************************************************************************************************* -->
+  
+</project>

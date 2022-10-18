@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>As per MRELKXIW-4313 import custom object access provided in this permission set.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>MDLZ_ImportObjectAccess</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ImportCustomObjects</name>
+    </userPermissions>
+</PermissionSet>
