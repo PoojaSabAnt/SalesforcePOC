@@ -53,7 +53,7 @@ jobs:
           echo $GITHUB_WORKSPACE
         fi
          
-        cat /home/runner/work/SalesforcePOC/SalesforcePOC/build.properties
+        cat $GITHUB_WORKSPACE/build.properties
         if [[ $BRANCH == development ]]; then
           sed -i "s/SFDC_POC_PASSWORD/"${{ secrets.SFDC_POC_PASSWORD_DEV }}"/g" $GITHUB_WORKSPACE/build.properties
           sed -i "s/SFDC_POC_USERNAME/"${{ secrets.SFDC_POC_USERNAME_DEV }}"/g" $GITHUB_WORKSPACE/build.properties
@@ -66,7 +66,7 @@ jobs:
     - name: SFDC_Pre_Deploy_Validation
       run: |
         echo "SFDC_Pre_Deploy_Validation"
-        ant validateRETests -buildfile build.xml   
+        ant validateRETests -buildfile $GITHUB_WORKSPACE/build/MDLZ-RE-Release1/build.xml   
         if [ $? != 0 ]  
         then
           echo "Validation failed"
@@ -74,7 +74,7 @@ jobs:
     - name: SFDC_Deploy
       run: |
         echo "SFDC_Deploy"
-        ant deploy project-manifest-TPM.txt
+        ant deploy $GITHUB_WORKSPACE/build/MDLZ-RE-Release1/project-manifest-TPM.txt
         if [ $? == 0 ] 
         then
           echo "deployment failed"
