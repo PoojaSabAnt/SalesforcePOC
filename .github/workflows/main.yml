@@ -29,7 +29,7 @@ jobs:
       (github.head_ref == 'development' && github.base_ref == 'qa') ||
       (github.head_ref == 'qa' && github.base_ref == 'uat') ||
       (github.head_ref == 'uat' && github.base_ref == 'main')
-      (github.head_ref, 'hotfix' && github.base_ref == 'development'))    
+      (github.head_ref, 'hotfix' && github.base_ref == 'development')))    
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
