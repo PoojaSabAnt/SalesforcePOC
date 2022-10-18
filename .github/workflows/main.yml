@@ -25,7 +25,7 @@ jobs:
     needs: salesforce
     if: |
       (github.event_name == 'pull_request'   && github.event.pull_request.merged == true) &&
-      (contains(github.head_ref, 'feature') && github.base_ref == 'development' ||
+      ((contains(github.head_ref, 'feature') && github.base_ref == 'development') ||
       (github.head_ref == 'development' && github.base_ref == 'qa') ||
       (github.head_ref == 'qa' && github.base_ref == 'uat') ||
       (github.head_ref == 'uat' && github.base_ref == 'main')
