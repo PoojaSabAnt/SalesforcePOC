@@ -63,10 +63,12 @@ jobs:
           sed -i "s/SFDC_POC_USERNAME/"${{ secrets.SFDC_POC_USERNAME_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
           sed -i "s/SFDC_POC_SERVERURL/"${{ secrets.SFDC_POC_SERVERURL_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
         fi
+        export MANIFEST_FOLDER=$(jq -r ".$ENV.MANIFEST_FOLDER" devops/params.json)
+        
     - name: SFDC_Pre_Deploy_Validation
       run: |
         echo "SFDC_Pre_Deploy_Validation"
-        ant validateRETests -buildfile $GITHUB_WORKSPACE/build/MDLZ-RE-Release1/build.xml   
+        ant validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml   
         if [ $? != 0 ]  
         then
           echo "Validation failed"
