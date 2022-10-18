@@ -55,18 +55,18 @@ jobs:
          
         cat /home/runner/work/SalesforcePOC/SalesforcePOC/build.properties
         if [[ $BRANCH == development ]]; then
-          sed -i "s/SFDC_POC_PASSWORD/"$SFDC_POC_PASSWORD_DEV"/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_USERNAME/"$SFDC_POC_USERNAME_DEV"/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_SERVERURL/"$SFDC_POC_SERVERURL_DEV"/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_PASSWORD/"${{ secrets.SFDC_POC_PASSWORD_DEV }}"/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_USERNAME/"${{ secrets.SFDC_POC_USERNAME_DEV }}"/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_SERVERURL/"${{ secrets.SFDC_POC_SERVERURL_DEV }}"/g" $GITHUB_WORKSPACE/build.properties
         elif [[ $BRANCH == main ]]; then
-          sed -i "s/SFDC_POC_PASSWORD/"$SFDC_POC_PASSWORD_PROD"/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_USERNAME/"$SFDC_POC_USERNAME_PROD"/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_SERVERURL/"$SFDC_POC_SERVERURL_PROD"/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_PASSWORD/"${{ secrets.SFDC_POC_PASSWORD_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_USERNAME/"${{ secrets.SFDC_POC_USERNAME_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_SERVERURL/"${{ secrets.SFDC_POC_SERVERURL_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
         fi
     - name: SFDC_Pre_Deploy_Validation
       run: |
         echo "SFDC_Pre_Deploy_Validation"
-        ant validateRETests -buildfile build.xml
+        ant validateRETests -buildfile build.xml   ${{ secrets.AZURE_CREDENTIALS }}
         if [ $? != 0 ]  
         then
           echo "Validation failed"
