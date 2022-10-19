@@ -37,6 +37,13 @@ jobs:
         
     
     - name: Auth sandbox
+      env:
+       SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
+       SFDC_POC_PASSWORD_DEV: ${{ secrets.SFDC_POCDEV_PASSWORD }}
+       SFDC_POC_SERVERURL_DEV: ${{ secrets.SFDC_POCDEV_SERVERURL }}
+       SFDC_POC_USERNAME_PROD: ${{ secrets.SFDC_POCDEV_USERNAME }}
+       SFDC_POC_PASSWORD_PROD: ${{ secrets.SFDC_POCDEV_PASSWORD }}
+       SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCDEV_SERVERURL }}  
       run: |
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
@@ -48,13 +55,13 @@ jobs:
          
         cat $GITHUB_WORKSPACE/build.properties
         if [[ $BRANCH == development ]]; then
-          sed -i 's|SFDC_POC_USERNAME|'"${{ secrets.SFDC_POCDEV_USERNAME }}"'/g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_PASSWORD|'"${{ secrets.SFDC_POCDEV_PASSWORD }}"'/g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_SERVERURL|'"${{ secrets.SFDC_POCDEV_SERVERURL }}"'/g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
         elif [[ $BRANCH == main ]]; then
-          sed -i 's|FDC_POC_PASSWORD|'"${{ secrets.SFDC_POCPROD_USERNAME }}"'/g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_USERNAME|'"${{ secrets.SFDC_POCPROD_PASSWORD }}"'/g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_SERVERURl|'"${{ secrets.SFDC_POCPROD_SERVERURL }}"'/g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         cat $GITHUB_WORKSPACE/build.properties
         export MANIFEST_FOLDER= jq '.MANIFEST_FOLDER' devops/params.json
