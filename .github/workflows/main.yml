@@ -59,9 +59,9 @@ jobs:
           sed -i 's/SFDC_POC_USERNAME/$SFDC_POC_USERNAME_DEV/g' $GITHUB_WORKSPACE/build.properties
           sed -i 's/SFDC_POC_SERVERURL/$SFDC_POC_SERVERURL_DEV/g' $GITHUB_WORKSPACE/build.properties
         elif [[ $BRANCH == main ]]; then
-          sed -i "s/SFDC_POC_PASSWORD/$SFDC_POC_PASSWORD_PROD/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_USERNAME/$SFDC_POC_USERNAME_PROD/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_SERVERURL/$SFDC_POC_SERVERURL_PROD/g" $GITHUB_WORKSPACE/build.properties
+          sed -i 's/SFDC_POC_PASSWORD/$SFDC_POC_PASSWORD_PROD/g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's/SFDC_POC_USERNAME/$SFDC_POC_USERNAME_PROD/g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's/SFDC_POC_SERVERURL/$SFDC_POC_SERVERURL_PROD/g' $GITHUB_WORKSPACE/build.properties
         fi
         export MANIFEST_FOLDER=$(jq ". | MANIFEST_FOLDER" devops/params.json)
         
