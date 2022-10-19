@@ -66,8 +66,7 @@ jobs:
         echo "Username being used is $SFDC_POC_USERNAME"
         export MANIFEST_FOLDER=$(jq -r '.[] | .MANIFEST_FOLDER' devops/params.json)
         
-        jq " . | .text" 1.json
-        
+             
         
     - name: SFDC_Pre_Deploy_Validation
       run: |
