@@ -64,7 +64,7 @@ jobs:
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         cat $GITHUB_WORKSPACE/build.properties
-        export MANIFEST_FOLDER=$(jq '.MANIFEST_FOLDER' devops/params.json)
+        export MANIFEST_FOLDER=$(jq '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
         
              
