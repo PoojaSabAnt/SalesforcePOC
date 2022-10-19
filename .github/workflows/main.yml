@@ -1,4 +1,4 @@
-name: Salesforce-workflow
+name: Salesforce-workflo
 on:
   pull_request:
     branches:
@@ -63,8 +63,8 @@ jobs:
           sed -i 's/SFDC_POC_USERNAME/$SFDC_POC_USERNAME_PROD/g' $GITHUB_WORKSPACE/build.properties
           sed -i 's/SFDC_POC_SERVERURL/$SFDC_POC_SERVERURL_PROD/g' $GITHUB_WORKSPACE/build.properties
         fi
-        echo "Username being used: $sf.username"
-        export MANIFEST_FOLDER=$(jq '.MANIFEST_FOLDER' devops/params.json)
+        cat $GITHUB_WORKSPACE/build.properties
+        export MANIFEST_FOLDER= jq '.MANIFEST_FOLDER' devops/params.json
         echo "Manifest folder: $MANIFEST_FOLDER"
         
              
