@@ -78,4 +78,3 @@ jobs:
         then
           echo "deployment failed"
         fi
-jq '.SITE_DATA' | jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]")
