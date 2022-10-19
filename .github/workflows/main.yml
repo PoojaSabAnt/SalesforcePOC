@@ -63,7 +63,10 @@ jobs:
           sed -i "s/SFDC_POC_USERNAME/"${{ secrets.SFDC_POC_USERNAME_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
           sed -i "s/SFDC_POC_SERVERURL/"${{ secrets.SFDC_POC_SERVERURL_PROD }}"/g" $GITHUB_WORKSPACE/build.properties
         fi
-        export MANIFEST_FOLDER=$(jq -r ".$ENV.MANIFEST_FOLDER" devops/params.json)
+        export MANIFEST_FOLDER=$(jq ".[] | .MANIFEST_FOLDER" devops/params.json)
+        
+        jq ".[] | .text" 1.json
+        
         
     - name: SFDC_Pre_Deploy_Validation
       run: |
@@ -76,7 +79,7 @@ jobs:
     - name: SFDC_Deploy
       run: |
         echo "SFDC_Deploy"
-        ant deploy $GITHUB_WORKSPACE/build/MDLZ-RE-Release1/project-manifest-TPM.txt
+        ant deploy $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt
         if [ $? == 0 ] 
         then
           echo "deployment failed"
