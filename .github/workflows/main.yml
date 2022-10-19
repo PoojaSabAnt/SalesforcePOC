@@ -1,4 +1,4 @@
-name: Salesforce-workflo
+name: Salesforce-workflow
 on:
   pull_request:
     branches:
@@ -50,7 +50,7 @@ jobs:
         if [[ $BRANCH == development ]]; then
           sed -i "s/SFDC_POC_USERNAME/${{ secrets.SFDC_POCDEV_USERNAME }}/g" $GITHUB_WORKSPACE/build.properties
           sed -i "s/SFDC_POC_PASSWORD/${{ secrets.SFDC_POCDEV_PASSWORD }}/g" $GITHUB_WORKSPACE/build.properties
-          sed -i "s/SFDC_POC_SERVERURL/${{ secrets.SFDC_POCDEV_SERVERURL} }/g" $GITHUB_WORKSPACE/build.properties
+          sed -i "s/SFDC_POC_SERVERURL/${{ secrets.SFDC_POCDEV_SERVERURL }}/g" $GITHUB_WORKSPACE/build.properties
         elif [[ $BRANCH == main ]]; then
           sed -i "s/SFDC_POC_PASSWORD/${{ secrets.SFDC_POCPROD_USERNAME }}/g" $GITHUB_WORKSPACE/build.properties
           sed -i "s/SFDC_POC_USERNAME/${{ secrets.SFDC_POCPROD_PASSWORD }}/g" $GITHUB_WORKSPACE/build.properties
