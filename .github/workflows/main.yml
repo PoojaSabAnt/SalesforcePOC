@@ -63,10 +63,10 @@ jobs:
           sed -i 's/SFDC_POC_USERNAME/$SFDC_POC_USERNAME_PROD/g' $GITHUB_WORKSPACE/build.properties
           sed -i 's/SFDC_POC_SERVERURL/$SFDC_POC_SERVERURL_PROD/g' $GITHUB_WORKSPACE/build.properties
         fi
-        export MANIFEST_FOLDER=$(jq ". | MANIFEST_FOLDER" devops/params.json)
+        echo "Username being used is $SFDC_POC_USERNAME"
+        export MANIFEST_FOLDER=$(jq -r '.[] | .MANIFEST_FOLDER' devops/params.json)
         
-        jq " . | .text" 1.json
-        
+             
         
     - name: SFDC_Pre_Deploy_Validation
       run: |
