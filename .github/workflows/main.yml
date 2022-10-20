@@ -64,15 +64,17 @@ jobs:
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         cat $GITHUB_WORKSPACE/build.properties
+        export MANIFEST_FOLDER=$(jq '.MANIFEST_FOLDER.FOLDER' devops/params.json)
+        echo "Manifest folder: $MANIFEST_FOLDER"
         
         echo "Validation of build file started"
-        ant validateRETests -buildfile $GITHUB_WORKSPACE/build/MDLZ-RE-Release1/build.xml   
+        ant validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml   
         if [ $? != 0 ]  
         then
           echo "Validation failed"
         fi  
         echo "Deployment of components started"
-        ant deploy $GITHUB_WORKSPACE/build/MDLZ-RE-Release1/project-manifest-TPM.txt
+        ant deploy $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt
         if [ $? == 0 ] 
         then
           echo "deployment failed"
