@@ -64,9 +64,11 @@ jobs:
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         cat $GITHUB_WORKSPACE/build.properties
+        
+    - name: Validate build and deploy components into sfdc
+      run: |
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
-        
         echo "Validation of build file started"
         ant validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml   
         if [ $? != 0 ]  
