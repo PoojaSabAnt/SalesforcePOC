@@ -29,13 +29,7 @@
     <pathelement location="${basedir}/lib/httpcore-4.3.2.jar"/>
     <pathelement location="${basedir}/lib/json-20080701.jar"/>
   </path>
-  <!-- Define salesforce Ant Jar-->
-    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
-        <classpath>
-            <pathelement location="${basedir}/lib/ant-salesforce.jar" />        	
-        </classpath>
-    </taskdef>
-	<!-- ***************************************************************************** -->
+  
   <!-- ANT Import Files for invoking APEX inside ANT Scripts                         -->
   <!-- ***************************************************************************** -->
   <import file="${basedir}/lib/exec_anon.xml"/>
