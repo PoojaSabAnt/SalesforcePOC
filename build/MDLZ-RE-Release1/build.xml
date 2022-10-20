@@ -32,7 +32,7 @@
   
   <!-- ANT Import Files for invoking APEX inside ANT Scripts                         -->
   <!-- ***************************************************************************** -->
- <!-- <import file="${basedir}/lib/exec_anon.xml"/> -->
+  <import file="${basedir}/lib/exec_anon.xml"/>
   <import file="${basedir}/lib/deploy.xml"/>
   <import file="${basedir}/lib/undeploy.xml"/>
   <import file="${basedir}/lib/run_tests.xml"/>
