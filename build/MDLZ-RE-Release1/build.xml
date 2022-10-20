@@ -32,14 +32,14 @@
   
   <!-- ANT Import Files for invoking APEX inside ANT Scripts                         -->
   <!-- ***************************************************************************** -->
-  <import file="${basedir}/lib/exec_anon.xml"/>
+ <!-- <import file="${basedir}/lib/exec_anon.xml"/> -->
   <import file="${basedir}/lib/deploy.xml"/>
   <import file="${basedir}/lib/undeploy.xml"/>
   <import file="${basedir}/lib/run_tests.xml"/>
   <import file="${basedir}/lib/package_generator.xml"/>
   <!-- ***************************************************************************** -->
 
-    <!-- Recreate the deployment directory and retrieve  meta-data from your org -->
+    <!-- Recreate the deployment directory and retrieve  meta-data from your org 
    <target name="retrieve" description="Recreate the deployment directory and retrieve all metadata from your org">
     <echo level="info">Performing a retrieve</echo>
     <mkdir dir="${basedir}/${sfdc.retrieveTarget}"/>
@@ -54,9 +54,9 @@
       <fileset dir="src" includes="**/*"/>
     </delete>
     <move file="${basedir}/${sfdc.retrieveTarget}" tofile="src"/>
-  </target>
+  </target> -->
 
-  <target name="retrieve-updates" description="Retrieve update(s)">
+ <!-- <target name="retrieve-updates" description="Retrieve update(s)">
     <echo level="info">Performing a retrieve</echo>
     <mkdir dir="${basedir}/${sfdc.retrieveTarget}"/>
     <sf:retrieve username="${sf.username}"
@@ -69,9 +69,9 @@
     <copy todir="src">
       <fileset dir="${basedir}/${sfdc.retrieveTarget}"/>
     </copy>
-  </target>  
+  </target>  -->
 
-  <target name="validate-updates" description="Validate updates">
+<!--  <target name="validate-updates" description="Validate updates">
     <echo level="info">Performing a validation</echo>
     <sf:deploy username="${sf.username}"
       password="${sf.password}"
@@ -85,7 +85,7 @@
       pollWaitMillis="${sfdc.pollWaitMillis}"
       maxPoll="${sfdc.maxPoll}">
     </sf:deploy>    
-  </target>  
+  </target>  -->
   <!-- ***************************************************************************** -->
   <!-- QuickDeploy the meta-data from code Repository to salesforce your org     -->
   <!-- ***************************************************************************** -->
