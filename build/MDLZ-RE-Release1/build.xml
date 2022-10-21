@@ -310,9 +310,9 @@
       autoUpdatePackage="true"
       ignoreWarnings="true"
       deployRoot="src"
-      pollWaitMillis="${sfdc.pollWaitMillis}"
-      maxPoll="${sfdc.maxPoll}">
-         <runTest>MDLZ_AccountTriggerHandler.cls</runTest>
+      pollWaitMillis=${sfdc.pollWaitMillis}
+      maxPoll=${sfdc.maxPoll}>
+        <runTest>MDLZ_AccountTriggerHandler.cls</runTest>
 	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
 	<runTest>MDLZ_AddCustomerSetToCustomerTask.cls</runTest>
 	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
