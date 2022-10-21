@@ -67,10 +67,13 @@ jobs:
         
     - name: Validate build and deploy components into sfdc
       run: |
+        ant -version
+        ls /usr/share/ant/lib
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
+        echo "files at new lib location $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ are:"
         ls $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         echo "Validation of build file started"
         ant validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml   
