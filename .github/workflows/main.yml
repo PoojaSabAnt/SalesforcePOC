@@ -74,15 +74,9 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
         echo "Validation of build file started"
-        ant -Dsf.username=maanasa.guttula@accenture.com.mdlz.pocdev -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=Nandhu11u@9HEUKKYRCx93MONoLvG09vpAI1v -Dsf.serverurl=https://mdlzinternationalinc--pocdev.sandbox.my.salesforce.com validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml  
-              
+        ant -Dsf.username=maanasa.guttula@accenture.com.mdlz.pocdev -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=Nandhu11u@9HEUKKYRCx93MONoLvG09vpAI1v -Dsf.serverurl=https://mdlzinternationalinc--pocdev.sandbox.my.salesforce.com validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml     
         if [ $? != 0 ]  
         then
           echo "Validation failed"
         fi  
-        echo "Deployment of components started"
-        ant deploy $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt
-        if [ $? == 0 ] 
-        then
-          echo "deployment failed"
-        fi
+        
