@@ -39,7 +39,7 @@
   <import file="${basedir}/lib/package_generator.xml"/>
   <!-- ***************************************************************************** -->
 
-     Recreate the deployment directory and retrieve  meta-data from your org 
+     <!-- Recreate the deployment directory and retrieve  meta-data from your org -->
    <target name="retrieve" description="Recreate the deployment directory and retrieve all metadata from your org">
     <echo level="info">Performing a retrieve</echo>
     <mkdir dir="${basedir}/${sfdc.retrieveTarget}"/>
