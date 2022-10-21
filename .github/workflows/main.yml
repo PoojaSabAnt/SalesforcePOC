@@ -74,7 +74,7 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
         echo "Validation of build file started"
-        ant -Dsf.username=$sf.username -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=$sf.password -Dsf.serverurl=$sf.serverurl validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml  
+        ant -Dsf.username=${sf.username} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${sf.password} -Dsf.serverurl=${sf.serverurl} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml  
               
         if [ $? != 0 ]  
         then
