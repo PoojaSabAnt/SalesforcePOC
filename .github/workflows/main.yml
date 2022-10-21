@@ -1,4 +1,4 @@
-name: Salesforce-workfloW
+name: Salesforce-workflo
 on:
   pull_request:
     branches:
