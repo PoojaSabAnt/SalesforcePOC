@@ -58,7 +58,7 @@ jobs:
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-        else [[ $BRANCH == main ]]; then
+        else [[ $BRANCH == main ]]; 
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
@@ -73,7 +73,7 @@ jobs:
         echo "Validation of build file started"
         if [[ $BRANCH == development ]]; then
            ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml     
-        else [[ $BRANCH == main ]]; then
+        else [[ $BRANCH == main ]]; 
            ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml         
         fi
         if [ $? != 0 ]  then
