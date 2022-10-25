@@ -58,7 +58,7 @@ jobs:
         fi
         
         sudo apt update
-        sudo apt-get install ant
+        sudo apt-get upgrade ant
         ant -version
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
