@@ -36,14 +36,14 @@ jobs:
         fetch-depth: 2
         
     
-    - name: Auth sandbox
+    - name: Auth sandbox, validate and deploy
       env:
        SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
        SFDC_POC_PASSWORD_DEV: ${{ secrets.SFDC_POCDEV_PASSWORD }}
        SFDC_POC_SERVERURL_DEV: ${{ secrets.SFDC_POCDEV_SERVERURL }}
-       SFDC_POC_USERNAME_PROD: ${{ secrets.SFDC_POCDEV_USERNAME }}
-       SFDC_POC_PASSWORD_PROD: ${{ secrets.SFDC_POCDEV_PASSWORD }}
-       SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCDEV_SERVERURL }}  
+       SFDC_POC_USERNAME_PROD: ${{ secrets.SFDC_POCPROD_USERNAME }}
+       SFDC_POC_PASSWORD_PROD: ${{ secrets.SFDC_POCPROD_PASSWORD }}
+       SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCPROD_SERVERURL }}  
       run: |
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
@@ -58,15 +58,12 @@ jobs:
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-        elif [[ $BRANCH == main ]]; then
+        else [[ $BRANCH == main ]]; then
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         cat $GITHUB_WORKSPACE/build.properties
-        
-    - name: Validate build and deploy components into sfdc
-      run: |
         ant -version
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
@@ -74,9 +71,12 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
         echo "Validation of build file started"
-        ant -Dsf.username=maanasa.guttula@accenture.com.mdlz.pocdev -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=Nandhu11u@9HEUKKYRCx93MONoLvG09vpAI1v -Dsf.serverurl=https://mdlzinternationalinc--pocdev.sandbox.my.salesforce.com validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml     
-        if [ $? != 0 ]  
-        then
+        if [[ $BRANCH == development ]]; then
+           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml     
+        else [[ $BRANCH == main ]]; then
+           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml         
+        fi
+        if [ $? != 0 ]  then
           echo "Validation failed"
         fi  
         
