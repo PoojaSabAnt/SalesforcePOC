@@ -56,7 +56,9 @@ jobs:
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
-          
+        
+        sudo apt update
+        sudo apt-get install ant
         ant -version
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
