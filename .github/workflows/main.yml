@@ -48,22 +48,17 @@ jobs:
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
         if [[ $BRANCH == development ]]; then
-          echo $GITHUB_WORKSPACE
-        elif [[ $BRANCH == main ]]; then
-          echo $GITHUB_WORKSPACE
-        fi
-         
-        cat $GITHUB_WORKSPACE/build.properties
-        if [[ $BRANCH == development ]]; then
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-        else [[ $BRANCH == main ]]; 
+        else [[ $BRANCH == main ]];       
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
-        cat $GITHUB_WORKSPACE/build.properties
+        
+        sudo apt update
+        sudo apt-get install ant
         ant -version
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"

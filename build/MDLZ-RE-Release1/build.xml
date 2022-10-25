@@ -312,81 +312,8 @@
       deployRoot="src"
       pollWaitMillis="10000"
       maxPoll="10000">
-        <runTest>MDLZ_AccountTriggerHandler.cls</runTest>
 	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
-	<runTest>MDLZ_AddCustomerSetToCustomerTask.cls</runTest>
 	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
-	<runTest>MDLZ_AddPPG.cls</runTest>
-	<runTest>MDLZ_AddPPGTest.cls</runTest>
-	<runTest>MDLZ_ConstantHelper.cls</runTest>
-	<runTest>MDLZ_CreateWrapperCAOOrder.cls</runTest>
-	<runTest>MDLZ_CreateWrapperCAOTestClass.cls</runTest>
-	<runTest>MDLZ_CreateWrapperOrderBatch.cls</runTest>
-	<runTest>MDLZ_CustomerTaskTriggerHandler.cls</runTest>
-	<runTest>MDLZ_CustomersetPicklist.cls</runTest>
-	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
-	<runTest>MDLZ_DeleteProdAssortBranchListing.cls</runTest>
-	<runTest>MDLZ_DeleteProdAssortBranchListingBatch.cls</runTest>
-	<runTest>MDLZ_DeleteProdAssortBranchListingTest.cls</runTest>
-	<runTest>MDLZ_EffectiveAccountManagerSync.cls</runTest>
-	<runTest>MDLZ_EffectiveAccountManagerSyncBatch.cls</runTest>
-	<runTest>MDLZ_EffectiveAccountManagerSyncTest.cls</runTest>
-	<runTest>MDLZ_ErrorExceptionHandler.cls</runTest>
-	<runTest>MDLZ_ErrorExceptionHandlerTest.cls</runTest>
-	<runTest>MDLZ_FundCalculationBatchTest.cls</runTest>
-	<runTest>MDLZ_ITrigger.cls</runTest>
-	<runTest>MDLZ_KPI_Data_Delete_Batch.cls</runTest>
-	<runTest>MDLZ_KPI_Data_Delete_Batch_Test.cls</runTest>
-	<runTest>MDLZ_NewUserSetup.cls</runTest>
-	<runTest>MDLZ_NewUserSetupBatch.cls</runTest>
-	<runTest>MDLZ_NewUserSetupTestClass.cls</runTest>
-	<runTest>MDLZ_OrderConTestClass.cls</runTest>
-	<runTest>MDLZ_OrderConsolidation.cls</runTest>
-	<runTest>MDLZ_OrderFlipBatch.cls</runTest>
-	<runTest>MDLZ_OrderFlipBatchTest.cls</runTest>
-	<runTest>MDLZ_OrderTriggerHandler.cls</runTest>
-	<runTest>MDLZ_OrderTriggerTestClass.cls</runTest>
-	<runTest>MDLZ_OrgUnitUserAssignementTestClass.cls</runTest>
-	<runTest>MDLZ_ProdAssortProd_Batch.cls</runTest>
-	<runTest>MDLZ_ProdAssortProd_Cleanup.cls</runTest>
-	<runTest>MDLZ_ProdAssortProd_TestClass.cls</runTest>
-	<runTest>MDLZ_ProdAssortment_ByCustBranch.cls</runTest>
-	<runTest>MDLZ_ProdAssortment_ByCustBranchBatch.cls</runTest>
-	<runTest>MDLZ_ProdAssortment_ByCustBranchTest.cls</runTest>
-	<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry.cls</runTest>
-	<runTest>MDLZ_ProductUnitFlagChange.cls</runTest>
-	<runTest>MDLZ_ProductUnitFlagTestClass.cls</runTest>
-	<runTest>MDLZ_PromotionExportBatch.cls</runTest>
-	<runTest>MDLZ_PromotionExportBatchTest.cls</runTest>
-	<runTest>MDLZ_PromotionExportDeleteBatch.cls</runTest>
-	<runTest>MDLZ_PromotionExportDeleteBatchTest.cls</runTest>
-	<runTest>MDLZ_PromotionExportHandler.cls</runTest>
-	<runTest>MDLZ_PromotionStoreCreateBatch.cls</runTest>
-	<runTest>MDLZ_PromotionStoreCreateBatchHandler.cls</runTest>
-	<runTest>MDLZ_PromotionStoreDeleteBatch.cls</runTest>
-	<runTest>MDLZ_Queueable_Batch_DML.cls</runTest>
-	<runTest>MDLZ_RDRTeamUserAssignBatch.cls</runTest>
-	<runTest>MDLZ_SystemSettingsFieldSetFilterTest.cls</runTest>
-	<runTest>MDLZ_TeamTerritoryTestClass.cls</runTest>
-	<runTest>MDLZ_TeamTerritoryUserAssignBatch.cls</runTest>
-	<runTest>MDLZ_TeamTerritoryUserAssignment.cls</runTest>
-	<runTest>MDLZ_TestClassSchedulerTest.cls</runTest>
-	<runTest>MDLZ_TestDataFactory.cls</runTest>
-	<runTest>MDLZ_TriggerDispatcher.cls</runTest>
-	<runTest>MDLZ_UpdateCAOOrdersBatch.cls</runTest>
-	<runTest>MDLZ_UpdateNOSEDIOrdersBatch.cls</runTest>
-	<runTest>MDLZ_UpdateOrgUnitUserValidity.cls</runTest>
-	<runTest>MDLZ_UpdateOrgUnitUserValidityBatch.cls</runTest>
-	<runTest>MDLZ_UpdateOrgUnitUserValidityTest.cls</runTest>
-	<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry.cls</runTest>
-	<runTest>MDLZ_UpdateTerritoryFlagBatch.cls</runTest>
-	<runTest>MDLZ_UpdateTerritoryFlagBatchTest.cls</runTest>
-	<runTest>MDLZ_UserPermissionSetAssignTestClass.cls</runTest>
-	<runTest>MDLZ_UserPermissionSetAssignment.cls</runTest>
-	<runTest>MDLZ_UserPermissionSetAssignmentBatch.cls</runTest>
-	<runTest>MDLZ_UserTriggerHandler.cls</runTest>
-	<runTest>MDLZ_WOForceSAPReceivedBatch.cls</runTest>
-	<runTest>MDLZ_WOForceSAPTestClass.cls</runTest>
 
     </sf:deploy>
   </target>
