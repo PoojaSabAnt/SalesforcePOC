@@ -305,7 +305,7 @@
       serverurl="${sf.serverurl}"
       checkOnly="true"
       logType="Debugonly"
-      testLevel="RunSpecifiedTests"
+      testLevel="RunLocalTests"
       allowMissingFiles="true"
       autoUpdatePackage="true"
       ignoreWarnings="true"
