@@ -76,21 +76,8 @@ jobs:
                fi
             done
         ls $GITHUB_WORKSPACE/src/objects
-            
-            
-         
            
-        
-        
-        
-        #cat /tmp/project-manifest-TPM.txt
-        #cat /tmp/project-manifest-TPM.txt
-        
-        #rm -rf $GITHUB_WORKSPACE/src/*
-        #cp -R /tmp/p/* $GITHUB_WORKSPACE/src/  object/classname
-        #rm -rf /tempf
-        #ls $GITHUB_WORKSPACE/src/
-        
+        pwd      
         #echo "Validation of build file started"
         #ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
         #if [ $? != 0 ]  then
