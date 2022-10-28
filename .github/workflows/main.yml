@@ -66,6 +66,19 @@ jobs:
         mkdir /tmp/objects
         rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
         ls /tmp/objects
+        rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
+        sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
+        for i in `cat /tmp/project-manifest-TPM.txt`;
+            do
+               if [ -f "/tmp/objects/$i" ]; then
+                  echo "$i exists."
+               fi
+            done
+            
+            
+         
+           
+        
         
         
         #cat /tmp/project-manifest-TPM.txt
