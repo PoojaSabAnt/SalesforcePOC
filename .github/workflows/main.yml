@@ -63,8 +63,8 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
         
-        
-        rsync $GITHUB_WORKSPACE/src/objects /tmp/
+        mkdir /tmp/objects
+        rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
         ls /tmp/objects
         
         
