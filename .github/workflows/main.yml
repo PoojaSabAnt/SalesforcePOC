@@ -70,8 +70,8 @@ jobs:
         mkdir tmp
         rm -rf tmp/*
         rsync -a --files-from=$GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt . tmp 
-        rm -rf src/*
-        cp -R tmp/src/* src/
+        rm -rf $GITHUB_WORKSPACE/src/*
+        cp -R tmp/src/* $GITHUB_WORKSPACE/src/
         rm -rf tmp
         find src
         echo "Validation of build file started"
