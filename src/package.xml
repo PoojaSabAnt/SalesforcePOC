@@ -2,7 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	
 	<types>
-		
+		<name>CustomObject</name>
 		<members>ACCL__Account_Extension__c</members>
 		<members>ACCL__Account_Opening_Hours__c</members>
 		<members>ACCL__Account_Org_Unit__c</members>
@@ -19,19 +19,16 @@
 		<members>ACCL__Call_Job__c</members>
 		<members>ACCL__Call_Template__c</members>
 		<members>ACCL__Contract_Template__c</members>
-
-		<name>CustomObject</name>
 	</types>
 	
 	<types>
+		<name>ApexClass</name>
 		<members>MDLZ_UpdateTerritoryFlagBatch</members>
 		<members>MDLZ_UpdateTerritoryFlagBatchTest</members>
 		<members>MDLZ_UserPermissionSetAssignment</members>
 		<members>MDLZ_UserPermissionSetAssignmentBatch</members>
 		<members>MDLZ_UserPermissionSetAssignTestClass</members>
 		<members>MDLZ_UserTriggerHandler</members>
-
-		<name>ApexClass</name>
 	</types>
 	
 	<version>51.0</version>
