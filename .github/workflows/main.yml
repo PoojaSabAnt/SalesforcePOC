@@ -66,11 +66,7 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
         echo "Validation of build file started"
-        if [[ $BRANCH == development ]]; then
-           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -f $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
-        else [[ $BRANCH == main ]]; 
-           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -f $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml validateRETests      
-        fi
+        ant deployCodeCheckOnly -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml     
         if [ $? != 0 ]  then
           echo "Validation failed"
         fi  
