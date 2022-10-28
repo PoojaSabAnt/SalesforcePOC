@@ -298,7 +298,7 @@
   <!-- ***************************************************************************** -->
   <!-- Validate and test RE      -->
   <!-- ***************************************************************************** -->
-  <target name="validateRETests">
+  <target name="deployCodeCheckOnly">
     <echo level="info">RE Validation with Tests</echo>
     <sf:deploy username="${sf.username}"
       password="${sf.password}"
