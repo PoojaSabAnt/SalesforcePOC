@@ -64,7 +64,7 @@ jobs:
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
         mkdir $GITHUB_WORKSPACE/tmp
         rm -rf $GITHUB_WORKSPACE/tmp/*
-        cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt/* $GITHUB_WORSPACE/tmp/ 
+        rsync -avzh $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt $GITHUB_WORSPACE/tmp/ 
         rm -rf $GITHUB_WORKSPACE/src/*
         cp -R $GITHUB_WORKSPACE/tmp/src/* $GITHUB_WORKSPACE/src/
         rm -rf $GITHUB_WORKSPACE/tmp
