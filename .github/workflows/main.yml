@@ -58,8 +58,10 @@ jobs:
         fi
         
         sudo apt update
-        sudo apt-get upgrade ant
+        java -version
         ant -version
+        echo JAVA_HOME
+        echo ANT_HOME
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
