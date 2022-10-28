@@ -62,12 +62,12 @@ jobs:
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
-        mkdir $GITHUB_WORKSPACE/tmp
-        rm -rf $GITHUB_WORKSPACE/tmp/*
-        rsync --files-from=$GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt $GITHUB_WORSPACE/tmp/ 
+        mkdir /tmp
+        rm -rf tmp/*
+        rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
         rm -rf $GITHUB_WORKSPACE/src/*
-        cp -R $GITHUB_WORKSPACE/tmp/src/* $GITHUB_WORKSPACE/src/
-        rm -rf $GITHUB_WORKSPACE/tmp
+        cp -R /tmp/src/* $GITHUB_WORKSPACE/src/
+        rm -rf /tmp
         ls $GITHUB_WORKSPACE/src/
         echo "Validation of build file started"
         ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
