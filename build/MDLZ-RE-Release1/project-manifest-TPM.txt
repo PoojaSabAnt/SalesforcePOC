@@ -3,3 +3,7 @@ src/objects/ACCL__Account_Opening_Hours__c.object
 src/objects/ACCL__Account_Org_Unit__c.object
 src/objects/ACCL__Account_Set__c.object
 src/objects/ACCL__Account_Set_Account__c.object
+src/classes/AccountClearEffectiveParentBatch.cls
+src/classes/AccountClearEffectiveParentBatch.cls-meta.xml
+src/classes/AccountClearEffectiveParentBatchTest.cls
+src/classes/AccountClearEffectiveParentBatchTest.cls-meta.xml
