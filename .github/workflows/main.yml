@@ -75,7 +75,7 @@ jobs:
             do
                if [ -f "/tmp/objects/$filename" ]; then
                   cp /tmp/objects/$filename $GITHUB_WORKSPACE/src
-                  sed 's/^/'/objects/'/' $GITHUB_WORKSPACE/src
+                  sed 's|^|'/objects/'|' $GITHUB_WORKSPACE/src
                fi
             done
         for filename in `cat /tmp/project-manifest-TPM.txt`;
@@ -83,7 +83,7 @@ jobs:
                if [ -f "/tmp/classes/$filename" ]; then
                   echo "$filename exists."
                   cp /tmp/classes/$filename $GITHUB_WORKSPACE/src
-                  sed 's/^/'/classes/'/' $GITHUB_WORKSPACE/src
+                  
                fi
             done
         
