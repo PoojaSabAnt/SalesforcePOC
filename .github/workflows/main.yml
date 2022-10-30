@@ -75,7 +75,7 @@ jobs:
             do
                if [ -f "/tmp/objects/$filename" ]; then
                   cp /tmp/objects/$filename $GITHUB_WORKSPACE/src
-                  sed 's|^|'/objects/'|' $GITHUB_WORKSPACE/src
+                  sed 's|^|/objects/|' $GITHUB_WORKSPACE/src
                fi
             done
         for filename in `cat /tmp/project-manifest-TPM.txt`;
