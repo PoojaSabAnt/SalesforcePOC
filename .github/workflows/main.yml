@@ -75,14 +75,14 @@ jobs:
             do
                if [ -f "/tmp/objects/$i" ]; then
                   echo "$i exists."
-                  cp /tmp/objects/$i $GITHUB_WORKSPACE/src
+                  cp /tmp/objects/$dirname/$i $GITHUB_WORKSPACE/src
                fi
             done
         for i in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/classes/$i" ]; then
                   echo "$i exists."
-                  cp /tmp/classes/$i $GITHUB_WORKSPACE/src
+                  cp /tmp/classes/$dirname/$i $GITHUB_WORKSPACE/src
                fi
             done
         
