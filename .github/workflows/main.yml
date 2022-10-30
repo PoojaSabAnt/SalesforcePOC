@@ -71,18 +71,19 @@ jobs:
         rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
         sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
         sed -i 's|src/classes/||' /tmp/project-manifest-TPM.txt
-        for i in `cat /tmp/project-manifest-TPM.txt`;
+        for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
-               if [ -f "/tmp/objects/$i" ]; then
-                  echo "$i exists."
-                  cp /tmp/objects/$dirname/$i $GITHUB_WORKSPACE/src
+               if [ -f "/tmp/objects/$filename" ]; then
+                  cp /tmp/objects/$filename GITHUB_WORKSPACE/src
+                  sed 's/^/'/objects/'/' GITHUB_WORKSPACE/src
                fi
             done
-        for i in `cat /tmp/project-manifest-TPM.txt`;
+        for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
-               if [ -f "/tmp/classes/$i" ]; then
-                  echo "$i exists."
-                  cp /tmp/classes/$dirname/$i $GITHUB_WORKSPACE/src
+               if [ -f "/tmp/classes/$filename" ]; then
+                  echo "$filename exists."
+                  cp /tmp/classes/$filename $GITHUB_WORKSPACE/src
+                  sed 's/^/'/classes/'/' GITHUB_WORKSPACE/src
                fi
             done
         
