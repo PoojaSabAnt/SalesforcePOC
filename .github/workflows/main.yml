@@ -71,7 +71,7 @@ jobs:
         rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
         sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
         sed -i 's|src/classes/||' /tmp/project-manifest-TPM.txt
-        touch $GITHUB_WORKSPACE/src/final-list.txt
+        cat $GITHUB_WORKSPACE/src/final-list.txt
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/objects/$filename" ]; then
