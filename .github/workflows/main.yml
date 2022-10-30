@@ -74,8 +74,9 @@ jobs:
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/objects/$filename" ]; then
-                  cp /tmp/objects/$filename $GITHUB_WORKSPACE/src
-                  sed 's|^|/objects/|' $GITHUB_WORKSPACE/src/tmp/objects/$
+                  cp /tmp/objects/$filename $GITHUB_WORKSPACE/src/final-list.txt
+                  cat final-list.txt
+                  sed 's|^|/objects/|' $GITHUB_WORKSPACE/src/final-list.txt
                fi
             done
         for filename in `cat /tmp/project-manifest-TPM.txt`;
@@ -87,7 +88,7 @@ jobs:
                fi
             done
         
-        ls $GITHUB_WORKSPACE/src
+        ls $GITHUB_WORKSPACE/src/final-list.txt
         
                 
         #echo "Validation of build file started"
