@@ -113,7 +113,7 @@
       allowMissingFiles="true"
       autoUpdatePackage="true"
       ignoreWarnings="true"
-      deployRoot="${basedir}/src"
+      deployRoot="/home/runner/work/SalesforcePOC/SalesforcePOC/src"
       pollWaitMillis="10000"
       maxPoll="10000"/>
   </target>
