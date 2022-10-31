@@ -67,10 +67,12 @@ jobs:
         mkdir /tmp/classes
         rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
         rsync $GITHUB_WORKSPACE/src/classes/* /tmp/classes
+        cp $GITHUB_WORKSPACE/src/package.xml cp /tmp
         
         rm -rf $GITHUB_WORKSPACE/src/*
         mkdir $GITHUB_WORKSPACE/src/objects
         mkdir $GITHUB_WORKSPACE/src/classes
+        cp /tmp/package.xml $GITHUB_WORKSPACE/src
         
         rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
         sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
