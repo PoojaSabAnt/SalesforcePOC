@@ -8,28 +8,9 @@
 		<members>ACCL__Account_Org_Unit__c</members>
 		<members>ACCL__Account_Set__c</members>
 		<members>ACCL__Account_Set_Account__c</members>
-		<members>ACCL__Account_Set_Manager__c</members>
-		<members>ACCL__Account_Task__c</members>
-		<members>ACCL__Account_Task_Template__c</members>
-		<members>ACCL__Account_Trade_Org_Hierarchy__c</members>
-		<members>ACCL__ACS_Dictionary_Index__c</members>
-		<members>ACCL__ACSF_Service_Schedule__c</members>
-		<members>ACCL__Asset_Audit__c</members>
-		<members>ACCL__Call__c</members>
-		<members>ACCL__Call_Job__c</members>
-		<members>ACCL__Call_Template__c</members>
-		<members>ACCL__Contract_Template__c</members>
 	</types>
 	
-	<types>
-		<name>ApexClass</name>
-		<members>MDLZ_UpdateTerritoryFlagBatch</members>
-		<members>MDLZ_UpdateTerritoryFlagBatchTest</members>
-		<members>MDLZ_UserPermissionSetAssignment</members>
-		<members>MDLZ_UserPermissionSetAssignmentBatch</members>
-		<members>MDLZ_UserPermissionSetAssignTestClass</members>
-		<members>MDLZ_UserTriggerHandler</members>
-	</types>
+	
 	
 	<version>51.0</version>
 </Package>
