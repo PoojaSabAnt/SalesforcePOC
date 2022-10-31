@@ -89,7 +89,7 @@ jobs:
                fi
             done
         
-        ls $GITHUB_WORKSPACE/src/final-list.txt
+        ls $GITHUB_WORKSPACE/src
         
                 
         #echo "Validation of build file started"
