@@ -671,17 +671,17 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Active_Policy__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Active__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Additional_Custom_Main_KPI_Subsets__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -696,7 +696,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Adjustment_KPI_1__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -711,7 +711,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Adjustment_KPI_2__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -726,77 +726,77 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Adjustment_KPI_3__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Anchor_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Auto_Close_On_Filter_Apply__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Available_Product_Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__BOM_Handler__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Calculation_Mode__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Consider_Account_Product_List__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Consider_Listing__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Consider_Product_KAM_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Consider_Promotion_Rewards__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Creation_Platform__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Description_Language_1__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Description_Language_2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Description_Language_3__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Description_Language_4__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -806,72 +806,72 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Display_Fund_Card__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Display_In_call__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Display_KPI_Validations_Only_On_Save__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Display_SPC__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Display_VPC__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Displayed_Product_Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Enable_Condition_Creation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Enable_Scenario_Planning__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Is_Copyable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Is_Derivable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Is_Pushable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__KPI_Set__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Mass_Copy_Start_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Mobility_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -891,107 +891,107 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Product_Definition_Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Product_Definition_Policy__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Promo_Phases_Cleaning__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Promotion_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Push_Process_Flow__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Sales_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Selectable_Promotion__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Sort__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Special_Order_Relevant__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Sub_Accounts_Enabled__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Synchronize_Promotion_Timeframes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__TFD_Commit_Date_Offset__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__TFD_Delivery_Date_From_Offset__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__TFD_Delivery_Date_Thru_Offset__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Timeframe_Determination_Policy__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Trade_Calendar_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Trade_Calendar_Relevant__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__UI_Contract__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__UI_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Use_UI_Contract__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>ACCL__Promotion_Template__c.ACCL__Used_Reference_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2086,9 +2086,9 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowCreate>true</allowCreate>
+        <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
+        <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>ACCL__Promotion_Template__c</object>

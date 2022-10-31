@@ -3359,6 +3359,11 @@
         <field>ACCL__Order__c.MDLZ_isChanged__c</field>
         <readable>true</readable>
     </fieldPermissions>
+	<fieldPermissions>
+        <editable>true</editable>
+        <field>ACCL__Order__c.MDLZ_KeyAccount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>ACCL__Org_Unit_Hierarchy__c.ACCL__Child_Org_Level__c</field>
@@ -3466,7 +3471,7 @@
     </fieldPermissions>
 	<fieldPermissions>
         <editable>true</editable>
-        <field>ACCL__Product__c.MDLZ_IsDiscontinued__c</field>
+        <field>ACCL__Product__c.MDLZ_Discontinued_from_Scan__c</field>
         <readable>true</readable>
     </fieldPermissions>
 	<fieldPermissions>
@@ -4702,6 +4707,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.ACCL__Sales_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.MDLZ_Sales_Rep__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

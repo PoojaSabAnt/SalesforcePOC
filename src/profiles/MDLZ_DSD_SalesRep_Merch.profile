@@ -10755,11 +10755,6 @@
     </fieldPermissions>
 	<fieldPermissions>
         <editable>false</editable>
-        <field>ACCL__Product__c.MDLZ_IsDiscontinued__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-	<fieldPermissions>
-        <editable>false</editable>
         <field>ACCL__Product__c.MDLZ_PPG__c</field>
         <readable>true</readable>
     </fieldPermissions>

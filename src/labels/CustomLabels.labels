@@ -43,6 +43,22 @@
         <value>ACS Engine User,ACSF Mobility Addon,MDLZ_SalesRep,MDLZ_Merchandizer,MDLZ_OrderWriter,MDLZ_Supervisor,ACSF Sales Support,ACSF_Orders_Read,MDLZ_System_Admin, MDLZ_EODSummary,MDLZ_ImportObjectAccess</value>
     </labels>
     <labels>
+        <fullName>MDLZ_CallOrderReOrgBatch</fullName>
+        <categories>Batch Configuration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MDLZ_CallOrderReOrgBatch</shortDescription>
+        <value>14</value>
+    </labels>
+    <labels>
+        <fullName>MDLZ_CallOrderReOrgBatchRunSize</fullName>
+        <categories>Batch Configuration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MDLZ_CallOrderReOrgBatchRunSize</shortDescription>
+        <value>200</value>
+    </labels>
+    <labels>
         <fullName>MDLZ_ConsumerUnit</fullName>
         <language>en_US</language>
         <protected>false</protected>

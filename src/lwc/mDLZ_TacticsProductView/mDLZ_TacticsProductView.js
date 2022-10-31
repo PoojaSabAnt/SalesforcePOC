@@ -41,18 +41,48 @@ renderInnerTable = false;
 wiredRecords;
 Successtoast ='Success';
 deleteSelectedRow ;
-draftValues = [];
+draftValues;
 cellChangeAction = false;
 rowAction = false
 saveEvent;
 
+/*constructor() {
+    super();
+    window.addEventListener('beforeunload', (event) => {
+        // Cancel the event as stated by the standard.
+        event.preventDefault();
+        // Chrome requires returnValue to be set.
+        event.returnValue = 'sample value';
+    });
+}*/
+
 connectedCallback() {
    // this.tacticsProdList = [];    
     this.initData();
-    this.draftValues = [];   
     this.renderInnerTable= false;
-    this.cellChangeAction = false;
-    this.rowAction = false;
+    //this.draftValues = null;
+
+    //added event listner to show prompt for any unsaved changes
+    window.addEventListener('beforeunload', (event) => {
+        if(this.draftValues != null && this.draftValues != undefined){
+            // Cancel the event as stated by the standard.
+            event.preventDefault();
+            // Chrome requires returnValue to be set.
+            event.returnValue = 'sample value';
+        }
+    });
+}
+
+disconnectedCallback() {
+    window.removeEventListener('beforeunload', (event) => {
+        if(this.draftValues != null && this.draftValues != undefined){
+            // Cancel the event as stated by the standard.
+            event.preventDefault();
+            // Chrome requires returnValue to be set.
+            event.returnValue = 'sample value';
+        }
+    });
+    console.log("disconnectedCallback executed");
 }
 
 initData() {  
@@ -107,6 +137,9 @@ saveTacPro(event) {
     const tacRec = event.detail.row;   
     updateTacticProd( {tacRec:tacRec , data: this.draftValues , recordId: this.recordId } )
     .then( result => {
+        this.draftValues = null;
+        this.cellChangeAction = false;
+        this.rowAction = false;
         this.connectedCallback();
         if(result.Success){
             this.showToast('PPG updated successfully.','Success',this.Successtoast);
@@ -115,6 +148,9 @@ saveTacPro(event) {
         }
     })
     .catch(error => {
+        this.draftValues = null;
+        this.cellChangeAction = false;
+        this.rowAction = false;
         this.connectedCallback();
         this.showToast('PPG cannot be updated.','error','Error');      
     });
@@ -134,6 +170,8 @@ showToast(messg, ttl ,Vari){
 
 //Method to verify cell change
 handleCellChange(event){
+    this.draftValues = this.template.querySelector('lightning-datatable').draftValues;
+    this.connectedCallback();
     this.cellChangeAction = true;
     if(this.cellChangeAction == true && this.rowAction == true){
 		//Calling the save method when save button is clicked and cell change is completed
@@ -142,8 +180,11 @@ handleCellChange(event){
 }
 
 handleRowAction(event) {
+    this.draftValues = this.template.querySelector('lightning-datatable').draftValues;
+    this.connectedCallback();
     const tacRec = event.detail.row;
     if (event.detail.action.name === 'delete') {
+        this.draftValues = null;
         this.connectedCallback();
         const tactic = event.detail.row.Id;
         deleteProds ({ tacRec: tacRec ,  recordId: this.recordId})
