@@ -8297,10 +8297,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MDLZ_Queueable_Batch_DML</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>MDLZ_RDRTeamUserAssignBatch</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -9897,6 +9893,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.MDLZ_Ad_Break_Day__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+   <fieldPermissions>
+        <editable>false</editable>
+        <field>ACCL__Product__c.MDLZ_Discontinued_from_Scan__c</field>
         <readable>true</readable>
     </fieldPermissions>
 	<recordTypeVisibilities>

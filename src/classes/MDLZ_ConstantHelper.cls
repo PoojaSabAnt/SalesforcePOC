@@ -37,10 +37,10 @@ public class MDLZ_ConstantHelper {
     public static final string UserPermREM  ='REM';
     public static final string UserPermRDR ='RDR';
     public static final string UserPermSIM ='SIM';
-	public static final string UserPermCBT ='CBT';
+  public static final string UserPermCBT ='CBT';
     public static final string UserPermSYSADM = 'System Administrator';
     public static final string UserPermOPSADM = 'MDLZ_DSD_OpsAdmin';
-	public static final string UserPermRoleOPSADM = 'Ops Admin';
+  public static final string UserPermRoleOPSADM = 'Ops Admin';
     public static final string OutboundSap = '1 outbound SAP';
     public static final string MDLZSap = 'MDLZ SAP User';
     public static final string BatchProcessed = 'Batch Processed';
@@ -57,7 +57,7 @@ public class MDLZ_ConstantHelper {
     public static Final String Template_Non = 'Non';
     public static Final String SSRPRofile = 'MDLZ_SSR_FTPT';
     public static Final String Territory = 'Territory';
-	public static Final String mobilityRelevant = 'No';
+  public static Final String mobilityRelevant = 'No';
     public static Final String KPIGroup = 'Intelligent Recommendation';
     
     //Change
@@ -82,15 +82,16 @@ public class MDLZ_ConstantHelper {
     public static final String sysAdmin='System_Administrator';
     public static final String opsAdmin='OPS_Admin';
     
-	//Flip object
+  //Flip object
     public static final String OrderAccepted='OrderAccepted';
     public static final String OrderSync='OrderSync';
-    public static final String DupWrapper='DupWrapper';   
-	
+    public static final String DupWrapper='DupWrapper';
+	public static final String CAOOrder='CAOOrder';
+  
     //Process Names
      public static final String UPDATE_CAO_ORDERS='Update_CAO_Orders';
-	 
-	  //Result Status
+   
+    //Result Status
     public static final String ResultMap_KeySuccess='Success';
     public static final String ApexError='Error';
     

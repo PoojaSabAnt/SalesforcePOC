@@ -11,6 +11,7 @@ History
 VERSION     AUTHOR         REVIEWER      DATE             DETAIL                 Description
 1.0         Bharath_V                   07/06/2021     Initial Development    
 1.1         Bharath_V     Abir Ghosh    01/02/2022     Initial Development 
+1.2         Vaidehi Heda                18/10/2022     Made changes for for within for loop
 ***************************************************************/
 
 Public with sharing class MDLZ_CustomersetPicklist {  
@@ -130,12 +131,18 @@ Public with sharing class MDLZ_CustomersetPicklist {
 *  MDLZ_Parent_RecordId__c =: salesfolder.id AND ACCL__Active__c= true];
 List<ACCL__Sales_Folder_Sell_Sheet__c> ssIds = [Select ACCL__Sell_Sheet__c from ACCL__Sales_Folder_Sell_Sheet__c 
 where ACCL__Sales_Folder__c =: salesfolder.id];*/
-                for(ACCL__Sales_Folder_Sell_Sheet__c sellSheet : [Select ACCL__Sell_Sheet__c from ACCL__Sales_Folder_Sell_Sheet__c 
-                                                                  where ACCL__Sales_Folder__c =: salesfolder.id] ){
+                
+                 //SellSeet list for the parent salesfolder
+                    List<ACCL__Sales_Folder_Sell_Sheet__c> sellSheetList = new List<ACCL__Sales_Folder_Sell_Sheet__c>([Select ACCL__Sell_Sheet__c from ACCL__Sales_Folder_Sell_Sheet__c 
+                                                                                                                       where ACCL__Sales_Folder__c =: salesfolder.id]);
+                    //Child SalesFolder list for the record/parent salesfolder
+                    List<ACCL__Sales_Folder__c> childSFList = new List<ACCL__Sales_Folder__c>([select id,ACCL__Sales_Org__c,MDLZ_Parent_RecordId__c
+                                                                                               from ACCL__Sales_Folder__c where MDLZ_Parent_RecordId__c =: salesfolder.id
+                                                                                               AND ACCL__Active__c= true]);
+                
+                for(ACCL__Sales_Folder_Sell_Sheet__c sellSheet : sellSheetList ){
                     
-                    for(ACCL__Sales_Folder__c childSF :[select id,ACCL__Sales_Org__c,MDLZ_Parent_RecordId__c
-                                                        from ACCL__Sales_Folder__c where MDLZ_Parent_RecordId__c =: salesfolder.id
-                                                        AND ACCL__Active__c= true]){
+                    for(ACCL__Sales_Folder__c childSF : childSFList){
                                                             ACCL__Sales_Folder_Sell_Sheet__c ssLink = new ACCL__Sales_Folder_Sell_Sheet__c();   
                                                             ssLink.ACCL__Sell_Sheet__c =sellSheet.ACCL__Sell_Sheet__c;
                                                             ssLink.ACCL__Sales_Folder__c = childSF.id;

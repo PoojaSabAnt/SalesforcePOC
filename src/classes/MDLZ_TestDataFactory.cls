@@ -15,6 +15,7 @@ public class MDLZ_TestDataFactory {
     private static ACCL__Order_Template__c ordertempEdi = insertOrdTemplate();
     private static Account acct = insertAccount();
     private static List<ACCL__Order__c> ordList; 
+    private static List<ACCL__Call__c> callList;
     private static List<ACCL__Order_Item__c> ordItemList;
     private static List<ACCL__Org_Unit_User__c> orgUserList;
     private static User usrList; 
@@ -502,6 +503,33 @@ public class MDLZ_TestDataFactory {
 
         insert kpiRecord;
         return kpiRecord;
+    }
+
+    public static List<ACCL__Call__c> insertCall(Integer count, Boolean doInsert){
+        callList = new List<ACCL__Call__c>();
+        for(integer i=0;i<count;i++){
+            ACCL__Call__c call = new ACCL__Call__c();
+            call.ACCL__Call_Template__c = insertCallTemplate().Id;
+            call.ACCL__Account__c=acct.id;
+            call.ACCL__Status__c= 'Plan';
+            call.ACCL__Start_Date_Time__c= System.today() - 20;
+            call.ACCL__End_Date_Time__c= System.today()+ 10;
+            call.ACCL__Distribution_Relevant__c= true;
+            callList.add(call);
+        }
+        if(doInsert){
+            insert callList;
+        }
+        return callList;
+    }
+    
+    public static ACCL__Call_Template__c insertCallTemplate(){        
+        ACCL__Call_Template__c calltemp = new ACCL__Call_Template__c(Name ='Coaching',ACCL__Description_Language_1__c = 'test',ACCL__Default_Duration__c = 100,
+                                                  RE_CallTemplate_ExternalID__c='COA_US0100'+Integer.valueOf(Math.random() * 10) ,
+                                                   ACCL__Sales_Org__c='US01',ACCL__Active__c=true);
+        
+        insert calltemp;
+        return calltemp;
     }
         
 }

@@ -21,7 +21,8 @@ global with sharing class MDLZ_CreateWrapperOrderBatch  implements Database.Batc
     
      global   Database.QueryLocator start(Database.BatchableContext BC)    
     {
-        String query = 'Select Id, ACCL__Order_Account__c, ACCL__Delivery_Date__c,ACCL__Order__c.ACCL__Phase__c, ACCL__Order_Template__c,ACCL__Order__c.ACCL__Order_Id__c'+
+        String query = 'Select Id, ACCL__Order_Account__c, ACCL__Delivery_Date__c,ACCL__Order__c.ACCL__Phase__c, ACCL__Order_Template__c,ACCL__Order__c.ACCL__Order_Id__c,'+
+		+'ACCL__Order_Account__r.ACCL__Account_Number__c'+
             +' from ACCL__Order__c where ACCL__Order_Template__r.Name in (\'Order\',\'NOS\',\'EDI\') and  '+
             +'ACCL__Phase__c NOT IN (\'REJECTED\',\'DELETED\',\'CANCELLED\') and createdDate >=yesterday';
 

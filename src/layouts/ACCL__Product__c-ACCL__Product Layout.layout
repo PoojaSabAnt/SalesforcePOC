@@ -306,7 +306,12 @@
                 <field>MLZ_Allocation__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns>
+        <layoutItems>
+                <behavior>Edit</behavior>
+                <field>MDLZ_Discontinued_from_Scan__c</field>
+            </layoutItems>
+         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>

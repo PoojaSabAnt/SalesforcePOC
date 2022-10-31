@@ -2618,6 +2618,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>ACCL__Product__c.MDLZ_Discontinued_from_Scan__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>ACCL__Promotion_Attachment_Link__c.ACCL__Parent_Promotion_Attachment_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
