@@ -1,4 +1,4 @@
-name: Salesforce-workflo
+name: Salesforce-workflow
 on:
   pull_request:
     branches:
@@ -76,7 +76,7 @@ jobs:
             do
                   filenamen=$filename
                   if [ -f "/tmp/objects/$filenamen" ]; then
-                  sed "s/^/objects//g" $filenamen 
+                  sed "s|^/objects/|g" $filenamen 
                   cp /tmp/objects/$filenamen $GITHUB_WORKSPACE/src
                fi
             done
