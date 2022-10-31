@@ -2,15 +2,13 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	
 	<types>
-		<name>CustomObject</name>
-		<members>ACCL__Account_Extension__c</members>
-		<members>ACCL__Account_Opening_Hours__c</members>
-		<members>ACCL__Account_Org_Unit__c</members>
-		<members>ACCL__Account_Set__c</members>
-		<members>ACCL__Account_Set_Account__c</members>
+		<name>ApexClass</name>
+		<members>AccountClearEffectiveParentBatch</members>
+		<members>AccountClearEffectiveParentBatchTest</members>
+		
 	</types>
 	
 	
 	
-	<version>51.0</version>
+	<version>54.0</version>
 </Package>
