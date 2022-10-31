@@ -75,18 +75,19 @@ jobs:
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/objects/$filename" ]; then
-                 cp /tmp/objects/$filename $GITHUB_WORKSPACE/src
-                 cat $GITHUB_WORKSPACE/src | ts /objects/ > $GITHUB_WORKSPACE/src/out.txt
+                 file="/objects/$filename"
+                 cp /tmp/objects/$file $GITHUB_WORKSPACE/src
                fi
             done
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/classes/$filename" ]; then
+                 file="/classes/$filename" 
                  cp /tmp/classes/$filename $GITHUB_WORKSPACE/src         
                fi
             done
         
-        cat $GITHUB_WORKSPACE/src/out.txt  
+        ls $GITHUB_WORKSPACE/src
         
         #echo "Validation of build file started"
         #ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
