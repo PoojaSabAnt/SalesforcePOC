@@ -75,14 +75,14 @@ jobs:
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/objects/$filename" ]; then
-                 file="objects/$filename"
+                 file="objects'/'$filename"
                  cp /tmp/objects/$file $GITHUB_WORKSPACE/src
                fi
             done
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
                if [ -f "/tmp/classes/$filename" ]; then
-                 file="classes/$filename" 
+                 file="classes'/'$filename" 
                  cp /tmp/classes/$filename $GITHUB_WORKSPACE/src         
                fi
             done
