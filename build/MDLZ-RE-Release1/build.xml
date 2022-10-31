@@ -312,7 +312,9 @@
       pollWaitMillis="10000"
       maxPoll="10000">
 	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
-	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
+	<runTest>MDLZ_AddPPGTest.cls</runTest>
+	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
+	    
     </sf:deploy>
   </target>
   <!-- ***************************************************************************** -->

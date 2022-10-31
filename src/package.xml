@@ -3,8 +3,9 @@
 	
 	<types>
 		<name>ApexClass</name>
-		<members>AccountClearEffectiveParentBatch</members>
-		<members>AccountClearEffectiveParentBatchTest</members>
+		<members>MDLZ_AccountTriggerHandler</members>
+		<members>MDLZ_CustomersetPicklist</members>
+		<members>MDLZ_AddPPG</members>
 		
 	</types>
 	
