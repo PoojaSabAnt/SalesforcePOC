@@ -2,7 +2,7 @@
 <!--    Build Script in Ant for Mondelez RE Salesforce Project - BEGIN                                                     -->
 <!--    Authors : Sushmitha MS   Accenture    Last Modified Date :19/11/2021                -->
 <!--    ******************************************************************************************************************* -->
-<project name="Mondelez RE" default="validateRETests" basedir="." xmlns:sf="antlib:com.salesforce">
+<project name="Mondelez RE" default="deployCodeCheckOnly" basedir="." xmlns:sf="antlib:com.salesforce">
 
   <!-- *************************************************************** -->
   <!--   Properties for Salesforce ANT targets                         -->
@@ -298,8 +298,7 @@
   <!-- ***************************************************************************** -->
   <!-- Validate and test RE      -->
   <!-- ***************************************************************************** -->
-  <target name="validateRETests">
-    <echo level="info">RE Validation with Tests</echo>
+  <target name="deployCodeCheckOnly">
     <sf:deploy username="${sf.username}"
       password="${sf.password}"
       serverurl="${sf.serverurl}"
@@ -314,7 +313,6 @@
       maxPoll="10000">
 	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
 	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
-
     </sf:deploy>
   </target>
   <!-- ***************************************************************************** -->

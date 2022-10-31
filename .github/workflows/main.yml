@@ -1,4 +1,4 @@
-name: Salesforce-workflow
+name: Salesforce-cicd-workflow
 on:
   pull_request:
     branches:
@@ -57,20 +57,46 @@ jobs:
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         
-        sudo apt update
-        sudo apt-get upgrade ant
-        ant -version
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
-        cp $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/ant-salesforce.jar  /usr/share/ant/lib/
+        cp $GITHUB_WORKSPACE/lib/* /usr/share/ant/lib/
+                
+        mkdir /tmp/objects
+        mkdir /tmp/classes
+        rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
+        rsync $GITHUB_WORKSPACE/src/classes/* /tmp/classes
+        cp $GITHUB_WORKSPACE/src/package.xml /tmp
+        
+        rm -rf $GITHUB_WORKSPACE/src/*
+        mkdir $GITHUB_WORKSPACE/src/objects
+        mkdir $GITHUB_WORKSPACE/src/classes
+        cp /tmp/package.xml $GITHUB_WORKSPACE/src
+        
+        rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
+        sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
+        sed -i 's|src/classes/||' /tmp/project-manifest-TPM.txt
+         
+        for filename in `cat /tmp/project-manifest-TPM.txt`;
+            do
+               if [ -f "/tmp/objects/$filename" ]; then
+                 cp /tmp/objects/$filename $GITHUB_WORKSPACE/src/objects
+               fi
+            done
+        
+               
+        for filename in `cat /tmp/project-manifest-TPM.txt`;
+            do
+               if [ -f "/tmp/classes/$filename" ]; then
+                  cp /tmp/classes/$filename $GITHUB_WORKSPACE/src/classes        
+               fi
+            done
+        
+        ls -R $GITHUB_WORKSPACE/src/*
+        
         echo "Validation of build file started"
-        if [[ $BRANCH == development ]]; then
-           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml     
-        else [[ $BRANCH == main ]]; 
-           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} validateRETests -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml         
-        fi
+        ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }}  -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
         if [ $? != 0 ]  then
           echo "Validation failed"
         fi  
