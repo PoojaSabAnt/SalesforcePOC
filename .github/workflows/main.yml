@@ -76,7 +76,7 @@ jobs:
             do
                   
                   if [ -f "/tmp/objects/$filename" ]; then
-                     sed -i 's|^/objects/||' $filename 
+                     sed -i 's|^/objects/||'  /tmp/objects/$filename 
                      cp /tmp/objects/$filename $GITHUB_WORKSPACE/src
                   fi
             done
