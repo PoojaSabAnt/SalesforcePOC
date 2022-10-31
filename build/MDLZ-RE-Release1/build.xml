@@ -114,8 +114,8 @@
       autoUpdatePackage="true"
       ignoreWarnings="true"
       deployRoot="${basedir}/src"
-      pollWaitMillis="${sfdc.pollWaitMillis}"
-      maxPoll="${sfdc.maxPoll}"/>
+      pollWaitMillis="10000"
+      maxPoll="10000"/>
   </target>
   <!-- ***************************************************************************** -->
   <!-- Deploy the meta-data from code Repository to salesforce Production     -->
