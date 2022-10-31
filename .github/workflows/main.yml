@@ -76,10 +76,9 @@ jobs:
             do
                   filenamen=$filename
                   if [ -f "/tmp/objects/$filenamen" ]; then
-                  sed -i 's|^/objects/||' $filenamen 
-                  cp /tmp/objects/$filenamen $GITHUB_WORKSPACE/src
-                  's/^/prefix/'
-               fi
+                     sed -i 's|^/objects/||' $filenamen 
+                     cp /tmp/objects/$filenamen $GITHUB_WORKSPACE/src
+                  fi
             done
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
