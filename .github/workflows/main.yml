@@ -67,7 +67,11 @@ jobs:
         mkdir /tmp/classes
         rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
         rsync $GITHUB_WORKSPACE/src/classes/* /tmp/classes
+        
         rm -rf $GITHUB_WORKSPACE/src/*
+        mkdir $GITHUB_WORKSPACE/src/objects
+        mkdir $GITHUB_WORKSPACE/src/classes
+        
         rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
         sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
         sed -i 's|src/classes/||' /tmp/project-manifest-TPM.txt
@@ -87,7 +91,7 @@ jobs:
                fi
             done
         
-        ls -R $GITHUB_WORKSPACE/src
+        ls -R $GITHUB_WORKSPACE/src/*
         
         #echo "Validation of build file started"
         #ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
