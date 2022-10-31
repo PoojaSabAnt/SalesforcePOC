@@ -57,6 +57,7 @@ jobs:
           sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         
+        echo ANT_HOME
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
         echo "Manifest folder: $MANIFEST_FOLDER"
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
@@ -95,7 +96,7 @@ jobs:
         ls -R $GITHUB_WORKSPACE/src/*
         
         echo "Validation of build file started"
-        ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }}  build.xml deployCodeCheckOnly    
+        ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }}  -buildfile /usr/share/ant/build.xml deployCodeCheckOnly    
         if [ $? != 0 ]  then
           echo "Validation failed"
         fi  
