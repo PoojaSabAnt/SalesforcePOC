@@ -67,7 +67,7 @@ jobs:
         mkdir /tmp/classes
         rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
         rsync $GITHUB_WORKSPACE/src/classes/* /tmp/classes
-        cp $GITHUB_WORKSPACE/src/package.xml cp /tmp
+        cp $GITHUB_WORKSPACE/src/package.xml /tmp
         
         rm -rf $GITHUB_WORKSPACE/src/*
         mkdir $GITHUB_WORKSPACE/src/objects
