@@ -74,8 +74,7 @@ jobs:
         
         for filename in `cat /tmp/project-manifest-TPM.txt`;
             do
-               cat $GITHUB_WORKSPACE/src/final-list.txt
-               if [ -f "/tmp/objects/$filename" ]; then
+                  if [ -f "/tmp/objects/$filename" ]; then
                   sed "s/^/objects//g" $filename>$filenamenew
                   cp /tmp/objects/$filenamenew $GITHUB_WORKSPACE/src
                fi
@@ -89,9 +88,7 @@ jobs:
                fi
             done
         
-        ls $GITHUB_WORKSPACE/src
-        
-                
+        ls $GITHUB_WORKSPACE/src            
         #echo "Validation of build file started"
         #ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly    
         #if [ $? != 0 ]  then
