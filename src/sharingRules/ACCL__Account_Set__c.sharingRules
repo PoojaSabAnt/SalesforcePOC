@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_ADUSA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is AD assign the record to PG_CBT_ADUSA public group</description>
+        <label>KeyAccount is ADUSA</label>
+        <sharedTo>
+            <group>MDLZ_CBT_ADUSA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>AD</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_ALBERTSONS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is ACI assign the record to PG_CBT_ALBERTSONS public group</description>
+        <label>KeyAccount is ALBERTSONS</label>
+        <sharedTo>
+            <group>MDLZ_CBT_ALBERTSONS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>ACI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_BJS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is BJS assign the record to PG_CBT_BJS public group</description>
+        <label>KeyAccount is BJS</label>
+        <sharedTo>
+            <group>MDLZ_CBT_BJS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>BJS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CENTRAL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CNT assign the record to PG_CBT_CENTRAL public group</description>
+        <label>KeyAccount is CENTRAL</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CENTRAL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CNT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CENTRAL_REGIONALS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is AD assign the record to PG_CBT_CENTRAL_REGIONALS public group</description>
+        <label>KeyAccount is CENTRAL REGIONALS</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CENTRAL_REGIONALS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CENR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CONVENIENCE_INDIRECTS_AND_SMG</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CVI assign the record to PG_CBT_convenience_indirect_and_smg public group</description>
+        <label>KeyAccount is CONVENIENCE INDIRECTS AND SMG</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CONVENIENCE_INDIRECTS_AND_SMG</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CVI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CONV_DISTRIBUTOR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CDM assign the record to PG_CBT_CONV_DISTRIBUTOR public group</description>
+        <label>KeyAccount is CONV DISTRIBUTOR</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CONV_DISTRIBUTOR</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CDM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CONV_RETAILER</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CVR assign the record to PG_CBT_CONV_RETAILER public group</description>
+        <label>KeyAccount is CONV RETAILER</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CONV_RETAILER</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CVR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CONV_TELESALES</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CVTS assign the record to PG_CBT_CONV_TELESALES public group</description>
+        <label>KeyAccount is CONV TELESALES</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CONV_TELESALES</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CVTS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_CORPARATE_ACCT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CAR assign the record to PG_CBT_CORPARATE ACCT public group</description>
+        <label>KeyAccount is CORPARATE ACCT</label>
+        <sharedTo>
+            <group>MDLZ_CBT_CORPORATE_ACCT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CAR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_COSTCO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is COST assign the record to PG_CBT_COSTCO public group</description>
+        <label>KeyAccount is COSTCO</label>
+        <sharedTo>
+            <group>MDLZ_CBT_COSTCO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>COST</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_C_S_HQ</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is CS assign the record to PG_CBT_C&amp;S_HQ public group</description>
+        <label>KeyAccount is C&amp;S HQ</label>
+        <sharedTo>
+            <group>MDLZ_CBT_C_S_HQ</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>CS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_DIR_CUST_OPS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is DCO assign the record to PG_CBT_DIR CUST OPS public group</description>
+        <label>KeyAccount is DIR CUST OPS</label>
+        <sharedTo>
+            <group>MDLZ_CBT_DIR_CUST_OPS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>DCO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_DOT_TOTAL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is DOT assign the record to PG_CBT_DOT TOTAL public group</description>
+        <label>KeyAccount is DOT TOTAL</label>
+        <sharedTo>
+            <group>MDLZ_CBT_DOT_TOTAL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>DOT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_DRUG</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is DRUG assign the record to PG_CBT_DRUG public group</description>
+        <label>KeyAccount is DRUG</label>
+        <sharedTo>
+            <group>MDLZ_CBT_DRUG</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>DRUG</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_E_COMMERCE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is ECOM assign the record to PG_CBT_ECOMMERCE public group</description>
+        <label>KeyAccount is E-COMMERCE</label>
+        <sharedTo>
+            <group>MDLZ_CBT_E_COMMERCE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>ECOM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_GROCERY_EAST</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is RGE assign the record to PG_CBT_GROCERY EAST public group</description>
+        <label>KeyAccount is GROCERY-EAST</label>
+        <sharedTo>
+            <group>MDLZ_CBT_GROCERY_EAST</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>RGE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_HQ_MISC_ALL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is HQM assign the record to PG_CBT_HQ MISC ALL public group</description>
+        <label>KeyAccount is HQ MISC ALL</label>
+        <sharedTo>
+            <group>MDLZ_CBT_HQ_MISC_ALL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>HQM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_INDEPENDENTS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is IND assign the record to PG_CBT_INDEPENDENTS public group</description>
+        <label>KeyAccount is INDEPENDENTS</label>
+        <sharedTo>
+            <group>MDLZ_CBT_INDEPENDENTS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>IND</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_KROGER</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is KR assign the record to PG_CBT_KROGER public group</description>
+        <label>KeyAccount is KROGER</label>
+        <sharedTo>
+            <group>MDLZ_CBT_KROGER</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>KR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_LIQUIDATOR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is LIQ assign the record to PG_CBT_LIQUIDATOR public group</description>
+        <label>KeyAccount is LIQUIDATOR</label>
+        <sharedTo>
+            <group>MDLZ_CBT_LIQUIDATOR</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>LIQ</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_NORTHEAST</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is NER assign the record to PG_CBT_NORTHEAST public group</description>
+        <label>KeyAccount is NORTHEAST</label>
+        <sharedTo>
+            <group>MDLZ_CBT_NORTHEAST</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>NER</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_SAMS_CLUB</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is SAM assign the record to PG_CBT_SAMS CLUB public group</description>
+        <label>KeyAccount is SAMS CLUB</label>
+        <sharedTo>
+            <group>MDLZ_CBT_SAMS_CLUB</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>SAM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_SOUTH</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is SOU assign the record to PG_CBT_SOUTH public group</description>
+        <label>KeyAccount is SOUTH</label>
+        <sharedTo>
+            <group>MDLZ_CBT_SOUTH</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>SOU</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_TARGET</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is TGT assign the record to PG_CBT_TARGET public group</description>
+        <label>KeyAccount is TARGET</label>
+        <sharedTo>
+            <group>MDLZ_CBT_TARGET</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>TGT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_VALUE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is VALU assign the record to PG_CBT_VALUE public group</description>
+        <label>KeyAccount is VALUE</label>
+        <sharedTo>
+            <group>MDLZ_CBT_VALUE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>VALU</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_W2W_ONLY</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is W2W assign the record to PG_CBT_W2W ONLY public group</description>
+        <label>KeyAccount is W2W ONLY</label>
+        <sharedTo>
+            <group>MDLZ_CBT_W2W_ONLY</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>W2W</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_WALMART</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is WMT assign the record to PG_CBT_WALMART public group</description>
+        <label>KeyAccount is WALMART</label>
+        <sharedTo>
+            <group>MDLZ_CBT_WALMART</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>WMT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_WEST</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is WEST assign the record to PG_CBT_WEST public group</description>
+        <label>KeyAccount is WEST</label>
+        <sharedTo>
+            <group>MDLZ_CBT_WEST</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>WEST</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_WHOLESALERS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is WHOL assign the record to PG_CBT_WHOLESALERS public group</description>
+        <label>KeyAccount is WHOLESALERS</label>
+        <sharedTo>
+            <group>MDLZ_CBT_WHOLESALERS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>WHOL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KeyAccount_is_WINCO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>if key Account value is WINC assign the record to PG_CBT_WINCO public group</description>
+        <label>KeyAccount is WINCO</label>
+        <sharedTo>
+            <group>MDLZ_CBT_WINCO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>MDLZ_KeyAccount__c</field>
+            <operation>equals</operation>
+            <value>WINC</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_With_Ops_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share all Customer Set records with Ops Admin</description>
+        <label>Share With Ops Admin</label>
+        <sharedTo>
+            <roleAndSubordinates>Ops_Admin</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

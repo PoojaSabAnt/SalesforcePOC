@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p class=&quot;ql-indent-2&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-2&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-2&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Hi there!&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-2&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Please use your Accenture Cloud Mobility App to access everything you need for your day-to-day activities! ;)&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-2&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-2&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-6&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-6&quot;&gt;&lt;br&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>left</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>middle</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>right</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>SR Home Page</masterLabel>
+    <template>
+        <name>home:desktopTemplateHeaderThreeColumns</name>
+    </template>
+    <type>HomePage</type>
+</FlexiPage>

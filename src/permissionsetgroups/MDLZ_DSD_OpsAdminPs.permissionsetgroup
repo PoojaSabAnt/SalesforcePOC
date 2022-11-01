@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission sets for ops admin</description>
+    <label>MDLZ_DSD_OpsAdmin</label>
+    <permissionSets>ACSF_Mobility_Addon</permissionSets>
+    <permissionSets>MDLZ_APIClientAccess</permissionSets>
+    <permissionSets>MDLZ_AccountWrite</permissionSets>
+    <permissionSets>MDLZ_Activity</permissionSets>
+<permissionSets>MDLZ_ActivityDelete</permissionSets>
+    <permissionSets>MDLZ_AllCallsWrite1</permissionSets>
+    <permissionSets>MDLZ_AllObjectsRead</permissionSets>
+    <permissionSets>MDLZ_AllOrdersWrite1</permissionSets>
+   <permissionSets>MDLZ_CustomerSetDelete</permissionSets>
+    <permissionSets>MDLZ_CallsWrites</permissionSets>
+    <permissionSets>MDLZ_CustomerSetWrite</permissionSets>
+    <permissionSets>MDLZ_CustomerTaskEdit</permissionSets>
+    <permissionSets>MDLZ_ImportObjectAccess</permissionSets>
+    <permissionSets>MDLZ_MobilityRead</permissionSets>
+    <permissionSets>MDLZ_OpsAdminAppAccess</permissionSets>
+    <permissionSets>MDLZ_OrgUnits</permissionSets>
+    <permissionSets>MDLZ_OpsAdmin</permissionSets>
+    <permissionSets>MDLZ_PromotionsEdit</permissionSets>
+    <permissionSets>MDLZ_SalesFoldersEdit</permissionSets>
+    <permissionSets>MDLZ_SellSheetsDelete</permissionSets>
+    <permissionSets>MDLZ_StoreListingEdit</permissionSets>
+    <permissionSets>MDLZ_SubstitutionWrite</permissionSets>
+	<permissionSets>Mobility_Admin</permissionSets>
+	<permissionSets>MDLZ_DisplayNotesEdit</permissionSets>
+	<permissionSets>MDLZ_SalesPlanningEdit</permissionSets>
+    <permissionSets>TquilaONE</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

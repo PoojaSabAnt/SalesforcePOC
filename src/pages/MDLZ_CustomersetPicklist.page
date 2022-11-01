@@ -1,0 +1,37 @@
+<apex:page standardController="ACCL__Sales_Folder__c"  extensions="MDLZ_CustomersetPicklist" docType="html-5.0" id="thePage" lightningStylesheets="true"  standardStylesheets="false">
+    
+    <apex:form > 
+        <apex:pageBlock rendered="{!if(OR(ACCL__Sales_Folder__c.MDLZ_Sell_Sheet_Count__c== 0, ACCL__Sales_Folder__c.ACCL__Active__c == false),false,true)}" id="out" title="Select Customer Sets">
+            <!--Success Message -->
+            <apex:pageMessages />
+            <!-- Save and Back Buttons --> 
+            <apex:pageBlockButtons location="top"  >                
+                <apex:commandButton value="Save" action="{!save}"  rerender="out" status="actStatusId" style="background-color: #4f2170;border-color: rgba(27, 82, 151, 1.0);color:white;" />
+                <apex:commandButton action="{!reset}" value="Reset" style="background-color: #4f2170;border-color: rgba(27, 82, 151, 1.0);color:white;"/>
+                <apex:commandButton action="{!doFinish}" value="Back" style="background-color: #4f2170;border-color: rgba(27, 82, 151, 1.0);color:white;"/>
+                
+                <apex:actionStatus id="actStatusId"> 
+                    <apex:facet name="start">
+                        <img src="/img/loading.gif" />
+                    </apex:facet>
+                </apex:actionStatus> 
+                
+            </apex:pageBlockButtons>
+            <!--End of Save and Back Buttons --> 
+            <apex:selectList value="{!selectedPicklistValues}" multiselect="true" size="10" style="width:300px;"   >   
+                <apex:selectOptions value="{!customerSets}"/>
+            </apex:selectList>             
+            <hr/>             
+        </apex:pageBlock>
+ 
+    <!--This section will appear if Sell sheet count is 0 and if Sales folder is not active  -->
+    <apex:pageBlock rendered="{!if(OR(ACCL__Sales_Folder__c.MDLZ_Sell_Sheet_Count__c== 0, ACCL__Sales_Folder__c.ACCL__Active__c == false),true,False)}">         
+        <apex:pageMessage severity="error" 
+                          strength="1"
+                          summary="Please select active sell sheet and add Sell Sheet before adding customer set." />
+         <apex:pageBlockButtons location="top"  >
+        <apex:commandButton action="{!doFinish}" value="Back" style="background-color: #4f2170;border-color: rgba(27, 82, 151, 1.0);color:white;"/>
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

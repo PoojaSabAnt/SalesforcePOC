@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>MDLZ_PermissionSets__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>MDLZ_PermissionSets</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MDLZ_User_Custom_PermissionSet</label>
+    <pluralLabel>MDLZ_User_Custom_PermissionSets</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

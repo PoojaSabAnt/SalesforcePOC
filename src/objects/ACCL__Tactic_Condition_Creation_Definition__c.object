@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Holds the details of tactic condition creation definition.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__Fields_To_Sync</fullName>
+        <description>Field Set to define the fields to copy/push</description>
+        <displayedFields>
+            <field>ACCL__Additional_KPI_Definition_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Additional_KPI_Definition_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Additional_KPI_Definition_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Allowed_Product_Levels__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Change_Rule__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Check_For_Duplicates__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Maintenance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Measure_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Product_Level__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Source_KPI_Definition__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Targets__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Fields To Sync</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACCL__Additional_KPI_Definition_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Defines the KPI definition used to provide additional information for the condition.</description>
+        <externalId>false</externalId>
+        <label>Additional KPI Definition 1</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Condition Creation Definitions (Additional KPI Definition 1)</relationshipLabel>
+        <relationshipName>Tactic_Condition_Creation_Definitions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Additional_KPI_Definition_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Defines the KPI definition used to provide additional information for the condition.</description>
+        <externalId>false</externalId>
+        <label>Additional KPI Definition 2</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Condition Creation Definitions (Additional KPI Definition 2)</relationshipLabel>
+        <relationshipName>Tactic_Condition_Creation_Definitions2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Additional_KPI_Definition_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Defines the KPI definition used to provide additional information for the condition.</description>
+        <externalId>false</externalId>
+        <label>Additional KPI Definition 3</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Condition Creation Definitions (Additional KPI Definition 3)</relationshipLabel>
+        <relationshipName>Tactic_Condition_Creation_Definitions3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Allowed_Product_Levels__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the eligible product levels when determining automatically the product levels on condition generation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the eligible product levels when determining automatically the product levels on condition generation.</inlineHelpText>
+        <label>Allowed Product Levels</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Category</fullName>
+                    <default>false</default>
+                    <label>Category</label>
+                </value>
+                <value>
+                    <fullName>SubCategory</fullName>
+                    <default>false</default>
+                    <label>Sub Category</label>
+                </value>
+                <value>
+                    <fullName>Brand</fullName>
+                    <default>false</default>
+                    <label>Brand</label>
+                </value>
+                <value>
+                    <fullName>Flavor</fullName>
+                    <default>false</default>
+                    <label>Sub Brand</label>
+                </value>
+                <value>
+                    <fullName>Package</fullName>
+                    <default>false</default>
+                    <label>Product Price Group</label>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                    <label>Product</label>
+                </value>
+                <value>
+                    <fullName>Component</fullName>
+                    <default>false</default>
+                    <label>Component</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Change_Rule__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines the rule to handle past conditions.</description>
+        <externalId>false</externalId>
+        <label>Change Rule</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>update</fullName>
+                    <default>false</default>
+                    <label>Update</label>
+                </value>
+                <value>
+                    <fullName>finish</fullName>
+                    <default>true</default>
+                    <label>Finish</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Check_For_Duplicates__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines, whether the system reports generated internal conditions conflicting with pre existing conditions.</description>
+        <externalId>false</externalId>
+        <label>Check For Duplicates</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Maintenance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the action on the conditions generated by the tactic.</description>
+        <externalId>false</externalId>
+        <label>Maintenance</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>initial</fullName>
+                    <default>true</default>
+                    <label>Initial</label>
+                </value>
+                <value>
+                    <fullName>upsert</fullName>
+                    <default>false</default>
+                    <label>Upsert</label>
+                </value>
+                <value>
+                    <fullName>delete</fullName>
+                    <default>false</default>
+                    <label>Delete</label>
+                </value>
+                <value>
+                    <fullName>freeze</fullName>
+                    <default>false</default>
+                    <label>Freeze</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Measure_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Measure Code of the Condition</description>
+        <externalId>false</externalId>
+        <label>Measure Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_TCCD__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Parent TCCD</label>
+        <referenceTo>ACCL__Tactic_Condition_Creation_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Condition Creation Definitions</relationshipLabel>
+        <relationshipName>Tactic_Condition_Creation_Definitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Product_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the product group level at which the condition is generated.</description>
+        <externalId>false</externalId>
+        <label>Product Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Category</fullName>
+                    <default>false</default>
+                    <label>Category</label>
+                </value>
+                <value>
+                    <fullName>SubCategory</fullName>
+                    <default>false</default>
+                    <label>Sub Category</label>
+                </value>
+                <value>
+                    <fullName>Brand</fullName>
+                    <default>false</default>
+                    <label>Brand</label>
+                </value>
+                <value>
+                    <fullName>Flavor</fullName>
+                    <default>false</default>
+                    <label>Sub Brand</label>
+                </value>
+                <value>
+                    <fullName>Package</fullName>
+                    <default>false</default>
+                    <label>Product Price Group</label>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                    <label>Product</label>
+                </value>
+                <value>
+                    <fullName>Component</fullName>
+                    <default>false</default>
+                    <label>Component</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Source_KPI_Definition__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Defines the KPI definition which is used as the source for generating condition.</description>
+        <externalId>false</externalId>
+        <label>Source KPI Definition</label>
+        <referenceTo>ACCL__KPI_Definition__c</referenceTo>
+        <relationshipLabel>Tactic Condition Creation Definitions</relationshipLabel>
+        <relationshipName>Tactic_Condition_Creation_Definitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Tactic__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Tactic for which the rule is defined.</description>
+        <externalId>false</externalId>
+        <label>Tactic</label>
+        <referenceTo>ACCL__Tactic__c</referenceTo>
+        <relationshipLabel>Tactic Condition Creation Definitions</relationshipLabel>
+        <relationshipName>Tactic_Condition_Creation_Definitions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ACCL__Targets__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the targets to which the conditions are written.</description>
+        <externalId>false</externalId>
+        <label>Targets</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>External</fullName>
+                    <default>true</default>
+                    <label>External</label>
+                </value>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>false</default>
+                    <label>Internal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Unique_Measure_Name__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Contains concatenation of tactic Id and source KPI definition Editable Code</description>
+        <externalId>false</externalId>
+        <label>Unique Measure Name</label>
+        <length>22</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Tactic Condition Creation Definition</label>
+    <nameField>
+        <displayFormat>TCCD-{0000}</displayFormat>
+        <label>Tactic Condition Creation Def Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Tactic Condition Creation Definitions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ACCL__AdditionalKPIs_CompatibleToProductLevel</fullName>
+        <active>true</active>
+        <description>The BOM Scope of Additional KPI Definition must contain ‘Component’ if Product Level is ‘Component’.</description>
+        <errorConditionFormula>AND(
+    ISPICKVAL(ACCL__Product_Level__c, &apos;Component&apos;),
+    OR(
+        AND(
+            NOT(INCLUDES(ACCL__Additional_KPI_Definition_1__r.ACCL__BoM_Scope__c, &apos;Component&apos;)),
+            NOT(ISBLANK(ACCL__Additional_KPI_Definition_1__c))
+        ),
+        AND(
+            NOT(INCLUDES(ACCL__Additional_KPI_Definition_2__r.ACCL__BoM_Scope__c, &apos;Component&apos;)),
+            NOT(ISBLANK(ACCL__Additional_KPI_Definition_2__c))
+        ),
+        AND(
+            NOT(INCLUDES(ACCL__Additional_KPI_Definition_3__r.ACCL__BoM_Scope__c, &apos;Component&apos;)),
+            NOT(ISBLANK(ACCL__Additional_KPI_Definition_3__c))
+        )
+    )
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Product_Level__c</errorDisplayField>
+        <errorMessage>The BOM Scope of Additional KPI Definitions must contain ‘Component’ if Product Level is ‘Component’.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__BOMScope_AllowProdLvlComponentValidation</fullName>
+        <active>true</active>
+        <description>The BOM Scope of Source KPI Definition must contain ‘Component’ if Allowed Product Level is ‘Component’.</description>
+        <errorConditionFormula>AND(
+INCLUDES( ACCL__Allowed_Product_Levels__c ,&apos;Component&apos;),
+NOT(INCLUDES(ACCL__Source_KPI_Definition__r.ACCL__BoM_Scope__c, &apos;Component&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Allowed_Product_Levels__c</errorDisplayField>
+        <errorMessage>The BOM Scope of Source KPI Definition must contain ‘Component’ if Allowed Product Level is ‘Component’.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__BOMScope_AllowProdLvlProductValidation</fullName>
+        <active>true</active>
+        <description>The BOM Scope of Source KPI Definition must not contain ‘Component’ if Allowed Product Level is ‘Product’.</description>
+        <errorConditionFormula>AND(
+INCLUDES( ACCL__Allowed_Product_Levels__c ,&apos;Product&apos;),
+INCLUDES(ACCL__Source_KPI_Definition__r.ACCL__BoM_Scope__c, &apos;Component&apos;))</errorConditionFormula>
+        <errorDisplayField>ACCL__Allowed_Product_Levels__c</errorDisplayField>
+        <errorMessage>The BOM Scope of Source KPI Definition must not contain ‘Component’ if Allowed Product Level is ‘Product’.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ChangeRule_NotEmpty</fullName>
+        <active>true</active>
+        <description>The Change Rule field can’t be empty.</description>
+        <errorConditionFormula>ISPICKVAL(ACCL__Change_Rule__c, &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>ACCL__Change_Rule__c</errorDisplayField>
+        <errorMessage>The Change Rule field can’t be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Maintenance_NotEmpty</fullName>
+        <active>true</active>
+        <description>The Maintenance field can’t be empty.</description>
+        <errorConditionFormula>ISPICKVAL(ACCL__Maintenance__c, &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>ACCL__Maintenance__c</errorDisplayField>
+        <errorMessage>The Maintenance field can’t be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Maintenance_UpdateToInitialRestricted</fullName>
+        <active>true</active>
+        <description>The Maintenance field cannot be updated to &apos;Initial&apos; from any other value.</description>
+        <errorConditionFormula>AND(
+   ISPICKVAL(ACCL__Maintenance__c , &apos;Initial&apos;),
+   ISCHANGED(ACCL__Maintenance__c)
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Maintenance__c</errorDisplayField>
+        <errorMessage>The Maintenance field cannot be updated to &apos;Initial&apos; from any other value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ProdLevel_And_BoMsCope_Component</fullName>
+        <active>true</active>
+        <description>BoM Scope of the Source KPI must contain &apos;Component&apos; if the product level is &apos;Component&apos;,</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(ACCL__Product_Level__c, &apos;Component&apos;),
+NOT(INCLUDES(ACCL__Source_KPI_Definition__r.ACCL__BoM_Scope__c, &apos;Component&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Product_Level__c</errorDisplayField>
+        <errorMessage>BoM Scope of the Source KPI must contain &apos;Component&apos; if the product level is &apos;Component&apos;,</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__ProductLevel_InAvailableProductLevel</fullName>
+        <active>true</active>
+        <description>The Product Level must be included in the Available Product Level of the promotion template.</description>
+        <errorConditionFormula>OR(
+	AND(
+		ISPICKVAL(ACCL__Product_Level__c, &apos;Category&apos;),
+		NOT(INCLUDES(ACCL__Tactic__r.ACCL__Promotion__r.ACCL__Promotion_Template__r.ACCL__Available_Product_Level__c,  &apos;Category&apos; ))
+	),
+	AND(
+		ISPICKVAL(ACCL__Product_Level__c, &apos;SubCategory&apos;),
+		NOT(INCLUDES(ACCL__Tactic__r.ACCL__Promotion__r.ACCL__Promotion_Template__r.ACCL__Available_Product_Level__c,  &apos;SubCategory&apos; ))
+	),
+	AND(
+		ISPICKVAL(ACCL__Product_Level__c, &apos;Brand&apos;),
+		NOT(INCLUDES(ACCL__Tactic__r.ACCL__Promotion__r.ACCL__Promotion_Template__r.ACCL__Available_Product_Level__c,  &apos;Brand&apos; ))
+	),
+	AND(
+		ISPICKVAL(ACCL__Product_Level__c, &apos;Flavor&apos;),
+		NOT(INCLUDES(ACCL__Tactic__r.ACCL__Promotion__r.ACCL__Promotion_Template__r.ACCL__Available_Product_Level__c,  &apos;Flavor&apos; ))
+	),
+	AND(
+		ISPICKVAL(ACCL__Product_Level__c, &apos;Package&apos;),
+		NOT(INCLUDES(ACCL__Tactic__r.ACCL__Promotion__r.ACCL__Promotion_Template__r.ACCL__Available_Product_Level__c,  &apos;Package&apos; ))
+	)
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Product_Level__c</errorDisplayField>
+        <errorMessage>The Product Level must be included in the Available Product Level of the promotion template.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__SourceKPI_EditableWithTotal</fullName>
+        <active>true</active>
+        <description>The Source KPI Definition must have Record Type &apos;Editable&apos; and Edit Mode &apos;Total&apos;.</description>
+        <errorConditionFormula>OR(
+    ACCL__Source_KPI_Definition__r.RecordType.DeveloperName &lt;&gt; &apos;editable&apos;,
+    NOT(ISPICKVAL(ACCL__Source_KPI_Definition__r.ACCL__Editable_Edit_Mode__c, &apos;total&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Source_KPI_Definition__c</errorDisplayField>
+        <errorMessage>The Source KPI Definition must have Record Type &apos;Editable&apos; and Edit Mode &apos;Total&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__SourceKPI_NotEmpty</fullName>
+        <active>true</active>
+        <description>The Source KPI Definition field can’t be empty.</description>
+        <errorConditionFormula>ISBLANK(ACCL__Source_KPI_Definition__c)</errorConditionFormula>
+        <errorDisplayField>ACCL__Source_KPI_Definition__c</errorDisplayField>
+        <errorMessage>The Source KPI Definition field can’t be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__SourceKPI_Scope</fullName>
+        <active>true</active>
+        <description>The Source KPI Definition must have Object Scope ‘Promotion Tactic’.</description>
+        <errorConditionFormula>NOT(ISPICKVAL(ACCL__Source_KPI_Definition__r.ACCL__Scope__c, &apos;promotiontactic&apos;))</errorConditionFormula>
+        <errorDisplayField>ACCL__Source_KPI_Definition__c</errorDisplayField>
+        <errorMessage>The Source KPI Definition must have Object Scope ‘Promotion Tactic’.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__SourceKpi_CompatibleToProductLevel</fullName>
+        <active>true</active>
+        <description>The BOM Scope of Source KPI Definition must contain ‘Component’ if Product Level is ‘Component’.</description>
+        <errorConditionFormula>AND(
+    ISPICKVAL(ACCL__Product_Level__c, &apos;Component&apos;),
+    NOT(INCLUDES(ACCL__Source_KPI_Definition__r.ACCL__BoM_Scope__c, &apos;Component&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Source_KPI_Definition__c</errorDisplayField>
+        <errorMessage>The BOM Scope of Source KPI Definition must contain ‘Component’ if Product Level is ‘Component’.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Targets_CheckMaintenanceBeforeUpdate</fullName>
+        <active>true</active>
+        <description>The Targets field can be changed after creation only if Maintenance field is set to &apos;Initial&apos;.</description>
+        <errorConditionFormula>AND(
+  NOT(ISPICKVAL(ACCL__Maintenance__c,&apos;Initial&apos;)),
+  ISCHANGED(ACCL__Targets__c)
+)</errorConditionFormula>
+        <errorDisplayField>ACCL__Targets__c</errorDisplayField>
+        <errorMessage>The Targets field can be changed after creation only if Maintenance field is set to &apos;Initial&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ACCL__Targets_ExternalMandatory</fullName>
+        <active>true</active>
+        <description>External is mandatory.</description>
+        <errorConditionFormula>NOT(INCLUDES(ACCL__Targets__c, &apos;External&apos;))</errorConditionFormula>
+        <errorDisplayField>ACCL__Targets__c</errorDisplayField>
+        <errorMessage>External is mandatory.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

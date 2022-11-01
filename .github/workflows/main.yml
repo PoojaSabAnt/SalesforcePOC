@@ -1,0 +1,116 @@
+name: Salesforce-cicd-workflow
+on:
+  pull_request:
+    branches:
+    - 'development'
+    - 'main'
+    types: 
+    - closed  
+
+jobs:
+  salesforce:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+  
+  salesforce-deploy:
+    needs: salesforce
+    if: |
+      (github.event_name == 'pull_request'   && github.event.pull_request.merged == true) &&
+      ((contains(github.head_ref, 'feature') && github.base_ref == 'development') ||
+      (github.head_ref == 'development'  && github.base_ref == 'main'))   
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+        
+    
+    - name: Auth sandbox, validate and deploy
+      env:
+       SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
+       SFDC_POC_PASSWORD_DEV: ${{ secrets.SFDC_POCDEV_PASSWORD }}
+       SFDC_POC_SERVERURL_DEV: ${{ secrets.SFDC_POCDEV_SERVERURL }}
+       SFDC_POC_USERNAME_PROD: ${{ secrets.SFDC_POCPROD_USERNAME }}
+       SFDC_POC_PASSWORD_PROD: ${{ secrets.SFDC_POCPROD_PASSWORD }}
+       SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCPROD_SERVERURL }}  
+      run: |
+        BRANCH=${GITHUB_REF#refs/heads/}
+        echo "Current branch is $BRANCH"
+        if [[ $BRANCH == development ]]; then
+          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+        else [[ $BRANCH == main ]];       
+          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+        fi
+        
+        export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
+        echo "Manifest folder: $MANIFEST_FOLDER"
+        mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
+        cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
+        cp $GITHUB_WORKSPACE/lib/* /usr/share/ant/lib/
+                
+        mkdir /tmp/objects
+        mkdir /tmp/classes
+        rsync $GITHUB_WORKSPACE/src/objects/* /tmp/objects
+        rsync $GITHUB_WORKSPACE/src/classes/* /tmp/classes
+        cp $GITHUB_WORKSPACE/src/package.xml /tmp
+        
+        rm -rf $GITHUB_WORKSPACE/src/*
+        mkdir $GITHUB_WORKSPACE/src/objects
+        mkdir $GITHUB_WORKSPACE/src/classes
+        cp /tmp/package.xml $GITHUB_WORKSPACE/src
+        
+        rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
+        sed -i 's|src/objects/||' /tmp/project-manifest-TPM.txt
+        sed -i 's|src/classes/||' /tmp/project-manifest-TPM.txt
+         
+        for filename in `cat /tmp/project-manifest-TPM.txt`;
+            do
+               if [ -f "/tmp/objects/$filename" ]; then
+                 cp /tmp/objects/$filename $GITHUB_WORKSPACE/src/objects
+               fi
+            done
+        
+               
+        for filename in `cat /tmp/project-manifest-TPM.txt`;
+            do
+               if [ -f "/tmp/classes/$filename" ]; then
+                  cp /tmp/classes/$filename $GITHUB_WORKSPACE/src/classes        
+               fi
+            done
+        
+        ls -R $GITHUB_WORKSPACE/src/*
+        
+        echo "Validation of build file started"
+        if [[ $BRANCH == development ]]; then
+        ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
+        else
+        ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
+        fi
+        if [ $? != 0 ];  then
+          echo "Validation failed"
+        fi 
+        
+        
+        echo "Deployment of components started"
+        if [[ $BRANCH == "development" ]]; then
+          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
+        else
+          ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
+        fi
+        if [ $? != 0 ];  then  
+          echo "Deployment failed"
+        fi
+      
+        

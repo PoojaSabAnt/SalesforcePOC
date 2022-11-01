@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <description>Assign null values to Order fields</description>
+        <name>Assign_null_values_to_Order_fields</name>
+        <label>Assign null values to Order fields</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_KeyAccount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTeam__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTerritory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assign values to Order fields</description>
+        <name>Assign_values_to_Order_fields</name>
+        <label>Assign values to Order fields</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_KeyAccount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Order_Account__r.MDLZ_KeyAccount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTeam__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Order_Account__r.MDLZ_AccountTeam__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.MDLZ_AccountTerritory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ACCL__Order_Account__r.MDLZ_AccountTerritory__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Check If customer lookup field is null</description>
+        <name>If_customer_field_is_null</name>
+        <label>If customer field is null</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Assign_null_values_to_Order_fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Customer_Account_Is_Not_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ACCL__Order_Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_values_to_Order_fields</targetReference>
+            </connector>
+            <label>Customer Account Is Not Null</label>
+        </rules>
+    </decisions>
+    <interviewLabel>MDLZ_Sales_Folder_Before_Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MDLZ_Order_Before_Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>If_customer_field_is_null</targetReference>
+        </connector>
+        <object>ACCL__Order__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Contains the list of account names</description>
+        <name>ListofAccountNames</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

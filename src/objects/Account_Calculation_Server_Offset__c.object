@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Set System Setting to be used for Call Order Distribution Relevant</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Days_After__c</fullName>
+        <defaultValue>90</defaultValue>
+        <externalId>false</externalId>
+        <label>Days After</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Before__c</fullName>
+        <defaultValue>90</defaultValue>
+        <externalId>false</externalId>
+        <label>Days Before</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Distribution Reorganisation</label>
+    <visibility>Public</visibility>
+</CustomObject>

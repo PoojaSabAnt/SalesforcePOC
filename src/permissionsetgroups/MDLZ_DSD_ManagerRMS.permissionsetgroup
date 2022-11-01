@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>MDLZ_DSD_ManagerRMS</label>
+    <permissionSets>ACSF_Mobility_Addon</permissionSets>
+    <permissionSets>MDLZ_APIClientAccess</permissionSets>
+    <permissionSets>MDLZ_AccountWrite</permissionSets>
+    <permissionSets>MDLZ_Activity</permissionSets>
+    <permissionSets>MDLZ_AllCallsWrite1</permissionSets>
+    <permissionSets>MDLZ_AllObjectsRead</permissionSets>
+    <permissionSets>MDLZ_AllOrdersWrite1</permissionSets>
+    <permissionSets>MDLZ_CustomPermissionsMobility_Managers</permissionSets>
+    <permissionSets>MDLZ_ManagerAppAccess</permissionSets>
+    <permissionSets>MDLZ_MobilityRead</permissionSets>
+    <permissionSets>MDLZ_OrderWriter</permissionSets>
+    <permissionSets>MDLZ_OrgUnits</permissionSets>
+    <permissionSets>MDLZ_SalesFoldersEdit</permissionSets>
+    <permissionSets>MDLZ_StoreListingEdit</permissionSets>
+    <permissionSets>MDLZ_SubstitutionWrite</permissionSets>
+    <permissionSets>MDLZ_CustomerSetWrite</permissionSets>
+    <permissionSets>MDLZ_CustomerTaskEdit</permissionSets>
+    <permissionSets>MDLZ_DisplayNotesEdit</permissionSets>
+    <permissionSets>MDLZ_SalesPlanningEdit</permissionSets>
+    <permissionSets>TquilaONE</permissionSets>
+    <permissionSets>force__EinsteinAnalyticsPlusUser</permissionSets>
+</PermissionSetGroup>
