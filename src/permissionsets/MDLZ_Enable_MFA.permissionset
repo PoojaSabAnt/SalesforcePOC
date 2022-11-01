@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Requiring MFA for non-SSO users i.e. Admins who will directly access SF</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>MDLZ Enable MFA</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ForceTwoFactor</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,28 @@
+<template>
+<lightning-card title="Product Tactics" >  
+  <lightning-button  label="Add New PPG"  onclick={addRow} class="slds-float_right slds-m-left_x-small"></lightning-button>
+  <lightning-button variant="destructive" label="Remove Row"  onclick={removeRow} class=" slds-float_right slds-m-left_x-small"></lightning-button>
+  <lightning-button  label="Cancel"  onclick={connectedCallback} class="slds-float_right slds-m-left_x-small"></lightning-button>
+  <br/><br/>
+  <div class="slds-m-around_medium table-height" >
+    <template if:true={tacticsProdList}>
+      <lightning-datatable
+      key-field="Id"
+      data={tacticsProdList}          
+      columns={columns}
+      suppress-bottom-bar      
+      draft-values={draftValues}
+      hide-row-number-column = "true"
+      hide-checkbox-column
+      onrowaction={handleRowAction}
+      oncellchange={handleCellChange}
+      >
+      </lightning-datatable>
+    </template>    
+    <template if:true={renderInnerTable}>
+    <c-m-D-L-Z_-Add-Delete-P-P-G  record-id={recordId}  onppgsave={connectedCallback}></c-m-D-L-Z_-Add-Delete-P-P-G>
+    </template>
+<br/>
+</div>
+</lightning-card>
+</template>

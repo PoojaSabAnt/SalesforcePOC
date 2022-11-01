@@ -1,0 +1,916 @@
+{
+  "version" : "55.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "mtd", "district", "district_txt", "team", "team_txt", "sales_repterritory", "sales_repterritory_txt", "objectives", "bq_insert_timestamp", "bq_update_timestamp" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "v_tcrm_terr_objective_amer",
+          "connectionName" : "D4GV",
+          "sourceObjectName" : "v_tcrm_terr_objective_amer"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET1" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "UserRoleId" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "User",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "User"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET2" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "ParentRoleId" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "UserRole",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "UserRole"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "FLATTEN0" : {
+      "action" : "flatten",
+      "sources" : [ "LOAD_DATASET2" ],
+      "parameters" : {
+        "selfField" : "Id",
+        "parentField" : "ParentRoleId",
+        "multiField" : {
+          "name" : "Id_flatten_multiField",
+          "label" : "Id Nodes",
+          "isSystemField" : false
+        },
+        "pathField" : {
+          "name" : "Id_flatten",
+          "label" : "Id Path",
+          "isSystemField" : false
+        },
+        "includeSelfId" : true
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET1", "FLATTEN0" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "UserRoleId" ],
+        "rightQualifier" : "UserRole",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET3" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "ACCL__Org_Unit__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "ACCL__Org_Unit__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET3", "JOIN2" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "MULTI_VALUE_LOOKUP",
+        "leftKeys" : [ "Id" ],
+        "rightQualifier" : "OrgUnitUser",
+        "rightKeys" : [ "ACCL__Org_Unit__c" ]
+      }
+    },
+    "LOAD_DATASET4" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "ACCL__Org_Unit__c", "ACCL__User__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "ACCL__Org_Unit_User__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "ACCL__Org_Unit_User__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN2" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET4", "JOIN0" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "ACCL__User__c" ],
+        "rightQualifier" : "User",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "JOIN3" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "JOIN1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "district" ],
+        "rightQualifier" : "District",
+        "rightKeys" : [ "Name" ]
+      }
+    },
+    "JOIN4" : {
+      "action" : "join",
+      "sources" : [ "JOIN3", "JOIN1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "team" ],
+        "rightQualifier" : "Team",
+        "rightKeys" : [ "Name" ]
+      }
+    },
+    "JOIN5" : {
+      "action" : "join",
+      "sources" : [ "JOIN4", "JOIN1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "sales_repterritory" ],
+        "rightQualifier" : "Territory",
+        "rightKeys" : [ "Name" ]
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "FORMULA4" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "MDLZ Territory Objectives",
+          "name" : "MDLZ_Territory_Objectives",
+          "folderName" : "SharedApp"
+        }
+      }
+    },
+    "EDIT_ATTRIBUTES6" : {
+      "action" : "schema",
+      "sources" : [ "JOIN8" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "objectives",
+          "newProperties" : {
+            "label" : "Objectives",
+            "name" : "objectives",
+            "typeProperties" : {
+              "type" : "NUMBER",
+              "scale" : 2,
+              "precision" : 18
+            }
+          }
+        } ]
+      }
+    },
+    "DROP_FIELDS0" : {
+      "action" : "schema",
+      "sources" : [ "FORMULA9" ],
+      "parameters" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ "District.Id", "District.Name", "District.OrgUnitUser.ACCL__Org_Unit__c", "District.OrgUnitUser.Id", "District.OrgUnitUser.Name", "District.OrgUnitUser.ACCL__User__c", "District.OrgUnitUser.User.UserRoleId", "District.OrgUnitUser.User.UserRole.Id", "District.OrgUnitUser.User.UserRole.ParentRoleId", "Team.OrgUnitUser.User.UserRole.ParentRoleId", "Territory.OrgUnitUser.User.UserRole.ParentRoleId", "District.OrgUnitUser.User.UserRole.Id_flatten", "Team.OrgUnitUser.User.UserRole.Id_flatten", "Territory.OrgUnitUser.User.UserRole.Id_flatten", "Team.Id", "Team.OrgUnitUser.Id", "Team.OrgUnitUser.User.UserRoleId", "Team.OrgUnitUser.User.UserRole.Id", "Territory.Id", "Territory.OrgUnitUser.Id", "Territory.OrgUnitUser.User.UserRoleId", "Territory.OrgUnitUser.User.UserRole.Id", "Team.Name", "Team.OrgUnitUser.Name", "Territory.Name", "Territory.OrgUnitUser.Name", "Team.OrgUnitUser.ACCL__Org_Unit__c", "Team.OrgUnitUser.ACCL__User__c", "Territory.OrgUnitUser.ACCL__Org_Unit__c", "Territory.OrgUnitUser.ACCL__User__c", "TerritoryMainUser.Id", "TerritoryMainUser.MainUserOrgUnit.Id", "TerritoryMainUser.MainUser.Id", "TerritoryMainUser.MainUser.UserRoleId", "TerritoryMainUser.ACCL__Org_Unit__c", "TerritoryMainUser.MainUserOrgUnit.Name", "TerritoryMainUser.MDLZ_Main__c", "TerritoryMainUser.MainUser.Name", "TerritoryMainUser.ACCL__User__c" ]
+        }
+      }
+    },
+    "FORMULA3" : {
+      "action" : "formula",
+      "sources" : [ "DROP_FIELDS0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "View_All",
+          "label" : "View All",
+          "formulaExpression" : "'Yes'",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA4" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA3" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "DATETIME",
+          "name" : "Load_Time",
+          "label" : "Load Time",
+          "formulaExpression" : "now()",
+          "format" : "MM/dd/yy hh:mm:ss a",
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES7" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES13" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "sales_repterritory_txt",
+          "newProperties" : {
+            "label" : "Territory Name",
+            "name" : "sales_repterritory_txt"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES8" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES7" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "district",
+          "newProperties" : {
+            "label" : "District",
+            "name" : "district"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES9" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES8" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "district_txt",
+          "newProperties" : {
+            "label" : "District Name",
+            "name" : "district_txt"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES10" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES9" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "team",
+          "newProperties" : {
+            "label" : "Team",
+            "name" : "team"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES11" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES10" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "sales_repterritory",
+          "newProperties" : {
+            "label" : "Territory",
+            "name" : "sales_repterritory"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES12" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES11" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "team_txt",
+          "newProperties" : {
+            "label" : "Team Name",
+            "name" : "team_txt"
+          }
+        } ]
+      }
+    },
+    "FORMULA5" : {
+      "action" : "formula",
+      "sources" : [ "EDIT_ATTRIBUTES15" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "Year_Flag",
+          "label" : "Year Flag",
+          "formulaExpression" : "case\r\n    when year(mtd) < year(now())\r\n    then 'PY'\r\n    else\r\n    'CY'\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA6" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA5" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "CY_Objectives",
+          "label" : "CY Objectives",
+          "formulaExpression" : "case\r\n    when Year_Flag = 'CY'\r\n    then objectives\r\nend",
+          "precision" : 18,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA7" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA6" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "PY_Objectives",
+          "label" : "PY Objectives",
+          "formulaExpression" : "case\r\n    when Year_Flag = 'PY'\r\n    then objectives\r\nend",
+          "precision" : 18,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES13" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES6" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "mtd",
+          "newProperties" : {
+            "label" : "MTD",
+            "name" : "mtd"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES14" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES12" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "bq_insert_timestamp",
+          "newProperties" : {
+            "label" : "BQ Insert Timestamp",
+            "name" : "bq_insert_timestamp"
+          }
+        } ]
+      }
+    },
+    "EDIT_ATTRIBUTES15" : {
+      "action" : "schema",
+      "sources" : [ "EDIT_ATTRIBUTES14" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "bq_update_timestamp",
+          "newProperties" : {
+            "label" : "BQ Update Timestamp",
+            "name" : "bq_update_timestamp"
+          }
+        } ]
+      }
+    },
+    "FORMULA8" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA7" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "Territory_SalesRep_Name",
+          "label" : "Territory - Sales Rep Name",
+          "formulaExpression" : "case\r\n    when sales_repterritory = \"TerritoryMainUser.MainUserOrgUnit.Name\"\r\n    then concat(sales_repterritory, ' - ',\"TerritoryMainUser.MainUser.Name\")\r\n    else concat(sales_repterritory, ' - ','NA')\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA9" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA8" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "Territory_Main_User",
+          "label" : "Territory Main User",
+          "formulaExpression" : "\"TerritoryMainUser.MainUser.Name\"",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "LOAD_DATASET5" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "ACCL__Org_Unit__c", "MDLZ_Main__c", "ACCL__User__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "ACCL__Org_Unit_User__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "ACCL__Org_Unit_User__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN6" : {
+      "action" : "join",
+      "sources" : [ "FILTER0", "LOAD_DATASET1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "ACCL__User__c" ],
+        "rightQualifier" : "MainUser",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "FILTER0" : {
+      "action" : "filter",
+      "sources" : [ "LOAD_DATASET5" ],
+      "parameters" : {
+        "filterExpressions" : [ {
+          "type" : "TEXT",
+          "field" : "MDLZ_Main__c",
+          "operator" : "EQUAL",
+          "operands" : [ "true" ]
+        } ]
+      }
+    },
+    "JOIN7" : {
+      "action" : "join",
+      "sources" : [ "JOIN6", "LOAD_DATASET3" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "ACCL__Org_Unit__c" ],
+        "rightQualifier" : "MainUserOrgUnit",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "JOIN8" : {
+      "action" : "join",
+      "sources" : [ "JOIN5", "JOIN7" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "sales_repterritory" ],
+        "rightQualifier" : "TerritoryMainUser",
+        "rightKeys" : [ "MainUserOrgUnit.Name" ]
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "v_tcrm_terr_objective_amer",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 672,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET1" : {
+        "label" : "User",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 812,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET2" : {
+        "label" : "UserRole",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "TRANSFORM0" : {
+        "label" : "Transform 0",
+        "type" : "TRANSFORM",
+        "top" : 112,
+        "left" : 252,
+        "graph" : {
+          "FLATTEN0" : {
+            "label" : "Flatten"
+          }
+        },
+        "connectors" : [ ]
+      },
+      "JOIN0" : {
+        "label" : "UserRole",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 392
+      },
+      "LOAD_DATASET3" : {
+        "label" : "ACCL__Org_Unit__c",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 952,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN1" : {
+        "label" : "OrgUnitUser",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 672
+      },
+      "LOAD_DATASET4" : {
+        "label" : "ACCL__Org_Unit_User__c",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 392,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN2" : {
+        "label" : "User",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 532
+      },
+      "JOIN3" : {
+        "label" : "District",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 812
+      },
+      "JOIN4" : {
+        "label" : "Team",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 952
+      },
+      "JOIN5" : {
+        "label" : "Territory",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 1092
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 112,
+        "left" : 1512
+      },
+      "TRANSFORM1" : {
+        "label" : "Transform 1",
+        "type" : "TRANSFORM",
+        "top" : 112,
+        "left" : 1372,
+        "graph" : {
+          "EDIT_ATTRIBUTES6" : {
+            "label" : "Edit Attributes"
+          },
+          "DROP_FIELDS0" : {
+            "label" : "Drop Columns"
+          },
+          "FORMULA3" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA4" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "EDIT_ATTRIBUTES7" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES8" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES9" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES10" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES11" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES12" : {
+            "label" : "Edit Attributes"
+          },
+          "FORMULA5" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA6" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA7" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "EDIT_ATTRIBUTES13" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES14" : {
+            "label" : "Edit Attributes"
+          },
+          "EDIT_ATTRIBUTES15" : {
+            "label" : "Edit Attributes"
+          },
+          "FORMULA8" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA9" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "DROP_FIELDS0",
+          "target" : "FORMULA3"
+        }, {
+          "source" : "FORMULA3",
+          "target" : "FORMULA4"
+        }, {
+          "source" : "EDIT_ATTRIBUTES7",
+          "target" : "EDIT_ATTRIBUTES8"
+        }, {
+          "source" : "EDIT_ATTRIBUTES8",
+          "target" : "EDIT_ATTRIBUTES9"
+        }, {
+          "source" : "EDIT_ATTRIBUTES9",
+          "target" : "EDIT_ATTRIBUTES10"
+        }, {
+          "source" : "EDIT_ATTRIBUTES10",
+          "target" : "EDIT_ATTRIBUTES11"
+        }, {
+          "source" : "EDIT_ATTRIBUTES11",
+          "target" : "EDIT_ATTRIBUTES12"
+        }, {
+          "source" : "FORMULA5",
+          "target" : "FORMULA6"
+        }, {
+          "source" : "FORMULA6",
+          "target" : "FORMULA7"
+        }, {
+          "source" : "EDIT_ATTRIBUTES13",
+          "target" : "EDIT_ATTRIBUTES7"
+        }, {
+          "source" : "EDIT_ATTRIBUTES6",
+          "target" : "EDIT_ATTRIBUTES13"
+        }, {
+          "source" : "EDIT_ATTRIBUTES12",
+          "target" : "EDIT_ATTRIBUTES14"
+        }, {
+          "source" : "EDIT_ATTRIBUTES15",
+          "target" : "FORMULA5"
+        }, {
+          "source" : "EDIT_ATTRIBUTES14",
+          "target" : "EDIT_ATTRIBUTES15"
+        }, {
+          "source" : "FORMULA7",
+          "target" : "FORMULA8"
+        }, {
+          "source" : "FORMULA9",
+          "target" : "DROP_FIELDS0"
+        }, {
+          "source" : "FORMULA8",
+          "target" : "FORMULA9"
+        } ]
+      },
+      "LOAD_DATASET5" : {
+        "label" : "ACCL__Org_Unit_User__c",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 672,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN6" : {
+        "label" : "MainUser",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 252,
+        "left" : 952
+      },
+      "FILTER0" : {
+        "label" : "Filter 0",
+        "type" : "FILTER",
+        "top" : 252,
+        "left" : 812
+      },
+      "JOIN7" : {
+        "label" : "MainUserOrgUnit",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 252,
+        "left" : 1092
+      },
+      "JOIN8" : {
+        "label" : "TerritoryMainUser",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 1232
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET2",
+      "target" : "TRANSFORM0"
+    }, {
+      "source" : "LOAD_DATASET1",
+      "target" : "JOIN0"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "LOAD_DATASET3",
+      "target" : "JOIN1"
+    }, {
+      "source" : "JOIN2",
+      "target" : "JOIN1"
+    }, {
+      "source" : "LOAD_DATASET4",
+      "target" : "JOIN2"
+    }, {
+      "source" : "JOIN0",
+      "target" : "JOIN2"
+    }, {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN3"
+    }, {
+      "source" : "JOIN1",
+      "target" : "JOIN3"
+    }, {
+      "source" : "JOIN3",
+      "target" : "JOIN4"
+    }, {
+      "source" : "JOIN1",
+      "target" : "JOIN4"
+    }, {
+      "source" : "JOIN4",
+      "target" : "JOIN5"
+    }, {
+      "source" : "JOIN1",
+      "target" : "JOIN5"
+    }, {
+      "source" : "TRANSFORM1",
+      "target" : "OUTPUT0"
+    }, {
+      "source" : "JOIN8",
+      "target" : "TRANSFORM1"
+    }, {
+      "source" : "FILTER0",
+      "target" : "JOIN6"
+    }, {
+      "source" : "LOAD_DATASET1",
+      "target" : "JOIN6"
+    }, {
+      "source" : "LOAD_DATASET5",
+      "target" : "FILTER0"
+    }, {
+      "source" : "JOIN6",
+      "target" : "JOIN7"
+    }, {
+      "source" : "LOAD_DATASET3",
+      "target" : "JOIN7"
+    }, {
+      "source" : "JOIN5",
+      "target" : "JOIN8"
+    }, {
+      "source" : "JOIN7",
+      "target" : "JOIN8"
+    } ],
+    "hiddenColumns" : [ ],
+    "assetType" : "TCRM"
+  }
+}

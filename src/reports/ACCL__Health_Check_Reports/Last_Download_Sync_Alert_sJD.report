@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Last_Successful_Upload_At__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Last_Successful_FSOD_At__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__User__c</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Link_to_Device_Logs__c</field>
+    </columns>
+    <description>Last successful downloads more than n days ago.</description>
+    <filter>
+        <criteriaItems>
+            <column>ACCL__TQ_App_Installation__c.ACCL__Last_Successful_Download_At__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>N_DAYS_AGO:7</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>ACCL__TQ_App_Installation__c.ACCL__Last_Successful_Download_At__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Last Download Sync Alert</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$ACCL__TQ_App_Installation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ACCL__TQ_App_Installation__c.ACCL__Installation_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

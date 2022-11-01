@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCL__TQ_App_Installation__c$ACCL__DeviceId__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__TQ_App_Installation__c$ACCL__User__c.Name</field>
+    </columns>
+    <description>The report provides an overview of how many users have applied latest deployment mobility package</description>
+    <filter>
+        <criteriaItems>
+            <column>ACCL__TQ_App_Installation__c.ACCL__AppInstallationIDs__r$ACCL__Is_Current__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCL__TQ_App_Installation__c.ACCL__AppInstallationIDs__r$ACCL__Deployment_Mobility_Package__c.Name</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Current Deployment Package Utilization</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Deployment_Package_Installation_Overview__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ACCL__TQ_App_Installation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

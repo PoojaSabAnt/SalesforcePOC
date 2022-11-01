@@ -1,0 +1,773 @@
+{
+  "version" : "55.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "cy_calendar_day", "Team.Id", "district", "team", "sales_repterritory", "cy_gross_revenue_less_unsalables", "py_gross_revenue_less_unsalables", "next_day_pending" ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "MDLZ Segment Revenue",
+          "name" : "MDLZ_Segment_Revenue"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET1" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "team", "sales_repterritory", "district", "PY_Objectives", "objectives", "CY_Objectives", "mtd" ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "MDLZ Territory Objectives",
+          "name" : "MDLZ_Territory_Objectives"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "AGGREGATE3", "AGGREGATE5" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "team" ],
+        "rightQualifier" : "Objectives",
+        "rightKeys" : [ "team" ]
+      }
+    },
+    "EXTRACT1" : {
+      "action" : "extractGrains",
+      "sources" : [ "FILTER0" ],
+      "parameters" : {
+        "grainExtractions" : [ ]
+      }
+    },
+    "AGGREGATE3" : {
+      "action" : "aggregate",
+      "sources" : [ "EXTRACT1" ],
+      "schema" : {
+        "fields" : [ {
+          "name" : "SUM_cy_gross_revenue_less_unsalables",
+          "newProperties" : {
+            "typeProperties" : {
+              "type" : "NUMBER",
+              "scale" : 2,
+              "precision" : 18
+            }
+          }
+        }, {
+          "name" : "SUM_py_gross_revenue_less_unsalables",
+          "newProperties" : {
+            "typeProperties" : {
+              "type" : "NUMBER",
+              "scale" : 2,
+              "precision" : 18
+            }
+          }
+        }, {
+          "name" : "SUM_next_day_pending",
+          "newProperties" : {
+            "typeProperties" : {
+              "type" : "NUMBER",
+              "scale" : 2,
+              "precision" : 18
+            }
+          }
+        } ]
+      },
+      "parameters" : {
+        "aggregations" : [ {
+          "action" : "SUM",
+          "source" : "cy_gross_revenue_less_unsalables",
+          "name" : "SUM_cy_gross_revenue_less_unsalables",
+          "label" : "Sum of CY Gross Revenue less Unsalables"
+        }, {
+          "action" : "SUM",
+          "source" : "py_gross_revenue_less_unsalables",
+          "name" : "SUM_py_gross_revenue_less_unsalables",
+          "label" : "Sum of PY Gross Revenue less Unsalables"
+        }, {
+          "action" : "SUM",
+          "source" : "next_day_pending",
+          "name" : "SUM_next_day_pending",
+          "label" : "Sum of Next Day Pending"
+        } ],
+        "groupings" : [ "district", "team", "Team.Id" ],
+        "pivots" : [ ],
+        "nodeType" : "STANDARD"
+      }
+    },
+    "FILTER0" : {
+      "action" : "filter",
+      "sources" : [ "LOAD_DATASET0" ],
+      "parameters" : {
+        "filterExpressions" : [ {
+          "type" : "DATETIME",
+          "field" : "cy_calendar_day",
+          "operator" : "IN_RANGE",
+          "operands" : [ {
+            "argument" : 0,
+            "type" : "N_MONTHS"
+          }, {
+            "argument" : 0,
+            "type" : "N_MONTHS"
+          } ]
+        } ]
+      }
+    },
+    "FILTER1" : {
+      "action" : "filter",
+      "sources" : [ "LOAD_DATASET1" ],
+      "parameters" : {
+        "filterExpressions" : [ {
+          "type" : "DATETIME",
+          "field" : "mtd",
+          "operator" : "IN_RANGE",
+          "operands" : [ {
+            "argument" : 0,
+            "type" : "N_MONTHS"
+          }, {
+            "argument" : 0,
+            "type" : "N_MONTHS"
+          } ]
+        } ]
+      }
+    },
+    "FORMULA0" : {
+      "action" : "formula",
+      "sources" : [ "JOIN0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "KPIGroup",
+          "label" : "KPI Group",
+          "formulaExpression" : "'Team'",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA1" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "KPITitle",
+          "label" : "KPI Title",
+          "formulaExpression" : "'Revenue'",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA2" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA1" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "DATETIME",
+          "name" : "KPIDate",
+          "label" : "KPI Refresh Date",
+          "formulaExpression" : "now()",
+          "format" : "yyyy-MM-dd HH:mm:ss",
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA3" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA2" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Value1",
+          "label" : "Value 1",
+          "formulaExpression" : "0",
+          "precision" : 18,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA4" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA3" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Value2",
+          "label" : "Value 2",
+          "formulaExpression" : "\"Objectives.SUM_CY_Objectives\"",
+          "precision" : 18,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA5" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA4" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Value3",
+          "label" : "Value 3",
+          "formulaExpression" : "SUM_cy_gross_revenue_less_unsalables + SUM_next_day_pending",
+          "precision" : 18,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA6" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA5" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Value4",
+          "label" : "Value 4",
+          "formulaExpression" : "((SUM_cy_gross_revenue_less_unsalables+SUM_next_day_pending)/\"Objectives.SUM_CY_Objectives\")*100",
+          "precision" : 18,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA7" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA6" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "DATE_ONLY",
+          "name" : "CurrentDay",
+          "label" : "Current Day",
+          "formulaExpression" : "current_date()",
+          "format" : "MM/dd/yyyy",
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA12" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA7" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "Value4_formula",
+          "label" : "Value 4 Formula",
+          "formulaExpression" : "string(Value4)",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "LOAD_DATASET2" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Month_Day_1", "Date", "WorkDaycou.Number_of_Working_Days", "Day_Factor", "Day_Sum" ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Day Factor",
+          "name" : "Day_Factor"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "FORMULA8" : {
+      "action" : "formula",
+      "sources" : [ "LOAD_DATASET2" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "DATE_ONLY",
+          "name" : "Date_formula",
+          "label" : "Date Formula",
+          "formulaExpression" : "to_date(Date)",
+          "format" : "MM/dd/yyyy",
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "sources" : [ "FORMULA12", "FORMULA8" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "CurrentDay" ],
+        "rightQualifier" : "DayFactor",
+        "rightKeys" : [ "Date_formula" ]
+      }
+    },
+    "FORMULA9" : {
+      "action" : "formula",
+      "sources" : [ "JOIN1" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Value5",
+          "label" : "Value 5",
+          "formulaExpression" : "\"DayFactor.Day_Factor\"",
+          "precision" : 18,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA10" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA9" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "Value6",
+          "label" : "Value 6",
+          "formulaExpression" : "\"DayFactor.WorkDaycou.Number_of_Working_Days\"",
+          "precision" : 18,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA11" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA10" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "ExternalID",
+          "label" : "External ID",
+          "formulaExpression" : "concat('US01','_',KPIGroup,'_',KPITitle,'_',team)",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "DROP_FIELDS0" : {
+      "action" : "schema",
+      "sources" : [ "FORMULA13" ],
+      "parameters" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "SELECT",
+          "ignoreMissingFields" : true,
+          "fields" : [ "Team.Id", "KPIGroup", "KPITitle", "KPIDate", "Value1", "Value2", "Value3", "Value4_formula", "Value6", "ExternalID", "Value5_formula" ]
+        }
+      }
+    },
+    "FORMULA13" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA11" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "Value5_formula",
+          "label" : "Value 5 Formula",
+          "formulaExpression" : "string(Value5)",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "EXTRACT2" : {
+      "action" : "extractGrains",
+      "sources" : [ "FILTER1" ],
+      "parameters" : {
+        "grainExtractions" : [ ]
+      }
+    },
+    "AGGREGATE5" : {
+      "action" : "aggregate",
+      "sources" : [ "EXTRACT2" ],
+      "schema" : {
+        "fields" : [ {
+          "name" : "SUM_CY_Objectives",
+          "newProperties" : {
+            "typeProperties" : {
+              "type" : "NUMBER",
+              "scale" : 2,
+              "precision" : 18
+            }
+          }
+        } ]
+      },
+      "parameters" : {
+        "aggregations" : [ {
+          "action" : "SUM",
+          "source" : "CY_Objectives",
+          "name" : "SUM_CY_Objectives",
+          "label" : "Sum of CY Objectives"
+        } ],
+        "groupings" : [ "district", "team" ],
+        "pivots" : [ ],
+        "nodeType" : "STANDARD"
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "outputExternal",
+      "sources" : [ "DROP_FIELDS0" ],
+      "parameters" : {
+        "connectionName" : "Mondelez",
+        "object" : "MDLZ_KPIData__c",
+        "operation" : "upsert",
+        "externalIdFieldName" : "MDLZ_ExternalId__c",
+        "hyperFileName" : "",
+        "fieldsMapping" : [ {
+          "sourceField" : "Team.Id",
+          "targetField" : "MDLZ_TerritoryId__c"
+        }, {
+          "sourceField" : "KPIGroup",
+          "targetField" : "MDLZ_KPIGroup__c"
+        }, {
+          "sourceField" : "KPITitle",
+          "targetField" : "MDLZ_KPITitle__c"
+        }, {
+          "sourceField" : "KPIDate",
+          "targetField" : "MDLZ_KPIDate__c"
+        }, {
+          "sourceField" : "Value1",
+          "targetField" : "MDLZ_Value1__c"
+        }, {
+          "sourceField" : "Value2",
+          "targetField" : "MDLZ_Value2__c"
+        }, {
+          "sourceField" : "Value3",
+          "targetField" : "MDLZ_Value3__c"
+        }, {
+          "sourceField" : "Value4_formula",
+          "targetField" : "MDLZ_Value4__c"
+        }, {
+          "sourceField" : "Value6",
+          "targetField" : "MDLZ_Value6__c"
+        }, {
+          "sourceField" : "ExternalID",
+          "targetField" : "MDLZ_ExternalId__c"
+        }, {
+          "sourceField" : "Value5_formula",
+          "targetField" : "MDLZ_Value5__c"
+        } ],
+        "connectorType" : "SALESFORCE_OUTPUT"
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "MDLZ Segment Revenue",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET1" : {
+        "label" : "MDLZ Territory Objectives",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN0" : {
+        "label" : "Join 0",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 532
+      },
+      "AGGREGATE2" : {
+        "label" : "Aggregate 2",
+        "type" : "AGGREGATE",
+        "top" : 112,
+        "left" : 392,
+        "graph" : {
+          "EXTRACT1" : null,
+          "AGGREGATE3" : null
+        },
+        "connectors" : [ {
+          "source" : "EXTRACT1",
+          "target" : "AGGREGATE3"
+        } ]
+      },
+      "FILTER0" : {
+        "label" : "Filter 0",
+        "type" : "FILTER",
+        "top" : 112,
+        "left" : 252
+      },
+      "FILTER1" : {
+        "label" : "Filter 1",
+        "type" : "FILTER",
+        "top" : 252,
+        "left" : 252
+      },
+      "TRANSFORM0" : {
+        "label" : "Transform 0",
+        "type" : "TRANSFORM",
+        "top" : 112,
+        "left" : 672,
+        "graph" : {
+          "FORMULA0" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA1" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA2" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA3" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA4" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA5" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA6" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA7" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA12" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA0",
+          "target" : "FORMULA1"
+        }, {
+          "source" : "FORMULA1",
+          "target" : "FORMULA2"
+        }, {
+          "source" : "FORMULA2",
+          "target" : "FORMULA3"
+        }, {
+          "source" : "FORMULA3",
+          "target" : "FORMULA4"
+        }, {
+          "source" : "FORMULA4",
+          "target" : "FORMULA5"
+        }, {
+          "source" : "FORMULA5",
+          "target" : "FORMULA6"
+        }, {
+          "source" : "FORMULA6",
+          "target" : "FORMULA7"
+        }, {
+          "source" : "FORMULA7",
+          "target" : "FORMULA12"
+        } ]
+      },
+      "LOAD_DATASET2" : {
+        "label" : "Day Factor",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 532,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "TRANSFORM1" : {
+        "label" : "Transform 1",
+        "type" : "TRANSFORM",
+        "top" : 252,
+        "left" : 672,
+        "graph" : {
+          "FORMULA8" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ ]
+      },
+      "JOIN1" : {
+        "label" : "Join 1",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 812
+      },
+      "TRANSFORM2" : {
+        "label" : "Transform 2",
+        "type" : "TRANSFORM",
+        "top" : 112,
+        "left" : 952,
+        "graph" : {
+          "FORMULA9" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA10" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA11" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "DROP_FIELDS0" : {
+            "label" : "Drop Columns"
+          },
+          "FORMULA13" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA9",
+          "target" : "FORMULA10"
+        }, {
+          "source" : "FORMULA10",
+          "target" : "FORMULA11"
+        }, {
+          "source" : "FORMULA13",
+          "target" : "DROP_FIELDS0"
+        }, {
+          "source" : "FORMULA11",
+          "target" : "FORMULA13"
+        } ]
+      },
+      "AGGREGATE4" : {
+        "label" : "Aggregate 4",
+        "type" : "AGGREGATE",
+        "top" : 252,
+        "left" : 392,
+        "graph" : {
+          "EXTRACT2" : null,
+          "AGGREGATE5" : null
+        },
+        "connectors" : [ {
+          "source" : "EXTRACT2",
+          "target" : "AGGREGATE5"
+        } ]
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 112,
+        "left" : 1092
+      }
+    },
+    "connectors" : [ {
+      "source" : "AGGREGATE2",
+      "target" : "JOIN0"
+    }, {
+      "source" : "AGGREGATE4",
+      "target" : "JOIN0"
+    }, {
+      "source" : "FILTER0",
+      "target" : "AGGREGATE2"
+    }, {
+      "source" : "LOAD_DATASET0",
+      "target" : "FILTER0"
+    }, {
+      "source" : "LOAD_DATASET1",
+      "target" : "FILTER1"
+    }, {
+      "source" : "JOIN0",
+      "target" : "TRANSFORM0"
+    }, {
+      "source" : "LOAD_DATASET2",
+      "target" : "TRANSFORM1"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "JOIN1"
+    }, {
+      "source" : "TRANSFORM1",
+      "target" : "JOIN1"
+    }, {
+      "source" : "JOIN1",
+      "target" : "TRANSFORM2"
+    }, {
+      "source" : "FILTER1",
+      "target" : "AGGREGATE4"
+    }, {
+      "source" : "TRANSFORM2",
+      "target" : "OUTPUT0"
+    } ],
+    "hiddenColumns" : [ ],
+    "assetType" : "TCRM"
+  }
+}

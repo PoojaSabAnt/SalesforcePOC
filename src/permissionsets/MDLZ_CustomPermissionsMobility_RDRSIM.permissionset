@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>MDLZ_RDRSIMD4GV</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>MDLZ_IntelligentRecMgr</name>
+    </customPermissions>
+	<customPermissions>
+        <enabled>true</enabled>
+        <name>MDLZ_SalesPlanning</name>
+    </customPermissions>
+	<customPermissions>
+        <enabled>true</enabled>
+        <name>MDLZ_Coaching</name>
+    </customPermissions>
+	<customPermissions>
+        <enabled>true</enabled>
+        <name>MDLZ_Visits</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>MDLZ_CustomPermissionsMobility_RDRSIM</label>
+</PermissionSet>

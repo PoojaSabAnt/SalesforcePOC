@@ -1,0 +1,2184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Holds the details of the order item object.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>ACCL__MobilityRelevant</fullName>
+        <description>Field set used to restrict the amount of data on the mobility device.</description>
+        <displayedFields>
+            <field>MDLZ_CodeDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+		<displayedFields>
+            <field>MDLZ_ErrorMessage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+		<displayedFields>
+            <field>MDLZ_ItemStatus__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_CreditReasonCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Item_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Discount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__UoM__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Listed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Promoted__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Promotion__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Promotion_Reward__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__History__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Out_Of_Stock__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Base_Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Special_Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Special_Price_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Suggested_Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Value_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Erp_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Free_Item_Creation_Step__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Parent_Order_Item__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Parent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Price_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Base_Price_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Gross_Value_Receipt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Information__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+<displayedFields>
+            <field>ACCL__Pricing_Info_5__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_6__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_7__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_8__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_9__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Pricing_Info_10__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_FreshCreditReasonCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_UnsaleableReasonCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+		<displayedFields>
+            <field>MDLZ_DeliveredQty__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_OriginalQty__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MDLZ_MobileQty__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+		<displayedFields>
+            <field>MDLZ_LastSavedByUser__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MobilityRelevant</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ACCL__OrderItemFieldsDisplay</fullName>
+        <description>This fieldset holds the order item fields to be displayed on Order Summary Page</description>
+        <displayedFields>
+            <field>ACCL__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Order_Item_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__UoM__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ACCL__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OrderItemFieldsDisplay</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACCL__Base_Price_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Basic product price in receipt currency.</description>
+        <externalId>false</externalId>
+        <label>Base Price Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Base_Price__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Stores the Value of the item, specified in the  appropriate product condition.</description>
+        <externalId>false</externalId>
+        <label>Base Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Check_In_Reason_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Allows specification of a reason if the checked in product quantity does not fit to the expected product quantity given via product inventory.</description>
+        <externalId>false</externalId>
+        <label>Check In Reason Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Broken</fullName>
+                    <default>false</default>
+                    <label>Broken</label>
+                </value>
+                <value>
+                    <fullName>Stolen</fullName>
+                    <default>false</default>
+                    <label>Stolen</label>
+                </value>
+                <value>
+                    <fullName>Miscounting</fullName>
+                    <default>false</default>
+                    <label>Miscounting</label>
+                </value>
+                <value>
+                    <fullName>NoDoc</fullName>
+                    <default>false</default>
+                    <label>NoDoc</label>
+                </value>
+                <value>
+                    <fullName>Misc.</fullName>
+                    <default>false</default>
+                    <label>Misc.</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Consumer_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The ordered quantity expressed in consumer quantity units</description>
+        <externalId>false</externalId>
+        <label>Consumer Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Discount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Manual discount given by the user.</description>
+        <externalId>false</externalId>
+        <label>Discount</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_SAPRejectionCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Rejection code from SAP</description>
+        <externalId>false</externalId>
+        <label>SAP Rejection Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Erp_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Id of this order entry for the ERP system.</description>
+        <externalId>false</externalId>
+        <label>Erp Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Free_Item_Creation_Step__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds a reference to the step which generates the free item</description>
+        <externalId>false</externalId>
+        <label>Free Item Creation Step</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Gross_Value_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Gross value in receipt currency.</description>
+        <externalId>false</externalId>
+        <label>Gross Value Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__History__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The item, which has been added to the disposal list, has been ordered in a former sales document. (The item belongs to a former sales document of the same business partner and of the same sales document template.)</description>
+        <externalId>false</externalId>
+        <label>History</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Left_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Item quantity left on the truck after product check in</description>
+        <externalId>false</externalId>
+        <label>Left Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Listed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>True, if product exists in an authorization list of the orderer.</description>
+        <externalId>false</externalId>
+        <label>Listed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Modification_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies a reason if preordered product quantity has been modified on mobility device.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute at present not used.</inlineHelpText>
+        <label>Modification Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>More</fullName>
+                    <default>false</default>
+                    <label>More</label>
+                </value>
+                <value>
+                    <fullName>Less</fullName>
+                    <default>false</default>
+                    <label>Less</label>
+                </value>
+                <value>
+                    <fullName>WrongPrd</fullName>
+                    <default>false</default>
+                    <label>WrongPrd</label>
+                </value>
+                <value>
+                    <fullName>IncOrder</fullName>
+                    <default>false</default>
+                    <label>IncOrder</label>
+                </value>
+                <value>
+                    <fullName>DmgByDriver</fullName>
+                    <default>false</default>
+                    <label>DmgByDriver</label>
+                </value>
+                <value>
+                    <fullName>Nopayment</fullName>
+                    <default>false</default>
+                    <label>Nopayment</label>
+                </value>
+                <value>
+                    <fullName>TMStock</fullName>
+                    <default>false</default>
+                    <label>TMStock</label>
+                </value>
+                <value>
+                    <fullName>WrDel</fullName>
+                    <default>false</default>
+                    <label>WrDel</label>
+                </value>
+                <value>
+                    <fullName>FGReturn</fullName>
+                    <default>false</default>
+                    <label>FGReturn</label>
+                </value>
+                <value>
+                    <fullName>BadPrd</fullName>
+                    <default>false</default>
+                    <label>BadPrd</label>
+                </value>
+                <value>
+                    <fullName>OutTrStock</fullName>
+                    <default>false</default>
+                    <label>OutTrStock</label>
+                </value>
+                <value>
+                    <fullName>TckTransfer</fullName>
+                    <default>false</default>
+                    <label>TckTransfer</label>
+                </value>
+                <value>
+                    <fullName>MissCount</fullName>
+                    <default>false</default>
+                    <label>MissCount</label>
+                </value>
+                <value>
+                    <fullName>Misc</fullName>
+                    <default>false</default>
+                    <label>Misc</label>
+                </value>
+                <value>
+                    <fullName>CpFailed</fullName>
+                    <default>false</default>
+                    <label>CpFailed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order_Item_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>ID of the order item template where order item is associated with</description>
+        <externalId>false</externalId>
+        <label>Order Item Template</label>
+        <referenceTo>ACCL__Order_Item_Template__c</referenceTo>
+        <relationshipLabel>Order Items</relationshipLabel>
+        <relationshipName>Order_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the order where Order Item is associated with</description>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <referenceTo>ACCL__Order__c</referenceTo>
+        <relationshipLabel>Order Items</relationshipLabel>
+        <relationshipName>Order_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ACCL__Out_Of_Stock__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Specifies whether the product is out of stock.</description>
+        <externalId>false</externalId>
+        <label>Out Of Stock</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Order_Item__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to a parent order item (e.g. in case of free item: the ordered item that caused the free item). Used in complex pricing on mobility devices.</description>
+        <externalId>false</externalId>
+        <label>Parent_Order_Item</label>
+        <referenceTo>ACCL__Order_Item__c</referenceTo>
+        <relationshipLabel>Parent Order Items</relationshipLabel>
+        <relationshipName>Parent_Order_Item</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_BkpItemStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Bkp Item Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Empty</fullName>
+                    <default>false</default>
+                    <label>Empty</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MDLZ_BkpSuggestedQty__c</fullName>
+        <externalId>false</externalId>
+        <label>Bkp Suggested Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Parent_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the to which parent the free item is related. Can be related to a order item then Parent_Order_Item is filled and the type is order. If free item is related to Order header type is &quot;Order&quot;.</description>
+        <externalId>false</externalId>
+        <label>Parent Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Item</fullName>
+                    <default>false</default>
+                    <label>Item</label>
+                </value>
+                <value>
+                    <fullName>Order</fullName>
+                    <default>false</default>
+                    <label>Order</label>
+                </value>
+                <value>
+                    <fullName>Reward</fullName>
+                    <default>false</default>
+                    <label>Reward</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Price_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated price of the item in the receipt/document currency.</description>
+        <externalId>false</externalId>
+        <label>Price Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated price of the item in the domestic currency.</description>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+<fields>
+        <fullName>ACCL__Pricing_Info_5__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_6__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_7__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_8__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_9__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+<fields>
+        <fullName>ACCL__Pricing_Info_10__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_3__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Info_4__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pricing Info 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Pricing_Information__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds the pricing information (found conditions) which are directly related to the order item.</description>
+        <externalId>false</externalId>
+        <label>Pricing Information</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ACCL__Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Product ID of selected product</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>ACCL__Product__c</referenceTo>
+        <relationshipLabel>Order Items</relationshipLabel>
+        <relationshipName>Order_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Promoted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>True if a promotion exists in the relevant period.</description>
+        <externalId>false</externalId>
+        <label>Promoted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Promotion_Reward__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Relation to the reward if order item was granted by a reward.</description>
+        <externalId>false</externalId>
+        <label>Promotion Reward</label>
+        <referenceTo>ACCL__Promotion_Reward__c</referenceTo>
+        <relationshipLabel>Order Items</relationshipLabel>
+        <relationshipName>Order_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Promotion__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to promotion if the product of the item originates from a selectable promotion</description>
+        <externalId>false</externalId>
+        <label>Promotion</label>
+        <referenceTo>ACCL__Promotion__c</referenceTo>
+        <relationshipLabel>Order Items</relationshipLabel>
+        <relationshipName>Order_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACCL__Quantity__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Quantity for this product.</description>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Record_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Hyperlink for the detail page of the record</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;Id, $Label.ACCL__record_link, &quot;_top&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Special_Price_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The attribute specifies a reduced price for an item that is used for the item value calculation if specified. The attribute can only be edited, if the Order item template allows the consideration of the special price.</description>
+        <externalId>false</externalId>
+        <label>Special Price Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Special_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The attribute specifies a reduced price for an item that is used for the item value calculation if specified. The attribute can only be edited, if the sales document item template allows the consideration of the special price.</description>
+        <externalId>false</externalId>
+        <label>Special Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Suggested_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The value contains the suggested order quantity that has been calculated via algorithm or that is given by a relevant promotion.</description>
+        <externalId>false</externalId>
+        <label>Suggested Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Target_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Product checkout quantity for the tour in question as given by the HOST interface.</description>
+        <externalId>false</externalId>
+        <label>Target Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__UoM__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stands for &apos;Unit Of Measure&apos;</description>
+        <externalId>false</externalId>
+        <label>UoM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ConsumerUnit</fullName>
+                    <default>false</default>
+                    <label>ConsumerUnit</label>
+                </value>
+                <value>
+                    <fullName>SalesUnit</fullName>
+                    <default>false</default>
+                    <label>SalesUnit</label>
+                </value>
+                <value>
+                    <fullName>Pallet</fullName>
+                    <default>false</default>
+                    <label>Pallet</label>
+                </value>
+                <value>
+                    <fullName>Layer</fullName>
+                    <default>false</default>
+                    <label>Layer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ACCL__Value_Receipt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated value of the item in the receipt/document currency.</description>
+        <externalId>false</externalId>
+        <label>Value Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated value of the item in the domestic currency.</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACCL__Voided__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This attribute indicates if a disposal list item is voided.</description>
+        <externalId>false</externalId>
+        <label>Voided</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MDLZ_CodeDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Code Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+	 <fields>
+        <fullName>MDLZ_SAPExternalID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SAP External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_CreditReasonCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Reason Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>03 - DSD Shelf-Life Code Expired</fullName>
+                    <default>false</default>
+                    <label>03 - DSD Shelf-Life Code Expired</label>
+                </value>
+                <value>
+                    <fullName>04 - DSD Infest, Water, Fire</fullName>
+                    <default>false</default>
+                    <label>04 - DSD Infest, Water, Fire</label>
+                </value>
+                <value>
+                    <fullName>07 - DSD Product Recall</fullName>
+                    <default>false</default>
+                    <label>07 - DSD Product Recall</label>
+                </value>
+                <value>
+                    <fullName>36 - DSD Glue Related Issues</fullName>
+                    <default>false</default>
+                    <label>36 - DSD Glue Related Issues</label>
+                </value>
+                <value>
+                    <fullName>38 - DSD Delivered Out of Code</fullName>
+                    <default>false</default>
+                    <label>38 - DSD Delivered Out of Code</label>
+                </value>
+                <value>
+                    <fullName>40 - DSD Pallet Damage</fullName>
+                    <default>false</default>
+                    <label>40 - DSD Pallet Damage</label>
+                </value>
+                <value>
+                    <fullName>41 - DSD Sticker Damage</fullName>
+                    <default>false</default>
+                    <label>41 - DSD Sticker Damage</label>
+                </value>
+                <value>
+                    <fullName>42 - DSD Handling Damage</fullName>
+                    <default>false</default>
+                    <label>42 - DSD Handling Damage</label>
+                </value>
+                <value>
+                    <fullName>43 - DSD Shrink Wrap Damage</fullName>
+                    <default>false</default>
+                    <label>43 - DSD Shrink Wrap Damage</label>
+                </value>
+                <value>
+                    <fullName>44 - DSD Open Seals</fullName>
+                    <default>false</default>
+                    <label>44 - DSD Open Seals</label>
+                </value>
+                <value>
+                    <fullName>45 - DSD Unknown Damage</fullName>
+                    <default>false</default>
+                    <label>45 - DSD Unknown Damage</label>
+                </value>
+                <value>
+                    <fullName>46 - DSD All Other MFG Damage</fullName>
+                    <default>false</default>
+                    <label>46 - DSD All Other MFG Damage</label>
+                </value>
+                <value>
+                    <fullName>47 - DSD Consumer Return</fullName>
+                    <default>false</default>
+                    <label>47 - DSD Consumer Return</label>
+                </value>
+                <value>
+                    <fullName>01 - DSD Overstock</fullName>
+                    <default>false</default>
+                    <label>01 - DSD Overstock</label>
+                </value>
+                <value>
+                    <fullName>15 - DSD Did Not Order</fullName>
+                    <default>false</default>
+                    <label>15 - DSD Did Not Order</label>
+                </value>
+                <value>
+                    <fullName>16 - DSD Discontinued</fullName>
+                    <default>false</default>
+                    <label>16 - DSD Discontinued</label>
+                </value>
+                <value>
+                    <fullName>18 - DSD Short on Delivery</fullName>
+                    <default>false</default>
+                    <label>18 - DSD Short on Delivery</label>
+                </value>
+                <value>
+                    <fullName>23 - DSD Customer Refused</fullName>
+                    <default>false</default>
+                    <label>23 - DSD Customer Refused</label>
+                </value>
+                <value>
+                    <fullName>02 - DSD Damaged in Store</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>02 - DSD Damaged in Store</label>
+                </value>
+                <value>
+                    <fullName>08 - DSD Allowance not given</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>08 - DSD Allowance not given</label>
+                </value>
+                <value>
+                    <fullName>11 - DSD Missed Distributor Deduction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>11 - DSD Missed Distributor Deduction</label>
+                </value>
+                <value>
+                    <fullName>12 - DSD Missed Efficiency Deduction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>12 - DSD Missed Efficiency Deduction</label>
+                </value>
+                <value>
+                    <fullName>14 - DSD Honor Receiving</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>14 - DSD Honor Receiving</label>
+                </value>
+                <value>
+                    <fullName>17 - DSD DAMAGED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>17 - DSD DAMAGED</label>
+                </value>
+                <value>
+                    <fullName>19 - DSD PRODUCT NOT AUTHORIZED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>19 - DSD PRODUCT NOT AUTHORIZED</label>
+                </value>
+                <value>
+                    <fullName>20 - DSD NOT USED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>20 - DSD NOT USED</label>
+                </value>
+                <value>
+                    <fullName>21 - DSD NO RECEIVER</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>21 - DSD NO RECEIVER</label>
+                </value>
+                <value>
+                    <fullName>22 - DSD MISSED WINDOW</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>22 - DSD MISSED WINDOW</label>
+                </value>
+                <value>
+                    <fullName>24 - DSD SAMPLING</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>24 - DSD SAMPLING</label>
+                </value>
+                <value>
+                    <fullName>26 - DSD Lump Sum Unsaleable</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>26 - DSD Lump Sum Unsaleable</label>
+                </value>
+                <value>
+                    <fullName>27 - DSD Pricing Adjustment</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>27 - DSD Pricing Adjustment</label>
+                </value>
+                <value>
+                    <fullName>28 - DSD Missed Allow/ChkBook</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>28 - DSD Missed Allow/ChkBook</label>
+                </value>
+                <value>
+                    <fullName>29 - DSD OVERSTOCKED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>29 - DSD OVERSTOCKED</label>
+                </value>
+                <value>
+                    <fullName>30 - DSD MISSING CREDITS</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>30 - DSD MISSING CREDITS</label>
+                </value>
+                <value>
+                    <fullName>31 - DSD CUSTOMER NEEDS SALES REP</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>31 - DSD CUSTOMER NEEDS SALES REP</label>
+                </value>
+                <value>
+                    <fullName>32 - DSD CHERRY PICKING</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>32 - DSD CHERRY PICKING</label>
+                </value>
+                <value>
+                    <fullName>33 - DSD ALLOWANCE DISCREPANCIES</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>33 - DSD ALLOWANCE DISCREPANCIES</label>
+                </value>
+                <value>
+                    <fullName>34 - DSD NO MONEY TO PAY</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>34 - DSD NO MONEY TO PAY</label>
+                </value>
+                <value>
+                    <fullName>35 - PIZ Demo Replacement</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>35 - PIZ Demo Replacement</label>
+                </value>
+                <value>
+                    <fullName>37 - DSD Manufacturer Defect</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>37 - DSD Manufacturer Defect</label>
+                </value>
+                <value>
+                    <fullName>62 - DSD SERVICE ISSUES</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>62 - DSD SERVICE ISSUES</label>
+                </value>
+                <value>
+                    <fullName>63 - DSD CREDIT ISSUE</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>63 - DSD CREDIT ISSUE</label>
+                </value>
+                <value>
+                    <fullName>64 - DSD PRICE</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>64 - DSD PRICE</label>
+                </value>
+                <value>
+                    <fullName>All Other Manufacture Defect</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>All Other Manufacture Defect</label>
+                </value>
+                <value>
+                    <fullName>Consumer Return</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Consumer Return</label>
+                </value>
+                <value>
+                    <fullName>DSD ALLOWANCE DISCREPANCIES</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD ALLOWANCE DISCREPANCIES</label>
+                </value>
+                <value>
+                    <fullName>DSD All Other MFG Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD All Other MFG Damage</label>
+                </value>
+                <value>
+                    <fullName>DSD Allowance not given</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Allowance not given</label>
+                </value>
+                <value>
+                    <fullName>DSD CHERRY PICKING</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD CHERRY PICKING</label>
+                </value>
+                <value>
+                    <fullName>DSD CREDIT ISSUE</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD CREDIT ISSUE</label>
+                </value>
+                <value>
+                    <fullName>DSD CUSTOMER NEEDS SALES REP</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD CUSTOMER NEEDS SALES REP</label>
+                </value>
+                <value>
+                    <fullName>DSD Consumer Return</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Consumer Return</label>
+                </value>
+                <value>
+                    <fullName>DSD DAMAGED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD DAMAGED</label>
+                </value>
+                <value>
+                    <fullName>DSD Damaged in Store</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Damaged in Store</label>
+                </value>
+                <value>
+                    <fullName>DSD Deliverd Out of Code</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Deliverd Out of Code</label>
+                </value>
+                <value>
+                    <fullName>DSD Did Not Order</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Did Not Order</label>
+                </value>
+                <value>
+                    <fullName>DSD Discontinued</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Discontinued</label>
+                </value>
+                <value>
+                    <fullName>DSD Glue Related Issues</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Glue Related Issues</label>
+                </value>
+                <value>
+                    <fullName>DSD Handling Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Handling Damage</label>
+                </value>
+                <value>
+                    <fullName>DSD Honor Receiving</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Honor Receiving</label>
+                </value>
+                <value>
+                    <fullName>DSD Infest, Water, Fire</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Infest, Water, Fire</label>
+                </value>
+                <value>
+                    <fullName>DSD Lump Sum Unsaleable</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Lump Sum Unsaleable</label>
+                </value>
+                <value>
+                    <fullName>DSD MISSED WINDOW</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD MISSED WINDOW</label>
+                </value>
+                <value>
+                    <fullName>DSD MISSING CREDITS</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD MISSING CREDITS</label>
+                </value>
+                <value>
+                    <fullName>DSD Manufactuer Defect</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Manufactuer Defect</label>
+                </value>
+                <value>
+                    <fullName>DSD Missed Allow/ChkBook</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Missed Allow/ChkBook</label>
+                </value>
+                <value>
+                    <fullName>DSD Missed Distributor Deduction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Missed Distributor Deduction</label>
+                </value>
+                <value>
+                    <fullName>DSD Missed Efficiency Deduction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Missed Efficiency Deduction</label>
+                </value>
+                <value>
+                    <fullName>DSD NO MONEY TO PAY</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD NO MONEY TO PAY</label>
+                </value>
+                <value>
+                    <fullName>DSD NO RECEIVER</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD NO RECEIVER</label>
+                </value>
+                <value>
+                    <fullName>DSD NOT USED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD NOT USED</label>
+                </value>
+                <value>
+                    <fullName>DSD OVERSTOCKED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD OVERSTOCKED</label>
+                </value>
+                <value>
+                    <fullName>DSD Open Seals</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Open Seals</label>
+                </value>
+                <value>
+                    <fullName>DSD Out of Code</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Out of Code</label>
+                </value>
+                <value>
+                    <fullName>DSD Overstock</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Overstock</label>
+                </value>
+                <value>
+                    <fullName>DSD PRICE</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD PRICE</label>
+                </value>
+                <value>
+                    <fullName>DSD PRODUCT NOT AUTHORIZED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD PRODUCT NOT AUTHORIZED</label>
+                </value>
+                <value>
+                    <fullName>DSD Pallet Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Pallet Damage</label>
+                </value>
+                <value>
+                    <fullName>DSD Pricing Adjustment</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Pricing Adjustment</label>
+                </value>
+                <value>
+                    <fullName>DSD Product Recall</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Product Recall</label>
+                </value>
+                <value>
+                    <fullName>DSD REFUSED - NO PROD TO PICKUP</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD REFUSED - NO PROD TO PICKUP</label>
+                </value>
+                <value>
+                    <fullName>DSD SAMPLING</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD SAMPLING</label>
+                </value>
+                <value>
+                    <fullName>DSD SERVICE ISSUES</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD SERVICE ISSUES</label>
+                </value>
+                <value>
+                    <fullName>DSD SHORT</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD SHORT</label>
+                </value>
+                <value>
+                    <fullName>DSD Shrink Wrap Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Shrink Wrap Damage</label>
+                </value>
+                <value>
+                    <fullName>DSD Sticker Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Sticker Damage</label>
+                </value>
+                <value>
+                    <fullName>DSD Unknown Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DSD Unknown Damage</label>
+                </value>
+                <value>
+                    <fullName>Delivered Out of Code</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Delivered Out of Code</label>
+                </value>
+                <value>
+                    <fullName>Discontinued</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Discontinued</label>
+                </value>
+                <value>
+                    <fullName>Fire/Infestation/Water</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Fire/Infestation/Water</label>
+                </value>
+                <value>
+                    <fullName>Glue Related</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Glue Related</label>
+                </value>
+                <value>
+                    <fullName>Handling Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Handling Damage</label>
+                </value>
+                <value>
+                    <fullName>MC - PIZ Manual Change</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MC - PIZ Manual Change</label>
+                </value>
+                <value>
+                    <fullName>OS - PIZ Order Split</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>OS - PIZ Order Split</label>
+                </value>
+                <value>
+                    <fullName>Open Seals</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Open Seals</label>
+                </value>
+                <value>
+                    <fullName>PIZ Demo Replacement</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PIZ Demo Replacement</label>
+                </value>
+                <value>
+                    <fullName>PIZ Manual Change</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PIZ Manual Change</label>
+                </value>
+                <value>
+                    <fullName>PIZ Order Split</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PIZ Order Split</label>
+                </value>
+                <value>
+                    <fullName>PIZ Substitution / Allocation Cut</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PIZ Substitution / Allocation Cut</label>
+                </value>
+                <value>
+                    <fullName>PIZ System Allocation Cut</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PIZ System Allocation Cut</label>
+                </value>
+                <value>
+                    <fullName>Pallet Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Pallet Damage</label>
+                </value>
+                <value>
+                    <fullName>RC - Reason Code DESC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>RC - Reason Code DESC</label>
+                </value>
+                <value>
+                    <fullName>Reason Code DESC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Reason Code DESC</label>
+                </value>
+                <value>
+                    <fullName>Recall</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Recall</label>
+                </value>
+                <value>
+                    <fullName>SA - PIZ System Allocation Cut</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SA - PIZ System Allocation Cut</label>
+                </value>
+                <value>
+                    <fullName>SB - PIZ Substitution / Allocation Cut</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SB - PIZ Substitution / Allocation Cut</label>
+                </value>
+                <value>
+                    <fullName>Shelf-Life Code Expired</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Shelf-Life Code Expired</label>
+                </value>
+                <value>
+                    <fullName>Shrinkwrap Damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Shrinkwrap Damage</label>
+                </value>
+                <value>
+                    <fullName>Sticker Damaging</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Sticker Damaging</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MDLZ_DeliveredQty__c</fullName>
+        <description>Final delivered quantity is stored here</description>
+        <externalId>false</externalId>
+        <label>Delivered Quantity</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ExternalFormula__c</fullName>
+        <externalId>false</externalId>
+        <formula>(ACCL__Order__r.ACCL__Order_Id__c) &amp;&quot;-&quot;&amp;(ACCL__Product__r.ACCL__Product_Code__c)</formula>
+        <label>MDLZ_ExternalFormula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ExternalId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>ExternalId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_FreshCreditReasonCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Fresh Credit Reason Code</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>16 - DSD Discontinued</fullName>
+                    <default>false</default>
+                    <label>16 - DSD Discontinued</label>
+                </value>
+                <value>
+                    <fullName>01 - DSD Overstock</fullName>
+                    <default>false</default>
+                    <label>01 - DSD Overstock</label>
+                </value>
+                <value>
+                    <fullName>23 - DSD Customer Refused</fullName>
+                    <default>false</default>
+                    <label>23 - DSD Customer Refused</label>
+                </value>
+                <value>
+                    <fullName>15 - DSD Did Not Order</fullName>
+                    <default>false</default>
+                    <label>15 - DSD Did Not Order</label>
+                </value>
+                <value>
+                    <fullName>18 - DSD Short on Delivery</fullName>
+                    <default>false</default>
+                    <label>18 - DSD Short on Delivery</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MDLZ_ItemStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Empty</fullName>
+                    <default>true</default>
+                    <label>Empty</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MDLZ_LastSavedByUser__c</fullName>
+        <description>Indicates whether item was added or updated by user on device</description>
+        <externalId>false</externalId>
+        <label>Last Saved By User</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+	<fields>
+        <fullName>MDLZ_ErrorMessage__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_LineItemNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Item Number</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_MobileQty__c</fullName>
+        <description>Each quantity edit by user is stored here</description>
+        <externalId>false</externalId>
+        <label>Mobile Quantity</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MDLZ_OriginalQty__c</fullName>
+        <description>Original value for each line item coming from source order</description>
+        <externalId>false</externalId>
+        <label>Original Quantity</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MDLZ_UnsaleableReasonCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Unsaleable Reason Code</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>03 - DSD Shelf-Life Code Expired</fullName>
+                    <default>false</default>
+                    <label>03 - DSD Shelf-Life Code Expired</label>
+                </value>
+                <value>
+                    <fullName>16 - DSD Discontinued</fullName>
+                    <default>false</default>
+                    <label>16 - DSD Discontinued</label>
+                </value>
+                <value>
+                    <fullName>38 - DSD Delivered Out of Code</fullName>
+                    <default>false</default>
+                    <label>38 - DSD Delivered Out of Code</label>
+                </value>
+                <value>
+                    <fullName>36 - DSD Glue Related Issues</fullName>
+                    <default>false</default>
+                    <label>36 - DSD Glue Related Issues</label>
+                </value>
+                <value>
+                    <fullName>04 - DSD Infest, Water, Fire</fullName>
+                    <default>false</default>
+                    <label>04 - DSD Infest, Water, Fire</label>
+                </value>
+                <value>
+                    <fullName>07 - DSD Product Recall</fullName>
+                    <default>false</default>
+                    <label>07 - DSD Product Recall</label>
+                </value>
+                <value>
+                    <fullName>40 - DSD Pallet Damage</fullName>
+                    <default>false</default>
+                    <label>40 - DSD Pallet Damage</label>
+                </value>
+                <value>
+                    <fullName>41 - DSD Sticker Damage</fullName>
+                    <default>false</default>
+                    <label>41 - DSD Sticker Damage</label>
+                </value>
+                <value>
+                    <fullName>42 - DSD Handling Damage</fullName>
+                    <default>false</default>
+                    <label>42 - DSD Handling Damage</label>
+                </value>
+                <value>
+                    <fullName>43 - DSD Shrink Wrap Damage</fullName>
+                    <default>false</default>
+                    <label>43 - DSD Shrink Wrap Damage</label>
+                </value>
+                <value>
+                    <fullName>44 - DSD Open seals</fullName>
+                    <default>false</default>
+                    <label>44 - DSD Open seals</label>
+                </value>
+                <value>
+                    <fullName>45 - DSD Unknown Damage</fullName>
+                    <default>false</default>
+                    <label>45 - DSD Unknown Damage</label>
+                </value>
+                <value>
+                    <fullName>46 - DSD All Other MFG Damage</fullName>
+                    <default>false</default>
+                    <label>46 - DSD All Other MFG Damage</label>
+                </value>
+                <value>
+                    <fullName>47 - DSD Consumer Return</fullName>
+                    <default>false</default>
+                    <label>47 - DSD Consumer Return</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Order Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MDLZ_ExternalFormula__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>MDLZ_ExternalId__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>OI-{0000}</displayFormat>
+        <label>Order Item Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Order Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ACCL__Quantity_Length_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ACCL__Quantity__c  &gt;  9999</errorConditionFormula>
+        <errorMessage>Quantity should not be more than 9999.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

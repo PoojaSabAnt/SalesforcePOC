@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Updates the external id of org unit user record for those created manually</description>
+    <formulas>
+        <description>Formula field for creating external id for org unit users</description>
+        <name>OrgUnitUserExternalId</name>
+        <dataType>String</dataType>
+        <expression>&apos;US01&apos;+{!$Record.ACCL__Org_Unit__r.Name}+&apos;_&apos;+{!$Record.ACCL__User__r.MDLZ_SharpId__c}</expression>
+    </formulas>
+    <interviewLabel>OrgUnitUser_ExternalId {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OrgUnitUser_ExternalId</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updates the external id of the org unit user, this is for manually created records.</description>
+        <name>UpdateOrgUnitUserExternalId</name>
+        <label>UpdateOrgUnitUserExternalId</label>
+        <locationX>615</locationX>
+        <locationY>409</locationY>
+        <filters>
+            <field>ACCL__Valid_Thru__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>$System.OriginDateTime</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MDLZ_ExternalId__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MDLZ_ExternalId__c</field>
+            <value>
+                <elementReference>OrgUnitUserExternalId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>490</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>UpdateOrgUnitUserExternalId</targetReference>
+        </connector>
+        <object>ACCL__Org_Unit_User__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

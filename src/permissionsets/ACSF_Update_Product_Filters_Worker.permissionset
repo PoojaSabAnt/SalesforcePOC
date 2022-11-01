@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>ACSF Update Product Filters Worker</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ACSF Update Product Filters Worker</label>
+    <objectPermissions>
+        <object>ACCL__System_Setting__c</object>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+</PermissionSet>

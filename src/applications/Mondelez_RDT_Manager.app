@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>true</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <label>Mondelez RDT Manager</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Sales_Folder_Lightning1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>ACCL__Sales_Folder__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>MDLZ_DSD_Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Sales_Folder_Lightning1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>ACCL__Sales_Folder__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>MDLZ_DSD_OpsAdmin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Sales_Folder_Lightning1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>ACCL__Sales_Folder__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <tabs>ACCL__Order__c</tabs>
+    <tabs>ACCL__Substitution__c</tabs>
+	<tabs>ACCL__Sales_Folder__c</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>ACCL__Call__c</tabs>
+	<tabs>ACCL__Job_Definition_List__c</tabs>   
+    <uiType>Lightning</uiType>
+    <utilityBar>Field_Sales_Manager_UtilityBar</utilityBar>
+</CustomApplication>

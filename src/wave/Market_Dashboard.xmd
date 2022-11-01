@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Revenue_by_Team_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>zcustomer_name_4.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>segment_desc_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>*</bin>
+                <formatValue>#B50E03</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>0.995</bin>
+                <formatValue>#00B531</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <property>chartColor</property>
+            <referenceField>C</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>multiple</type>
+        </conditionalFormatting>
+        <field>lens_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_Team_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_Store_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_SKU_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>6</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>7</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_2.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>8</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Revenue_by_Territory_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>9</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_Team_2.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>10</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>District_Level_CY_vs_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>11</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_3.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>12</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Top_10_Territories_b_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>13</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Bottom_10_Territorie_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>14</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Top_10_Waste_Stores_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>15</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Top_10_Waste_Territo_3.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>16</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Team_Level_CY_vs_PY__1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>17</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Team_CY_vs_PY_Waste_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>18</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Store_Level_CY_vs_PY_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>19</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Store_CY_vs_PY_Waste_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>20</sortIndex>
+    </dimensions>
+    <measures>
+        <field>Day_Factor_1.sum_Day_Factor</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,1]</formatCustomFormat>
+        <formatDecimalSeparator>.</formatDecimalSeparator>
+        <formatThousandsSeparator>,</formatThousandsSeparator>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>*</bin>
+                <formatValue>#B50E03</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>0.995</bin>
+                <formatValue>#00B531</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <property>chartColor</property>
+            <referenceField>C</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>multiple</type>
+        </conditionalFormatting>
+        <field>lens_1.C</field>
+        <formatCustomFormat>[&quot;#,###.#%&quot;,100]</formatCustomFormat>
+        <formatDecimalSeparator>.</formatDecimalSeparator>
+        <formatThousandsSeparator>,</formatThousandsSeparator>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>Gross_Revenue_CY_1.C</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Revenue_by_Team_1.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>zcustomer_name_4.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>Segment_by_Revenue_1.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>segment_desc_1.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>CY_Objectives_1.sum_CY_Objectives</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>Waste_Abs_CY_1.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_2.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <measures>
+        <field>Waste_with_Target_Wa_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>10</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_Team_1.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>11</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_Store_1.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>12</sortIndex>
+    </measures>
+    <measures>
+        <field>Waste_by_Category_1.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>13</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_SKU_1.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>14</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3.F</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% Change</label>
+        <sortIndex>15</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3.E</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>PY Revenue</label>
+        <sortIndex>16</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>*</bin>
+                <formatValue>#E84340</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>0.995</bin>
+                <formatValue>#3AE867</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <property>backgroundColor</property>
+            <referenceField>D</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>multiple</type>
+        </conditionalFormatting>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>*</bin>
+                <formatValue>#091A3E</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>0.995</bin>
+                <formatValue>#091A3E</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <property>color</property>
+            <referenceField>D</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>multiple</type>
+        </conditionalFormatting>
+        <field>lens_3.D</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% to Objective</label>
+        <sortIndex>17</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3.C</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>CY Objectives</label>
+        <sortIndex>18</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Next Day Pending</label>
+        <sortIndex>19</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>CY Revenue</label>
+        <sortIndex>20</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>21</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>22</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_4.E</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% to Waste Target</label>
+        <sortIndex>23</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_4.D</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Target Waste</label>
+        <sortIndex>24</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_4.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Waste %</label>
+        <sortIndex>25</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_4.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Waste</label>
+        <sortIndex>26</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_2.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>27</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_2.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>28</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Revenue_by_Territory_1.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>29</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Waste_by_Team_2.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>30</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>District_Level_CY_vs_1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>31</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>District_Level_CY_vs_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>32</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_5.F</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% Change</label>
+        <sortIndex>33</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_5.E</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>PY Revenue</label>
+        <sortIndex>34</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>*</bin>
+                <formatValue>#E84340</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>0</bin>
+                <formatValue>#3AE867</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <property>backgroundColor</property>
+            <referenceField>D</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>multiple</type>
+        </conditionalFormatting>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>*</bin>
+                <formatValue>#091A3E</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>0</bin>
+                <formatValue>#091A3E</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <property>color</property>
+            <referenceField>D</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>multiple</type>
+        </conditionalFormatting>
+        <field>lens_5.D</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% to Objective</label>
+        <sortIndex>35</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_5.C</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>CY Objectives</label>
+        <sortIndex>36</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_5.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Next Day Pending</label>
+        <sortIndex>37</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_5.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>CY Revenue</label>
+        <sortIndex>38</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_3.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>39</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>district_cy_calendar_3.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>40</sortIndex>
+    </measures>
+    <measures>
+        <field>Team_Waste_Details_1.E</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% to Waste Target</label>
+        <sortIndex>41</sortIndex>
+    </measures>
+    <measures>
+        <field>Team_Waste_Details_1.D</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Target Waste</label>
+        <sortIndex>42</sortIndex>
+    </measures>
+    <measures>
+        <field>Team_Waste_Details_1.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Waste %</label>
+        <sortIndex>43</sortIndex>
+    </measures>
+    <measures>
+        <field>Team_Waste_Details_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Waste</label>
+        <sortIndex>44</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Top_10_Territories_b_1.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>45</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(79, 33, 112)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_gross_revenue_less_unsalables</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Bottom_10_Territorie_1.sum_cy_gross_revenue_less_unsalables</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>46</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Top_10_Waste_Territo_3.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>47</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>rgb(225, 135, 25)</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>sum_cy_waste_abs</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Top_10_Waste_Stores_1.sum_cy_waste_abs</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>48</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Team_Level_CY_vs_PY__1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>49</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Team_Level_CY_vs_PY__1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>50</sortIndex>
+    </measures>
+    <measures>
+        <field>zcustomer_name_3.D</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>51</sortIndex>
+    </measures>
+    <measures>
+        <field>zcustomer_name_3.C</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>52</sortIndex>
+    </measures>
+    <measures>
+        <field>zcustomer_name_3.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>53</sortIndex>
+    </measures>
+    <measures>
+        <field>zcustomer_name_3.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>54</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Team_CY_vs_PY_Waste_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>55</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Team_CY_vs_PY_Waste_1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>56</sortIndex>
+    </measures>
+    <measures>
+        <field>Territory_Waste_Deta_1.E</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>% to Waste Target</label>
+        <sortIndex>57</sortIndex>
+    </measures>
+    <measures>
+        <field>Territory_Waste_Deta_1.D</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Target Waste</label>
+        <sortIndex>58</sortIndex>
+    </measures>
+    <measures>
+        <field>Territory_Waste_Deta_1.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Waste %</label>
+        <sortIndex>59</sortIndex>
+    </measures>
+    <measures>
+        <field>Territory_Waste_Deta_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Waste</label>
+        <sortIndex>60</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Store_Level_CY_vs_PY_1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>61</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Store_Level_CY_vs_PY_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>62</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#335779</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>A</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Store_CY_vs_PY_Waste_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>63</sortIndex>
+    </measures>
+    <measures>
+        <conditionalFormatting>
+            <formattingPredicates>
+                <formatValue>#CD96FF</formatValue>
+                <operator xsi:nil="true"/>
+                <sortIndex xsi:nil="true"/>
+                <value xsi:nil="true"/>
+            </formattingPredicates>
+            <property>chartColor</property>
+            <referenceField>B</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>static</type>
+        </conditionalFormatting>
+        <field>Store_CY_vs_PY_Waste_1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>64</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_1.D</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>65</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_1.C</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>66</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_1.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>67</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_1.E</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>68</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>69</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_2.D</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>70</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_2.C</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>71</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_2.B</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>72</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_2.E</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>73</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Revenue_Det_2.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>74</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Waste_Detai_2.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>75</sortIndex>
+    </measures>
+    <measures>
+        <field>Category_Waste_Detai_2.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>76</sortIndex>
+    </measures>
+    <measures>
+        <field>Segment_Waste_Detail_1.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>77</sortIndex>
+    </measures>
+    <measures>
+        <field>Segment_Waste_Detail_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>78</sortIndex>
+    </measures>
+    <measures>
+        <field>SKU_Split_segment_de_1.C</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>79</sortIndex>
+    </measures>
+    <measures>
+        <field>SKU_Split_segment_de_1.A</field>
+        <formatCustomFormat>[&quot;$#,###.00&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>80</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Market_Dashboard</waveVisualization>
+</WaveXmd>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCL__User_Deployment_Mobility_Package__c$ACCL__Device_Id__c</field>
+    </columns>
+    <columns>
+        <field>ACCL__User_Deployment_Mobility_Package__c$CreatedBy.Name</field>
+    </columns>
+    <description>Report provides overview of the deployment packages currently the users have installed.</description>
+    <filter>
+        <criteriaItems>
+            <column>ACCL__User_Deployment_Mobility_Package__c$ACCL__State__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Installed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCL__User_Deployment_Mobility_Package__c$ACCL__Deployment_Mobility_Package__c.Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value/>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCL__User_Deployment_Mobility_Package__c$ACCL__Deployment_Mobility_Package__c.Name</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Deployment Package Installation Overview</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User_Deployment_Mobility_Packages__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ACCL__User_Deployment_Mobility_Package__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
