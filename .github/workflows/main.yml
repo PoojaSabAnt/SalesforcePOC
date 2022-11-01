@@ -1,4 +1,4 @@
-name: Salsforce-cicd-workflow
+name: Salesforce-workflow
 on:
   pull_request:
     branches:
