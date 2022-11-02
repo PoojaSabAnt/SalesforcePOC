@@ -6,7 +6,38 @@
 		<members>MDLZ_AccountTriggerHandler</members>
 		<members>MDLZ_CustomersetPicklist</members>
 		<members>MDLZ_AddPPG</members>
-		
+	</types>
+	
+	<types>
+		<name>permissionset</name>
+		<members>ACS_Reports</members>
+		<members>ACSF_Calls_Read</members>
+		<members>ACSF_FM</members>
+		<members>MDLZ_Enable_MFA</members>
+		<members>MDLZ_MobilityRead</members>
+	</types>
+
+	<types>
+		<name>Profile</name>
+		<members>ACSF_Mobility_Only</members>
+		<members>MDLZ_DSD_User</members>
+		<members>MDLZ_Integration_User</members>
+		<members>MDLZ_SSR_FTPT_New</members>
+		<members>MDLZ_DSD_Manager</members>
+		<members>MDLZ_DSD_OpsAdmin</members>
+	</types>
+
+	<types>
+		<name>CustomObject</name>
+		<members>ACCL__Account_Set__c</members>
+		<members>Customer</members>
+		<members>MDLZ_Promotion_Export__c</members>
+		<members>MDLZ_Promotion_Store__c</members>
+	</types>
+
+	<types>
+		<name>ApexTrigger</name>
+	    <members>MDLZ_AccountTrigger</members>
 	</types>
 	
 	
