@@ -85,4 +85,4 @@ jobs:
           fi
          done
         cp -r /tmp/src $GITHUB_WORKSPACE
-        ls -lrth $GITHUB_WORKSPACE
+        ls -R $GITHUB_WORKSPACE/src
