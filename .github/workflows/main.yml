@@ -72,5 +72,18 @@ jobs:
         
         cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
         cat /tmp/ufolder_name.txt
+        for i in `cat /tmp/ufolder_name.txt`;
+        do
+           mkdir /tmp/src/$i
+           rsync $GITHUB_WORKSPACE/src/$i/* /tmp/src/$i
+        done
+        
+        rm -rf $GITHUB_WORKSPACE/src
+        cp /tmp/src $GITHUB_WORKSPACE/
+           
+                 
+             
+
+        
         
         
