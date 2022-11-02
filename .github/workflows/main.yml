@@ -61,28 +61,15 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* /usr/share/ant/lib/
         
         
-        mkdir /tmp/src/
+        mkdir /tmp/src
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
         do
           folder_name=`echo $i | cut -d "/" -f 2` >> /tmp/folder_name.txt
         done
-        cat /tmp/folder_name.txt
+        
+        echo "doing it"
         uniq /tmp/folder_name.txt > /tmp/ufolder_name.txt
         cat /tmp/ufolder_name.txt
-        
-        #for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-        #do
-         #folder_name=echo $i | cut -d "/" -f 2
-         
-         #mkdir /tmp/src/$folder_name
-         #rsync $GITHUB_WORKSPACE/src/$folder_name/* /tmp/src/$folder_name
-        #done
-        
-        #rm -rf $GITHUB_WORKSPACE/src
-        #cp /tmp/src $GITHUB_WORKSPACE 
-        
-             
-        #ls -R $GITHUB_WORKSPACE/src/*
         
         
