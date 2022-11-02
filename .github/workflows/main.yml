@@ -66,12 +66,12 @@ jobs:
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
          do
          folder_name=echo $i | cut -d "/" -f 2
-         mkdir $folder_name
+         mkdir /tmp/src/$folder_name
          rsync $GITHUB_WORKSPACE/src/$folder_name/* /tmp/src/$folder_name
         done
         
         rm -rf $GITHUB_WORKSPACE/src
-        cp /tmp/src $GITHUB_WORKSPACE/ 
+        cp /tmp/src $GITHUB_WORKSPACE 
         
              
         ls -R $GITHUB_WORKSPACE/src/*
