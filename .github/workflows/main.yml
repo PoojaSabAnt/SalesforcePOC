@@ -70,8 +70,7 @@ jobs:
           
         done
         
-        
-        
-        cat /tmp/folder_name.txt
+        cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
+        cat /tmp/ufolder_name.txt
         
         
