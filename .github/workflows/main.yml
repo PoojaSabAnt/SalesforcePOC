@@ -77,12 +77,11 @@ jobs:
           cp -r $GITHUB_WORKSPACE/src/$i/* /tmp/src/$i 
         done
 
-        rm -rf $GITHUB_WORKSPACE/src
+        
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-         do
-           if [[ ! -f /tmp/$i ]]; then
-           rm -rf /tmp/$i
-          fi
-         done
+        do
+          cp $GITHUB_WORKSPACE/$i /tmp/  
+        done
+        rm -rf $GITHUB_WORKSPACE/src
         cp -r /tmp/src $GITHUB_WORKSPACE
         ls -R $GITHUB_WORKSPACE/src
