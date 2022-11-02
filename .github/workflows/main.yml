@@ -64,38 +64,24 @@ jobs:
         mkdir /tmp/src/
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-         do
-         folder_name=echo $i | cut -d "/" -f 2
-         mkdir /tmp/src/$folder_name
-         rsync $GITHUB_WORKSPACE/src/$folder_name/* /tmp/src/$folder_name
+        do
+          folder_name=`echo $i | cut -d "/" -f 2` >> /tmp/folder_name.txt
         done
+        unique /tmp/folder_name.txt > /tmp/ufolder_name.txt
+        cat /tmp/ufolder_name.txt
         
-        rm -rf $GITHUB_WORKSPACE/src
-        cp /tmp/src $GITHUB_WORKSPACE 
+        #for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
+        #do
+         #folder_name=echo $i | cut -d "/" -f 2
+         
+         #mkdir /tmp/src/$folder_name
+         #rsync $GITHUB_WORKSPACE/src/$folder_name/* /tmp/src/$folder_name
+        #done
+        
+        #rm -rf $GITHUB_WORKSPACE/src
+        #cp /tmp/src $GITHUB_WORKSPACE 
         
              
-        ls -R $GITHUB_WORKSPACE/src/*
-        
-        echo "Validation of build file started"
-        if [[ $BRANCH == development ]]; then
-        ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
-        else
-        ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
-        fi
-        if [ $? != 0 ];  then
-          echo "Validation failed"
-        fi 
+        #ls -R $GITHUB_WORKSPACE/src/*
         
         
-        echo "Deployment of components started"
-        if [[ $BRANCH == development ]]; then
-          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
-        else
-          ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
-        fi
-        if [ $? != 0 ];  then  
-          echo "Deployment failed"
-        fi
-
-      
- 
