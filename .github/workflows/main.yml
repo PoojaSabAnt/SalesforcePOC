@@ -72,12 +72,18 @@ jobs:
         
         cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
         cat /tmp/ufolder_name.txt
+        
+        
         for i in `cat /tmp/ufolder_name.txt`;
         do
            mkdir /tmp/src/$i
-           rsync $GITHUB_WORKSPACE/src/$i/* /tmp/src/$i
+           for filename in `$GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
+           do
+             file=`echo $filename | cut -d "/" -f 3`
+             cp $GITHUB_WORKSPACE/src/$i/$file /tmp/src/$i/
+           done
         done
-        
+               
         rm -rf $GITHUB_WORKSPACE/src
         cp -r /tmp/src $GITHUB_WORKSPACE
         ls -lrth $GITHUB_WORKSPACE/src
