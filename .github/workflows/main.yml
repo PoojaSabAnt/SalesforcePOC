@@ -66,31 +66,23 @@ jobs:
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
         do
           folder_name=`echo $i | cut -d "/" -f 2`
-          echo $folder_name >>/tmp/folder_name.txt
-          
+          echo $folder_name >>/tmp/folder_name.txt  
         done
-        
         cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
         cat /tmp/ufolder_name.txt
-        
-        
+                
         for i in `cat /tmp/ufolder_name.txt`;
         do
-           mkdir /tmp/src/$i
-           for filename in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-           do
-             file=`echo $filename | cut -d "/" -f 3`
-             cp $GITHUB_WORKSPACE/src/$i/$file /tmp/src/$i/
-           done
+          mkdir /tmp/src/$i
+          cp -r $GITHUB_WORKSPACE/src/$i/* /tmp/src/$i 
         done
-               
-        rm -rf $GITHUB_WORKSPACE/src
-        cp -r /tmp/src $GITHUB_WORKSPACE
-        ls -lrth $GITHUB_WORKSPACE/src
-           
-                 
-             
 
-        
-        
-        
+        rm -rf $GITHUB_WORKSPACE/src
+        for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
+         do
+           if [[ ! -f /tmp/$i ]]; then
+           rm -rf /tmp/$i
+          fi
+         done
+        cp -r /tmp/src $GITHUB_WORKSPACE
+        ls -lrth $$GITHUB_WORKSPACE
