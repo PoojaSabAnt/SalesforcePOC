@@ -65,7 +65,8 @@ jobs:
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
         do
-          folder_name=`echo $i | cut -d "/" -f 2` > /tmp/folder_name.txt
+          folder_name=`echo $i | cut -d "/" -f 2` 
+          echo $folder_name
         done
         
         
