@@ -80,7 +80,7 @@ jobs:
         
         rm -rf $GITHUB_WORKSPACE/src
         cp -r /tmp/src $GITHUB_WORKSPACE
-        ls -R $GITHUB_WORKSPACE/src
+        ls -lrth $GITHUB_WORKSPACE/src
            
                  
              
