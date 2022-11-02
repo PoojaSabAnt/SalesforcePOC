@@ -59,9 +59,10 @@ jobs:
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/lib/* /usr/share/ant/lib/
-                
-        cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt | cut -d "/" -f 2 > componentlist.txt
-        for component in componentlist.txt;
+         
+        mkdir /tmp/componentlist.txt 
+        cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt | cut -d "/" -f 2 > /tmp/componentlist.txt
+        for component in /tmp/componentlist.txt;
         do
             mkdir /tmp/$component
             rsync $GITHUB_WORKSPACE/src/$component/* /tmp/$component
