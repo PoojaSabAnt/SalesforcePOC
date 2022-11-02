@@ -67,7 +67,7 @@ jobs:
         do
           folder_name=`echo $i | cut -d "/" -f 2` >> /tmp/folder_name.txt
         done
-        unique /tmp/folder_name.txt > /tmp/ufolder_name.txt
+        uniq /tmp/folder_name.txt > /tmp/ufolder_name.txt
         cat /tmp/ufolder_name.txt
         
         #for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
