@@ -77,7 +77,7 @@ jobs:
         for i in `cat /tmp/ufolder_name.txt`;
         do
            mkdir /tmp/src/$i
-           for filename in `$GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
+           for filename in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
            do
              file=`echo $filename | cut -d "/" -f 3`
              cp $GITHUB_WORKSPACE/src/$i/$file /tmp/src/$i/
