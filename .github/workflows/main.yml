@@ -79,7 +79,7 @@ jobs:
         done
         
         rm -rf $GITHUB_WORKSPACE/src
-        cp /tmp/src $GITHUB_WORKSPACE/
+        cp -r /tmp/src $GITHUB_WORKSPACE/
            
                  
              
