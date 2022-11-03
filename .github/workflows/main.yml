@@ -60,7 +60,6 @@ jobs:
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/lib/* /usr/share/ant/lib/
         
-        
         mkdir /tmp/src
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
@@ -70,12 +69,25 @@ jobs:
         done
         cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
         cat /tmp/ufolder_name.txt
-                
+        
+        cp $GITHUB_WORKSPACE/src/package.xml /tmp
         for i in `cat /tmp/ufolder_name.txt`;
         do
           mkdir /tmp/src/$i
           cp -r $GITHUB_WORKSPACE/src/$i/* /tmp/src/$i 
-        done
+          rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
+          sed -i 's|src/'"$i/"'||' /tmp/project-manifest-TPM.txt
+        
+          for i in `cat /tmp/ufolder_name.txt`;
+          do
+            for filename in `cat /tmp/project-manifest-TPM.txt`;
+            do
+               if [ -f "/tmp/$src/$i/$filename ];then
+                 cp /tmp/src/$i/$filename $GITHUB_WORKSPACE/src/$i
+            done
+          done      
+        done        
+ls -R $GITHUB_WORKSPACE/src/*
 
         
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
