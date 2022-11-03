@@ -62,36 +62,20 @@ jobs:
         
         mkdir /tmp/src
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
-        for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-        do
-          folder_name=`echo $i | cut -d "/" -f 2`
-          echo $folder_name >>/tmp/folder_name.txt  
+        
+        cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt` | awk -F "/" '{ print $2 }' | sort | uniq > uniq_folder.txt
+        for i in `cat uniq_folder.txt`; 
+        do 
+          mkdir -p /tmp/src/$i; 
         done
-        cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
-                
-        for i in `cat /tmp/ufolder_name.txt`;
-        do
-           mkdir /tmp/src/$i
-        done
-        
-        rsync $GITHUB_WORKSPACE/src/* /tmp/src && rm -rf $GITHUB_WORKSPACE/src/*
-        ls -R /tmp/src
-        for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-        do
-           if [ -f /tmp/$i ]; then
-           echo "$i is present in both manifest and src"
-           else
-           rm -rf /tmp/$i
-        fi
-        done
-        
-        rsync /tmp/src $GITHUB_WORKSPACE/src
-        ls -lrth $GITHUB_WORKSPACE/src
-        
-        
-        
-        
        
-
+        for i in `cat Uniq_list.txt`; 
+        do 
+         cp $GITHUB_WORKSPACE/$i /tmp/
+        done
         
-        
+        rm -rf $GITHUB_WORKSPACE/src
+        cp -r /tmp/src $GITHUB_WORKSPACE/
+        ls -R $GITHUB_WORKSPACE
+       
+      
