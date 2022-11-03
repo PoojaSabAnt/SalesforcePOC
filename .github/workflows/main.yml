@@ -74,17 +74,14 @@ jobs:
         do
           mkdir /tmp/src/$i
           rsync $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt /tmp
-          sed -i 's|src/'"$i/"'||' /tmp/project-manifest-TPM.txt
-        
-          for i in `cat /tmp/ufolder_name.txt`;
-          do
-            for filename in `cat /tmp/project-manifest-TPM.txt`;
-            do
-               cp /tmp/src/$i/$filename $GITHUB_WORKSPACE/src/$i
+          grep -l "$i" /tmp/project-manifest-TPM.txt | xargs -r mv -t /tmp/src/$i
             done
-          done      
-        done        
+          done         
+        cp /tmp/src $GITHUB_WORKSPACE/src
         ls -R $GITHUB_WORKSPACE/src/*
+        
+        
+       
 
         
         
