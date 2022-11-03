@@ -74,5 +74,5 @@ jobs:
         ls -R $GITHUB_WORKSPACE/src/permissionsets
         ls -R $GITHUB_WORKSPACE/src/profiles
         ls -R $GITHUB_WORKSPACE/src/triggers
-       
+        ls -lrth /tmp
       
