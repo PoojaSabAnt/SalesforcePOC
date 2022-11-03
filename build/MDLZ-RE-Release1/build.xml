@@ -120,6 +120,7 @@
 		<runTest>MDLZ_AddPPGTest.cls</runTest>
 		<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
 		<runTest>MDLZ_OrderFlipBatchTest</runTest>
+    </sf:deploy>
   </target>
   <!-- ***************************************************************************** -->
   <!-- Deploy the meta-data from code Repository to salesforce Production     -->
