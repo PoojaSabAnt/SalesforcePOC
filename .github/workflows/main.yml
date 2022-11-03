@@ -59,14 +59,14 @@ jobs:
         mkdir $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/  
         cp $GITHUB_WORKSPACE/lib/* $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/lib/
         cp $GITHUB_WORKSPACE/lib/* /usr/share/ant/lib/
-        cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
+        
         
         cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt | sort | uniq > /tmp/uniq_list.txt
         cat /tmp/uniq_list.txt | awk -F "/" '{ print $2 }' | sort | uniq > /tmp/uniq_folder.txt
         cat /tmp/uniq_folder.txt
         for i in `cat /tmp/uniq_folder.txt`; do mkdir -p /tmp/src/$i; done
         for i in `cat /tmp/uniq_list.txt`; do cp $GITHUB_WORKSPACE/$i /tmp/; done
-        
+        cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         rm -rf $GITHUB_WORKSPACE/src
         cp -r /tmp/src $GITHUB_WORKSPACE/
         ls -R $GITHUB_WORKSPACE/src
