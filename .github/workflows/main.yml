@@ -63,7 +63,7 @@ jobs:
         mkdir /tmp/src
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         
-        cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt` | awk -F "/" '{ print $2 }' | sort | uniq > uniq_folder.txt
+        cat `$GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt` | awk -F "/" '{ print $2 }' | sort | uniq > uniq_folder.txt
         for i in `cat uniq_folder.txt`; 
         do 
           mkdir -p /tmp/src/$i; 
