@@ -65,8 +65,8 @@ jobs:
         cat /tmp/uniq_list.txt | awk -F "/" '{ print $2 }' | sort | uniq > /tmp/uniq_folder.txt
         cat /tmp/uniq_folder.txt
         cat /tmp/uniq_list.txt
-        for i in `cat /tmp/uniq_folder.txt`; do mkdir -p /tmp/src/$i; done
-        for i in `cat /tmp/uniq_list.txt`; do cp $GITHUB_WORKSPACE/$i /tmp/; done
+        for i in `cat /tmp/uniq_folder.txt`; do mkdir -p /tmp/src/$i; done 
+        for i in `cat /tmp/uniq_list.txt`; do cp $GITHUB_WORKSPACE/$i /tmp/$i; done 
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
         rm -rf $GITHUB_WORKSPACE/src
         cp -r /tmp/src $GITHUB_WORKSPACE/
@@ -76,4 +76,4 @@ jobs:
         ls -R $GITHUB_WORKSPACE/src/profiles
         ls -R $GITHUB_WORKSPACE/src/triggers
         ls -lrth /tmp
-      
+    
