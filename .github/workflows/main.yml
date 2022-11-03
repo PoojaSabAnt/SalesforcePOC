@@ -74,7 +74,8 @@ jobs:
            mkdir /tmp/src/$i
         done
         
-        rsync $GITHUB_WORKSPACE/src /tmp/src && rm -rf $GITHUB_WORKSPACE/src/*
+        rsync $GITHUB_WORKSPACE/src/* /tmp/src && rm -rf $GITHUB_WORKSPACE/src/*
+        ls -R /tmp/src
         for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
         do
            if [ -f /tmp/$i ]; then
