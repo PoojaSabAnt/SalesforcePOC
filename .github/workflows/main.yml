@@ -68,7 +68,7 @@ jobs:
           echo $folder_name >>/tmp/folder_name.txt  
         done
         cat /tmp/folder_name.txt | sort | uniq>>/tmp/ufolder_name.txt
-        cat /tmp/ufolder_name.txt
+        
         
         for i in `cat /tmp/ufolder_name.txt`;
         do
@@ -77,7 +77,7 @@ jobs:
           grep -l "$i" /tmp/project-manifest-TPM.txt | xargs -r mv -t /tmp/src/$i
         done
                
-        cp /tmp/src $GITHUB_WORKSPACE/src
+        cp -r /tmp/src $GITHUB_WORKSPACE/src
         ls -R $GITHUB_WORKSPACE/src/*
         
         
