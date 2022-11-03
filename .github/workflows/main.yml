@@ -87,10 +87,4 @@ jobs:
 ls -R $GITHUB_WORKSPACE/src/*
 
         
-        for i in `cat $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/project-manifest-TPM.txt`;
-        do
-          cp $GITHUB_WORKSPACE/$i /tmp/  
-        done
-        rm -rf $GITHUB_WORKSPACE/src
-        cp -r /tmp/src $GITHUB_WORKSPACE
-        ls -R $GITHUB_WORKSPACE/src
+        
