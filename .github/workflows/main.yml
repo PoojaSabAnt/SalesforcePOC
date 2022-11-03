@@ -69,7 +69,7 @@ jobs:
           mkdir -p /tmp/src/$i; 
         done
        
-        for i in `cat Uniq_list.txt`; 
+        for i in `cat uniq_folder.txt`; 
         do 
          cp $GITHUB_WORKSPACE/$i /tmp/
         done
