@@ -114,7 +114,7 @@
       autoUpdatePackage="true"
       ignoreWarnings="true"
       deployRoot="/home/runner/work/SalesforcePOC/SalesforcePOC/src"
-      pollWaitMillis="${sf.pollWaitMillis}"
+      pollWaitMillis="10000"
       maxPoll="${sf.maxPoll}">
 	        <runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
 		<runTest>MDLZ_AddPPGTest.cls</runTest>
@@ -314,8 +314,8 @@
       autoUpdatePackage="true"
       ignoreWarnings="true"
       deployRoot="src"
-      pollWaitMillis="${sf.pollWaitMillis}"
-      maxPoll="${sf.maxPoll}">
+      pollWaitMillis="10000"
+      maxPoll="10000">
 	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
 	<runTest>MDLZ_AddPPGTest.cls</runTest>
 	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
