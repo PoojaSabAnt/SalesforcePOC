@@ -73,7 +73,7 @@ jobs:
         done 
         
         cp $GITHUB_WORKSPACE/src/package.xml /tmp/src
-        cp $GITHUB_WORKSPACE/src/build.properties /tmp/
+        cp $GITHUB_WORKSPACE/build.properties /tmp/
         rm -rf $GITHUB_WORKSPACE/src
         cp -r /tmp/src $GITHUB_WORKSPACE/
         cp /tmp/build.properties $GITHUB_WORKSPACE/
