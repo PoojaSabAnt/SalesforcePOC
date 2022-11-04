@@ -116,38 +116,38 @@
       deployRoot="/home/runner/work/SalesforcePOC/SalesforcePOC/src"
       pollWaitMillis="10000"
       maxPoll="${sf.maxPoll}">
-	        <runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
-		<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
-		<runTest>MDLZ_AddPPGTest.cls</runTest>
-		<runTest>MDLZ_CallReOrgBatchTest.cls</runTest>
-		<runTest>MDLZ_CreateWrapperCAOTestClass.cls</runTest>
-		<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
-		<runTest>MDLZ_DeleteProdAssortBranchListingTest.cls</runTest>
-		<runTest>MDLZ_EffectiveAccountManagerSyncTest.cls</runTest>
-		<runTest>MDLZ_ErrorExceptionHandlerTest.cls</runTest>
-		<runTest>MDLZ_FundCalculationBatchTest.cls</runTest>
-		<runTest>MDLZ_KPI_Data_Delete_Batch_Test.cls</runTest>
-		<runTest>MDLZ_NewUserSetupTestClass.cls</runTest>
-		<runTest>MDLZ_OrderConTestClass.cls</runTest>
-		<runTest>MDLZ_OrderFlipBatchTest.cls</runTest>
-		<runTest>MDLZ_OrderReOrgBatchTest.cls</runTest>
-		<runTest>MDLZ_OrderTriggerTestClass.cls</runTest>
-		<runTest>MDLZ_OrgUnitUserAssignementTestClass.cls</runTest>
-		<runTest>MDLZ_ProdAssortment_ByCustBranchTest.cls</runTest>
-		<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry.cls</runTest>
-		<runTest>MDLZ_ProdAssortProd_TestClass.cls</runTest>
-		<runTest>MDLZ_ProductUnitFlagTestClass.cls</runTest>
-		<runTest>MDLZ_PromotionExportBatchTest.cls</runTest>
-		<runTest>MDLZ_PromotionExportDeleteBatchTest.cls</runTest>
-		<runTest>MDLZ_SystemSettingsFieldSetFilterTest.cls</runTest>
-		<runTest>MDLZ_TeamTerritoryTestClass.cls</runTest>
-		<runTest>MDLZ_TestClassSchedulerTest.cls</runTest>
-		<runTest>MDLZ_TestDataFactory.cls</runTest>
-		<runTest>MDLZ_UpdateOrgUnitUserValidityTest.cls</runTest>
-		<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry.cls</runTest>
-		<runTest>MDLZ_UpdateTerritoryFlagBatchTest.cls</runTest>
-		<runTest>MDLZ_UserPermissionSetAssignTestClass.cls</runTest>
-		<runTest>MDLZ_WOForceSAPTestClass.cls</runTest>
+	        <runTest>MDLZ_AccountTriggerHandlerTest</runTest>
+<runTest>MDLZ_AddCustomerSetToCustomerTaskTest</runTest>
+<runTest>MDLZ_AddPPGTest</runTest>
+<runTest>MDLZ_CallReOrgBatchTest</runTest>
+<runTest>MDLZ_CreateWrapperCAOTestClass</runTest>
+<runTest>MDLZ_CustomersetPicklistTestclass</runTest>
+<runTest>MDLZ_DeleteProdAssortBranchListingTest</runTest>
+<runTest>MDLZ_EffectiveAccountManagerSyncTest</runTest>
+<runTest>MDLZ_ErrorExceptionHandlerTest</runTest>
+<runTest>MDLZ_FundCalculationBatchTest</runTest>
+<runTest>MDLZ_KPI_Data_Delete_Batch_Test</runTest>
+<runTest>MDLZ_NewUserSetupTestClass</runTest>
+<runTest>MDLZ_OrderConTestClass</runTest>
+<runTest>MDLZ_OrderFlipBatchTest</runTest>
+<runTest>MDLZ_OrderReOrgBatchTest</runTest>
+<runTest>MDLZ_OrderTriggerTestClass</runTest>
+<runTest>MDLZ_OrgUnitUserAssignementTestClass</runTest>
+<runTest>MDLZ_ProdAssortment_ByCustBranchTest</runTest>
+<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry</runTest>
+<runTest>MDLZ_ProdAssortProd_TestClass</runTest>
+<runTest>MDLZ_ProductUnitFlagTestClass</runTest>
+<runTest>MDLZ_PromotionExportBatchTest</runTest>
+<runTest>MDLZ_PromotionExportDeleteBatchTest</runTest>
+<runTest>MDLZ_SystemSettingsFieldSetFilterTest</runTest>
+<runTest>MDLZ_TeamTerritoryTestClass</runTest>
+<runTest>MDLZ_TestClassSchedulerTest</runTest>
+<runTest>MDLZ_TestDataFactory</runTest>
+<runTest>MDLZ_UpdateOrgUnitUserValidityTest</runTest>
+<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry</runTest>
+<runTest>MDLZ_UpdateTerritoryFlagBatchTest</runTest>
+<runTest>MDLZ_UserPermissionSetAssignTestClass</runTest>
+<runTest>MDLZ_WOForceSAPTestClass</runTest>
 
     </sf:deploy>
   </target>
@@ -270,38 +270,39 @@
       deployRoot="src"
       pollWaitMillis="10000"
       maxPoll="10000">
-	<runTest>MDLZ_AccountTriggerHandlerTest.cls</runTest>
-	<runTest>MDLZ_AddCustomerSetToCustomerTaskTest.cls</runTest>
-	<runTest>MDLZ_AddPPGTest.cls</runTest>
-	<runTest>MDLZ_CallReOrgBatchTest.cls</runTest>
-	<runTest>MDLZ_CreateWrapperCAOTestClass.cls</runTest>
-	<runTest>MDLZ_CustomersetPicklistTestclass.cls</runTest>
-	<runTest>MDLZ_DeleteProdAssortBranchListingTest.cls</runTest>
-	<runTest>MDLZ_EffectiveAccountManagerSyncTest.cls</runTest>
-	<runTest>MDLZ_ErrorExceptionHandlerTest.cls</runTest>
-	<runTest>MDLZ_FundCalculationBatchTest.cls</runTest>
-	<runTest>MDLZ_KPI_Data_Delete_Batch_Test.cls</runTest>
-	<runTest>MDLZ_NewUserSetupTestClass.cls</runTest>
-	<runTest>MDLZ_OrderConTestClass.cls</runTest>
-	<runTest>MDLZ_OrderFlipBatchTest.cls</runTest>
-	<runTest>MDLZ_OrderReOrgBatchTest.cls</runTest>
-	<runTest>MDLZ_OrderTriggerTestClass.cls</runTest>
-	<runTest>MDLZ_OrgUnitUserAssignementTestClass.cls</runTest>
-	<runTest>MDLZ_ProdAssortment_ByCustBranchTest.cls</runTest>
-	<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry.cls</runTest>
-	<runTest>MDLZ_ProdAssortProd_TestClass.cls</runTest>
-	<runTest>MDLZ_ProductUnitFlagTestClass.cls</runTest>
-	<runTest>MDLZ_PromotionExportBatchTest.cls</runTest>
-	<runTest>MDLZ_PromotionExportDeleteBatchTest.cls</runTest>
-	<runTest>MDLZ_SystemSettingsFieldSetFilterTest.cls</runTest>
-	<runTest>MDLZ_TeamTerritoryTestClass.cls</runTest>
-	<runTest>MDLZ_TestClassSchedulerTest.cls</runTest>
-	<runTest>MDLZ_TestDataFactory.cls</runTest>
-	<runTest>MDLZ_UpdateOrgUnitUserValidityTest.cls</runTest>
-	<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry.cls</runTest>
-	<runTest>MDLZ_UpdateTerritoryFlagBatchTest.cls</runTest>
-	<runTest>MDLZ_UserPermissionSetAssignTestClass.cls</runTest>
-	<runTest>MDLZ_WOForceSAPTestClass.cls</runTest>
+	<runTest>MDLZ_AccountTriggerHandlerTest</runTest>
+<runTest>MDLZ_AddCustomerSetToCustomerTaskTest</runTest>
+<runTest>MDLZ_AddPPGTest</runTest>
+<runTest>MDLZ_CallReOrgBatchTest</runTest>
+<runTest>MDLZ_CreateWrapperCAOTestClass</runTest>
+<runTest>MDLZ_CustomersetPicklistTestclass</runTest>
+<runTest>MDLZ_DeleteProdAssortBranchListingTest</runTest>
+<runTest>MDLZ_EffectiveAccountManagerSyncTest</runTest>
+<runTest>MDLZ_ErrorExceptionHandlerTest</runTest>
+<runTest>MDLZ_FundCalculationBatchTest</runTest>
+<runTest>MDLZ_KPI_Data_Delete_Batch_Test</runTest>
+<runTest>MDLZ_NewUserSetupTestClass</runTest>
+<runTest>MDLZ_OrderConTestClass</runTest>
+<runTest>MDLZ_OrderFlipBatchTest</runTest>
+<runTest>MDLZ_OrderReOrgBatchTest</runTest>
+<runTest>MDLZ_OrderTriggerTestClass</runTest>
+<runTest>MDLZ_OrgUnitUserAssignementTestClass</runTest>
+<runTest>MDLZ_ProdAssortment_ByCustBranchTest</runTest>
+<runTest>MDLZ_ProdAssortmnt_ByCustBrnchTestFctry</runTest>
+<runTest>MDLZ_ProdAssortProd_TestClass</runTest>
+<runTest>MDLZ_ProductUnitFlagTestClass</runTest>
+<runTest>MDLZ_PromotionExportBatchTest</runTest>
+<runTest>MDLZ_PromotionExportDeleteBatchTest</runTest>
+<runTest>MDLZ_SystemSettingsFieldSetFilterTest</runTest>
+<runTest>MDLZ_TeamTerritoryTestClass</runTest>
+<runTest>MDLZ_TestClassSchedulerTest</runTest>
+<runTest>MDLZ_TestDataFactory</runTest>
+<runTest>MDLZ_UpdateOrgUnitUserValidityTest</runTest>
+<runTest>MDLZ_UpdateOrgUnitUserValidityTestFctry</runTest>
+<runTest>MDLZ_UpdateTerritoryFlagBatchTest</runTest>
+<runTest>MDLZ_UserPermissionSetAssignTestClass</runTest>
+<runTest>MDLZ_WOForceSAPTestClass</runTest>
+
 
 	    
     </sf:deploy>
