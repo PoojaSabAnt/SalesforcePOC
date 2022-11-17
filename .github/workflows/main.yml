@@ -1,4 +1,4 @@
-name: Salesforce-demo-workflow
+name: Slesforce-demo-workflow
 on:
   pull_request:
     branches:
