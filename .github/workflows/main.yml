@@ -1,4 +1,4 @@
-name: Slesforce-end-to-end-demo-of-workflow
+name: Salesforce-end-to-end-demo-of-workflow
 on:
   pull_request:
     branches:
