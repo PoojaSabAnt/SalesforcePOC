@@ -1,6 +1,4 @@
 # SalesforcePOC
-En to end demo of pipeline
-
-
-story1 for prioritization.
+End to end demo of salesforce pipeline
+story1 for prioritization
 
