@@ -1,4 +1,4 @@
-name: Sfdc-end-to-end-demo-of-workflow
+name: End-to-end-demo-of-cicd-workflow
 on:
   pull_request:
     branches:
