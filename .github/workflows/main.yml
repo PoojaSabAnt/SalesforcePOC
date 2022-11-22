@@ -1,4 +1,5 @@
-name: salesforce-end-to-end-demo-of-cicd-workflow
+
+name: slesforce-end-to-end-demo-of-story-transition
 on:
   pull_request:
     branches:
