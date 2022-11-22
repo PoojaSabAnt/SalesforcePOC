@@ -1,4 +1,4 @@
-#story1 transition
+#story transition
 name: slesforce-end-to-end-demo-of-cicd-workflow
 on:
   pull_request:
