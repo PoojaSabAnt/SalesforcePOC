@@ -1,5 +1,4 @@
-#story1 transition
-name: slesforce-end-to-end-demo-of-cicd-workflow
+name: salesforce-end-to-end-demo-of-cicd-workflow-githubactions
 on:
   pull_request:
     branches:
