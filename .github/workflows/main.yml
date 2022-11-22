@@ -1,5 +1,5 @@
-
-name: slesforce-end-to-end-demo-of-story-transition
+#story transition
+name: slesforce-end-to-end-demo-of-cicd-workflow
 on:
   pull_request:
     branches:
