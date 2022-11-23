@@ -1,4 +1,4 @@
-name: salesforce-end-to-end-demo
+name: salesforce-end-to-end-demo-using-githubactions
 on:
   pull_request:
     branches:
