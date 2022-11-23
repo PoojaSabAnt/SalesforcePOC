@@ -1,4 +1,4 @@
-name: salesforce-end-to-end-demo-of-cicd-workflow-githubactions
+name: salesforce-end-to-end-demo-of-cicd-workflow
 on:
   pull_request:
     branches:
