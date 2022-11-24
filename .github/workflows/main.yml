@@ -1,4 +1,4 @@
-name: salesforce-cicd-worflow-feature-lock-test
+name: salesforce-cicd-worflow-comment-validation
 on:
   pull_request:
     branches:
