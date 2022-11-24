@@ -9,6 +9,16 @@ on:
     - closed  
 
 jobs:
+  jira-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cleartax/jira-lint@v0.0.1
+        name: jira-lint
+        with:
+          github-token: ${{ secrets.GITHUBTOKEN }}
+          jira-token: ${{ secrets.JIRA_TOKEN }}
+          jira-base-url: https://mdlzintl.atlassian.net
+          
   salesforce:
     runs-on: ubuntu-latest
     defaults:
