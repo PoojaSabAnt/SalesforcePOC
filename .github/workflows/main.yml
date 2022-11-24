@@ -1,4 +1,4 @@
-name: salesforce-cicd-workflow-feature-lock-test
+name: salesforce-cicd-workflow-feature-lock-testing
 on:
   pull_request:
     branches:
