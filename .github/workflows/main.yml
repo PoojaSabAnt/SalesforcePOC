@@ -1,4 +1,4 @@
-name: salesforce-end-to-end-demo-using-githubactions
+name: salesforce-cicd-workflow-feature-lock
 on:
   pull_request:
     branches:
