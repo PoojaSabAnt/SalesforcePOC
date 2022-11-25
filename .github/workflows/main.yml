@@ -6,13 +6,14 @@ on:
     - 'hotfix'
     - 'main'
     types: 
-    - closed  
+    - closed
+    - created
 
 jobs:
   jira-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: cleartax/jira-lint@v0.0.1
+      - uses: btwrk/action-jira-linter@v1.0.1
         name: jira-lint
         with:
           github-token: ${{ secrets.GITHUBTOKEN }}
