@@ -13,10 +13,11 @@ jobs:
   jira-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: btwrk/action-jira-linter@v1.0.1
+      - uses: jira-tools/action-jira-linter@v1.0.1
         name: jira-lint
         with:
           github-token: ${{ secrets.GITHUBTOKEN }}
+          jira-user: ${{ secrets.JIRA_USER }}
           jira-token: ${{ secrets.JIRA_TOKEN }}
           jira-base-url: https://mdlzintl.atlassian.net
           
