@@ -5,9 +5,7 @@ on:
     - 'development'
     - 'hotfix'
     - 'main'
-    types: 
-    - closed
-    - created
+    types: [closed, created]
 
 jobs:
   jira-lint:
@@ -20,6 +18,9 @@ jobs:
           jira-user: ${{ secrets.JIRA_USER }}
           jira-token: ${{ secrets.JIRA_TOKEN }}
           jira-base-url: https://mdlzintl.atlassian.net
+          validate-issue-status: true
+          allowed-issue-statuses: New
+          fail-on-error: false
           
   salesforce:
     runs-on: ubuntu-latest
