@@ -1,14 +1,16 @@
-name: salesforce-cicd-worflow-feature-lock-test
+name: salesforce-cicd-worflow-featue-lock-test
 on:
   pull_request:
     branches:
     - 'development'
     - 'hotfix'
     - 'main'
-    types: 
-    - closed  
+    types: [closed, created]
 
-jobs:      
+
+
+jobs:
+ steps:
   salesforce:
     runs-on: ubuntu-latest
     defaults:
