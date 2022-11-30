@@ -1,23 +1,26 @@
-name: salesforce-cicd-worflow-feature-lock-test
+name: salesforce-cicd-worflow-featue-lock-test
 on:
   pull_request:
     branches:
     - 'development'
     - 'hotfix'
     - 'main'
-    types: 
-    - closed  
+    types: [closed, created]
 
 jobs:
   jira-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: cleartax/jira-lint@v0.0.1
+      - uses: jira-tools/action-jira-linter@v1.0.1
         name: jira-lint
         with:
           github-token: ${{ secrets.GITHUBTOKEN }}
+          jira-user: ${{ secrets.JIRA_USER }}
           jira-token: ${{ secrets.JIRA_TOKEN }}
           jira-base-url: https://mdlzintl.atlassian.net
+          validate-issue-status: true
+          allowed-issue-statuses: New
+          fail-on-error: false
           
   salesforce:
     runs-on: ubuntu-latest
