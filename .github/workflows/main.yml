@@ -10,7 +10,6 @@ on:
 
 
 jobs:
- steps:
   salesforce:
     runs-on: ubuntu-latest
     defaults:
