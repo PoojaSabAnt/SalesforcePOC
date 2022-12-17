@@ -9,15 +9,7 @@ on:
     - closed  
 
 jobs:
-  jira-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: cleartax/jira-lint@v0.0.1
-        name: jira-lint
-        with:
-          github-token: ${{ secrets.GITHUBTOKEN }}
-          jira-token: ${{ secrets.JIRA_TOKEN }}
-          jira-base-url: https://mdlzintl.atlassian.net
+  
           
   salesforce:
     runs-on: ubuntu-latest
@@ -29,6 +21,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
+        
+    - name: Check commit messages for jira issue key
+      uses: gsactions/commit-message-checker@v2
+      with:
+          pattern: '[A-Z]{2,}-\d+'
+          error: 'You need to mention jira issue in commit message'
   
   salesforce-deploy:
     needs: salesforce
