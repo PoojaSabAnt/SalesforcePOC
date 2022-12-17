@@ -28,7 +28,7 @@ jobs:
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: '[A-Z]{2,}-\d+'
-          error: 'You need to mention jira issue in commit message'
+          error: 'You need to mention jira issue key in commit message'
   
   salesforce-deploy:
     needs: salesforce
