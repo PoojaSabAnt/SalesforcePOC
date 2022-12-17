@@ -1,1 +1,1 @@
-LOCK DEMO
+comment validation
