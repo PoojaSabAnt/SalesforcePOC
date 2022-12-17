@@ -6,11 +6,13 @@ on:
     - 'hotfix'
     - 'main'
     types: 
-    - closed  
+    - closed 
+  push:
+    branches:
+    - 'feature/**'
+   
 
-jobs:
-  
-          
+jobs:       
   salesforce:
     runs-on: ubuntu-latest
     defaults:
