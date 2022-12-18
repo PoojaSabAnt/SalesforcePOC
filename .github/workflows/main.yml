@@ -1,4 +1,4 @@
-name: salesforce-cicd-worflow-feature-lock-test
+name: salesforce-cicd-worflow
 on:
   pull_request:
     branches:
@@ -7,10 +7,7 @@ on:
     - 'main'
     types: 
     - closed 
-  push:
-    branches:
-    - 'feature/**'
-   
+    
 
 jobs:       
   salesforce:
