@@ -9,7 +9,6 @@ on:
     - closed 
     
 
-jobs:       
   salesforce:
     runs-on: ubuntu-latest
     defaults:
