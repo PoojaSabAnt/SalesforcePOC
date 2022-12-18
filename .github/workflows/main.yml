@@ -8,7 +8,7 @@ on:
     types: 
     - closed 
     
-
+jobs:
   salesforce:
     runs-on: ubuntu-latest
     defaults:
