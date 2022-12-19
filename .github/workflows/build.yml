@@ -1,4 +1,4 @@
-name: salesforce-cicd-worflow-
+name: salesforce-cicd-worflow
 on:
   pull_request:
     branches:
