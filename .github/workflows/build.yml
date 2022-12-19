@@ -25,6 +25,15 @@ jobs:
       with:
           pattern: '[A-Z]{2,}-\d+'
           error: 'You need to mention jira issue key in commit message'
+<<<<<<< HEAD:.github/workflows/build.yml
+          
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+=======
+>>>>>>> 75a8cec8125e9654388eb7afeb9c7be4c4eb32c5:.github/workflows/main.yml
   
   salesforce-deploy:
     needs: salesforce
