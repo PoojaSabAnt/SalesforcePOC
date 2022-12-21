@@ -1,4 +1,4 @@
-name: salesforce-cicd-worflow
+name: salesforce-cicd-worflow-test
 on:
   pull_request:
     branches:
@@ -9,23 +9,24 @@ on:
     - closed 
     
 jobs:
-  salesforce:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
         
+    steps:
     - name: Check commit messages for jira issue key
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: '[A-Z]{2,}-\d+'
           error: 'You need to mention jira issue key in commit message'
-
+          
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
