@@ -14,13 +14,8 @@ jobs:
     defaults:
       run:
         shell: bash
-        
-    steps:
-    - name: Check commit messages for jira issue key
-      uses: gsactions/commit-message-checker@v2
-      with:
-          pattern: '[A-Z]{2,}-\d+'
-          error: 'You need to mention jira issue key in commit message'
+    if: ${{ !contains(github.event.head_commit.message, '[A-Z][a-z]{2,}-\d+') }}    
+    steps:   
           
     - name: Checkout code
       uses: actions/checkout@v2
@@ -33,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
-  salesforce-deploy:
+  deploy:
     needs: build
     if: |
       (github.event_name == 'pull_request'   && github.event.pull_request.merged == true) &&
@@ -42,6 +37,7 @@ jobs:
       (github.head_ref == 'hotfix'  && github.base_ref == 'development') ||
       (github.head_ref == 'development'  && github.base_ref == 'main'))   
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
