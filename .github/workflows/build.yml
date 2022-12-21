@@ -19,7 +19,7 @@ jobs:
     - name: Check commit messages for jira issue key
       uses: gsactions/commit-message-checker@v2
       with:
-          pattern: '[A-Z]{2,}-\d{3}$'
+          pattern: '[a-zA-Z]{2,}-\d{3}$'
           error: 'You need to mention jira issue key in commit message'
           
     - name: Checkout code
