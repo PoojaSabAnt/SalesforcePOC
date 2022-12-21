@@ -14,8 +14,13 @@ jobs:
     defaults:
       run:
         shell: bash
-    if: ${{ contains(github.event.head_commit.message, '[A-Z][a-z]{2,}-\d+') }}    
-    steps:   
+      
+    steps:
+    - name: Check commit messages for jira issue key
+      uses: gsactions/commit-message-checker@v2
+      with:
+          pattern: '[a-z][A-Z]{2,}-\d{3}$'
+          error: 'You need to mention jira issue key in commit message'
           
     - name: Checkout code
       uses: actions/checkout@v2
