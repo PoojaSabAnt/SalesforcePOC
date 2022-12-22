@@ -1,5 +1,8 @@
-name: salesforce-cicd-worfl
+name: salesforce-workflow
 on:
+  push:
+    branches:
+    - 'feature/**'
   pull_request:
     branches:
     - 'development'
