@@ -27,6 +27,7 @@ src/objects/Customer.object
 src/objects/MDLZ_Promotion_Export__c.object
 src/objects/MDLZ_Promotion_Store__c.object
 src/objects/MDLZ_Trigger_Switch__c.object
+src/objects/Order.object
 
 
 
