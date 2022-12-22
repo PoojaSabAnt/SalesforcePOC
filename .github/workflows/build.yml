@@ -23,7 +23,7 @@ jobs:
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: ^.*[a-zA-Z]{2,}-\d{3}.*$
-          error: 'You need to mention jira issue key in commit message'
+          error: 'You need to mention jira issue key in commit messages and PR titles'
           
     - name: Checkout code
       uses: actions/checkout@v2
