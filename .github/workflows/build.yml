@@ -1,4 +1,4 @@
-name: salesforce-workflow
+name: salesforce-workflow-test
 on:
   push:
     branches:
