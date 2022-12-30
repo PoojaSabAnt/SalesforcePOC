@@ -1,4 +1,4 @@
-name: salesforce-workflow-test30122022
+name: salesforce-workflow-test30122022-updated
 on:
   push:
     branches:
