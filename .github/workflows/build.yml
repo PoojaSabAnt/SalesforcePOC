@@ -1,4 +1,4 @@
-name: salesforce-workflow-test30122022-updated-version
+name: 30122022-updated-version-testing
 on:
   push:
     branches:
@@ -23,7 +23,7 @@ jobs:
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: ^.*[a-zA-Z]{2,}-\d{3}.*$
-          error: 'You need to mention jira issue key in commit messages and PR titles'
+          error: 'You need to specify jira issue key in commit messages and PR titles else workflow will fail'
           
     - name: Checkout code
       uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.8
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }} 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
   deploy:
@@ -52,8 +52,8 @@ jobs:
       with:
         fetch-depth: 2
         
-    
-    - name: Auth sandbox, validate and deploy
+
+    - name: Authenticate sandbox, validate and deploy onto it
       env:
        SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
        SFDC_POC_PASSWORD_DEV: ${{ secrets.SFDC_POCDEV_PASSWORD }}
@@ -110,12 +110,12 @@ jobs:
           echo "Validation failed"
         fi 
         
-        echo "Deployment of components started"
+        echo "Deployment of components mentioned in manifest file started...."
         if [[ $BRANCH == development ]]; then
           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         else
           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         fi
         if [ $? != 0 ];  then  
-          echo "Deployment failed"
+          echo "Deployment on sandbox failed"
         fi
