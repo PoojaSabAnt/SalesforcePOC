@@ -1,4 +1,4 @@
-name: salesforce-workflow-30122022-updated-version-testing
+name: 30122022-updated-version-testing
 on:
   push:
     branches:
@@ -23,7 +23,7 @@ jobs:
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: ^.*[a-zA-Z]{2,}-\d{3}.*$
-          error: 'You need to mention jira issue key in commit messages and PR titles else workflow will fail'
+          error: 'You need to specify jira issue key in commit messages and PR titles else workflow will fail'
           
     - name: Checkout code
       uses: actions/checkout@v2
@@ -53,7 +53,7 @@ jobs:
         fetch-depth: 2
         
 
-    - name: Authenticate sandbox, validate and deploy
+    - name: Authenticate sandbox, validate and deploy onto it
       env:
        SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
        SFDC_POC_PASSWORD_DEV: ${{ secrets.SFDC_POCDEV_PASSWORD }}
@@ -110,7 +110,7 @@ jobs:
           echo "Validation failed"
         fi 
         
-        echo "Deployment of components mentioned in manifest file started"
+        echo "Deployment of components mentioned in manifest file started...."
         if [[ $BRANCH == development ]]; then
           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         else
