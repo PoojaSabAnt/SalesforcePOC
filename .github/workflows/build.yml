@@ -1,4 +1,4 @@
-name: 30122022-updated-version-testing
+name: 30122022-updated-version-for-testing
 on:
   push:
     branches:
@@ -19,7 +19,7 @@ jobs:
         shell: bash
       
     steps:
-    - name: Check commit messages for jira issue key
+    - name: Check commit messages for occurence of jira issue key
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: ^.*[a-zA-Z]{2,}-\d{3}.*$
