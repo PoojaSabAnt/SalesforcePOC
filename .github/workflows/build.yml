@@ -1,4 +1,4 @@
-name: salesforce-workflow-test30122022-updated-version1
+name: salesforce-workflow-30122022-updated-version-testing
 on:
   push:
     branches:
@@ -23,7 +23,7 @@ jobs:
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: ^.*[a-zA-Z]{2,}-\d{3}.*$
-          error: 'You need to mention jira issue key in commit messages and PR titles'
+          error: 'You need to mention jira issue key in commit messages and PR titles else workflow will fail'
           
     - name: Checkout code
       uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.8
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }} 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
   deploy:
@@ -110,7 +110,7 @@ jobs:
           echo "Validation failed"
         fi 
         
-        echo "Deployment of components on sandbox started"
+        echo "Deployment of components mentioned in manifest file started"
         if [[ $BRANCH == development ]]; then
           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         else
