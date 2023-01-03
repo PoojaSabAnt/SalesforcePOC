@@ -114,6 +114,7 @@ jobs:
           args:
             -Dsonar.projectKey=Mondelez-DevOps-POC_SalesforcePOC
             -Dsonar.organization=mondelez-devops-poc
+            -Dsonar.sources=.
             
             echo "Deployment of components mentioned in manifest file started...."
             if [[ $BRANCH == development ]]; then
