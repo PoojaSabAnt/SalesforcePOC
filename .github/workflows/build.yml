@@ -30,16 +30,7 @@ jobs:
       with:
         fetch-depth: 0
         
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@v1.8
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }} 
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-          args:
-            -Dsonar.projectKey=Mondelez-DevOps-POC_SalesforcePOC
-            -Dsonar.organization=mondelez-devops-poc
-            
+    
   deploy:
     needs: build
     if: |
@@ -114,12 +105,22 @@ jobs:
           echo "Validation failed"
         fi 
         
-        echo "Deployment of components mentioned in manifest file started...."
-        if [[ $BRANCH == development ]]; then
-          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
-        else
-          ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
-        fi
-        if [ $? != 0 ];  then  
-          echo "Deployment on sandbox failed"
-        fi
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v1.8
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }} 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+          args:
+            -Dsonar.projectKey=Mondelez-DevOps-POC_SalesforcePOC
+            -Dsonar.organization=mondelez-devops-poc
+            
+            echo "Deployment of components mentioned in manifest file started...."
+            if [[ $BRANCH == development ]]; then
+              ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
+            else
+             ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
+           fi
+           if [ $? != 0 ];  then  
+            echo "Deployment on sandbox failed"
+           fi
