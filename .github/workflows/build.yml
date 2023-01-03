@@ -1,4 +1,4 @@
-name: 3Jan2023-updated-version-for-testingitouttoday
+name: 03Jan2023-updated-version-test
 on:
   push:
     branches:
