@@ -1,4 +1,4 @@
-name: 04January2023-updated-version-test
+name: 24Jan23-updated-version-test
 on:
   push:
     branches:
@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
     - 'development'
-    - 'hotfix'
     - 'main'
     types: 
     - closed 
