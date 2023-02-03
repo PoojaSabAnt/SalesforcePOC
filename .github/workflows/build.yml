@@ -18,12 +18,7 @@ jobs:
         shell: bash
       
     steps:
-    - name: Check commit messages for occurence of jira issue key
-      uses: gsactions/commit-message-checker@v2
-      with:
-          pattern: ^.*[a-zA-Z]{2,}-\d{3}.*$
-          error: 'You need to specify jira issue key in commit messages and PR titles else workflow will fail'
-          
+        
     - name: Checkout code
       uses: actions/checkout@v2
       with:
