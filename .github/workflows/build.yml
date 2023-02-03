@@ -1,4 +1,4 @@
-name: 01Feb23-updated-version
+name: 03Feb23-updated-version
 on:
   push:
     branches:
@@ -35,8 +35,6 @@ jobs:
     if: |
       (github.event_name == 'pull_request'   && github.event.pull_request.merged == true) &&
       ((contains(github.head_ref, 'feature') && github.base_ref == 'development') ||
-      (github.head_ref == 'hotfix'  && github.base_ref == 'main') ||
-      (github.head_ref == 'hotfix'  && github.base_ref == 'development') ||
       (github.head_ref == 'development'  && github.base_ref == 'main'))   
     runs-on: ubuntu-latest
     
