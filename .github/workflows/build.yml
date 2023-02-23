@@ -50,6 +50,7 @@ jobs:
        SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCPROD_SERVERURL }}  
       run: |
         java -version
+        java -Dpackage-prefix=wsc -classpath wsc.jar com.sforce.ws.tools.wsdlc wsdl jar.file
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
         if [[ $BRANCH == development ]]; then
