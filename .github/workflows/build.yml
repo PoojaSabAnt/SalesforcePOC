@@ -1,4 +1,4 @@
-name: 23February2023-updated-version
+name: 27February2023-updated-version
 on:
   push:
     branches:
@@ -49,9 +49,7 @@ jobs:
        SFDC_POC_PASSWORD_PROD: ${{ secrets.SFDC_POCPROD_PASSWORD }}
        SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCPROD_SERVERURL }}  
       run: |
-        java -version
-        echo $JAVA_HOME
-        java -classpath force-wsc-27.0.0.jar:js-1.7R2.jar com.sforce.ws.tools.wsdlc partner.wsdl partner-27.jar
+        
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
         if [[ $BRANCH == development ]]; then
