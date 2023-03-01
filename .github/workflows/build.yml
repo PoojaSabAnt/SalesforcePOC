@@ -42,8 +42,7 @@ jobs:
     - name: Install Java  
       uses: actions/setup-java@v3
       with:
-       distribution: 'temurin'
-       java-version: '19'
+       java-version: '1.8'
        java-package: jdk
     - run: |
         echo $JAVA_HOME
