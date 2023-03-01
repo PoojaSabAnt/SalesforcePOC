@@ -55,6 +55,7 @@ jobs:
        SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCPROD_SERVERURL }}  
       run: |
         cd $GITHUB_WORKSPACE
+        pwd
         ls
         java -version
         java -Dpackage-prefix=wsc -classpath tools.jar $GITHUB_WORKSPACE/ST4-4.0.8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar
