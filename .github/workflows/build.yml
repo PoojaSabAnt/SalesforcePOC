@@ -43,7 +43,7 @@ jobs:
       uses: actions/setup-java@main
       with:
        java-version: '17'
-       java-distribution: 'temurin'
+       distribution: 'temurin'
     - run: |
         echo $JAVA_HOME
         cd $JAVA_HOME
