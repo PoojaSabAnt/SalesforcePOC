@@ -1,4 +1,4 @@
-name: 28February2023-updated-version
+name: 01March2023-updated-version
 on:
   push:
     branches:
@@ -58,7 +58,7 @@ jobs:
         pwd
         ls
         java -version
-        java -Dpackage-prefix=wsc -classpath tools.jar $GITHUB_WORKSPACE/ST4-4.0.8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar
+        java -Dpackage-prefix=wsc -classpath tools.jar $GITHUB_WORKSPACE/ST4-4_0_8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
         if [[ $BRANCH == development ]]; then
