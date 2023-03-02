@@ -1,4 +1,4 @@
-name: 01March2023-updated-version
+name: 02March2023-updated-version
 on:
   push:
     branches:
@@ -51,7 +51,7 @@ jobs:
     - name: Install Java  
       uses: actions/setup-java@main
       with:
-       java-version: '17'
+       java-version: '8'
        distribution: 'temurin'
     - run: |
         echo $JAVA_HOME
