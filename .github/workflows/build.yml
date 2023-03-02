@@ -24,9 +24,18 @@ jobs:
       with:
         fetch-depth: 0
         
+
+    - name: Check commit messages for jira issue key
+      uses: gsactions/commit-message-checker@v2
+      with:
+          pattern: '[A-Z]{2,}-\d+'
+          error: 'You need to mention jira issue key in commit message'
+          
+  
     
   deploy:
     needs: build
+
     if: |
       (github.event_name == 'pull_request'   && github.event.pull_request.merged == true) &&
       ((contains(github.head_ref, 'feature') && github.base_ref == 'development') ||
