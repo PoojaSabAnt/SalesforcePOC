@@ -1,4 +1,4 @@
-name: 02March2023-updated-version
+name: 02March23-updated-version
 on:
   push:
     branches:
