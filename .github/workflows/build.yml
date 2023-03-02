@@ -1,54 +1,69 @@
-name: salesforce-cicd-worflow-test
+name: 01March2023-updated-version
 on:
+  push:
+    branches:
+    - 'feature/**'  
   pull_request:
     branches:
     - 'development'
-    - 'hotfix'
     - 'main'
     types: 
     - closed 
     
 jobs:
-  salesforce:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
+      
     steps:
+        
     - name: Checkout code
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
         
+
     - name: Check commit messages for jira issue key
       uses: gsactions/commit-message-checker@v2
       with:
           pattern: '[A-Z]{2,}-\d+'
           error: 'You need to mention jira issue key in commit message'
           
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
-  salesforce-deploy:
-    needs: salesforce
+    
+  deploy:
+    needs: build
+
     if: |
       (github.event_name == 'pull_request'   && github.event.pull_request.merged == true) &&
       ((contains(github.head_ref, 'feature') && github.base_ref == 'development') ||
-      (github.head_ref == 'hotfix'  && github.base_ref == 'main') ||
-      (github.head_ref == 'hotfix'  && github.base_ref == 'development') ||
       (github.head_ref == 'development'  && github.base_ref == 'main'))   
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
         fetch-depth: 2
         
-    
-    - name: Auth sandbox, validate and deploy
+    - name: Install Java  
+      uses: actions/setup-java@main
+      with:
+       java-version: '17'
+       distribution: 'temurin'
+    - run: |
+        echo $JAVA_HOME
+        cd $JAVA_HOME
+        pwd
+        ls
+        cd lib
+        ls
+        java -cp java lib/tools.jar $GITHUB_WORKSPACE/ST4-4.0.8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar
+       
+        
+    - name: Authenticate sandbox, validate and deploy onto it
       env:
        SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
        SFDC_POC_PASSWORD_DEV: ${{ secrets.SFDC_POCDEV_PASSWORD }}
@@ -57,12 +72,13 @@ jobs:
        SFDC_POC_PASSWORD_PROD: ${{ secrets.SFDC_POCPROD_PASSWORD }}
        SFDC_POC_SERVERURL_PROD: ${{ secrets.SFDC_POCPROD_SERVERURL }}  
       run: |
+        
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
         if [[ $BRANCH == development ]]; then
-          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed  -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed  -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed  -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
         else [[ $BRANCH == main ]];       
           sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
           sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
@@ -94,23 +110,24 @@ jobs:
         cp /tmp/build.properties $GITHUB_WORKSPACE/
         ls -R $GITHUB_WORKSPACE/src
         ls $GITHUB_WORKSPACE
-    
+        
+        
         echo "Validation of build file started"
         if [[ $BRANCH == development ]]; then
-        ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
+          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
         else
-        ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
+          ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
         fi
         if [ $? != 0 ];  then
           echo "Validation failed"
         fi 
         
-        echo "Deployment of components started"
+        echo "Deployment of components mentioned in manifest file started...."
         if [[ $BRANCH == development ]]; then
           ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         else
           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         fi
         if [ $? != 0 ];  then  
-          echo "Deployment failed"
+            echo "Deployment on sandbox failed"
         fi
