@@ -39,6 +39,11 @@ jobs:
       with:
         fetch-depth: 2
         
+    - name: Check commit messages for jira issue key
+      uses: gsactions/commit-message-checker@v2
+      with:
+          pattern: '[A-Z]{2,}-\d+'
+          error: 'You need to mention jira issue key in commit message'
 
     - name: Authenticate sandbox, validate and deploy onto it
       env:
