@@ -29,6 +29,14 @@ jobs:
       with:
           pattern: '[A-Z]{2,}-\d+'
           error: 'You need to mention jira issue key in commit message'
+          
+    - name: Install Java  
+      uses: actions/setup-java@main
+      with:
+       java-version: '8'
+       distribution: 'temurin'
+    - run: 
+       java -Dpackage-prefix=wsc -classpath tools.jar ST4-4.0.8.jar force-wsc-57.0.0.jar antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc partner.wsdl.xml partner.jar    
         
 
     - name: Check commit messages for jira issue key
