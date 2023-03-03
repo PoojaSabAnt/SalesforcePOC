@@ -30,16 +30,7 @@ jobs:
           pattern: '[A-Z]{2,}-\d+'
           error: 'You need to mention jira issue key in commit message'
           
-    - name: Install Java  
-      uses: actions/setup-java@main
-      with:
-       java-version: '8'
-       distribution: 'temurin'
-    - run: |
-       echo $CLASSPATH
-       java -Dpackage-prefix=wsc $GITHUB_WORKSPACE/ST4-4.0.8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar    
-
-    
+      
   deploy:
     needs: build
 
@@ -69,13 +60,13 @@ jobs:
         BRANCH=${GITHUB_REF#refs/heads/}
         echo "Current branch is $BRANCH"
         if [[ $BRANCH == development ]]; then
-          sed  -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-          sed  -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
-          sed  -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed  -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed  -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed  -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
         else [[ $BRANCH == main ]];       
-          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_PROD"'|g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_PROD"'|g' $GITHUB_WORKSPACE/build.properties
-          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_PROD"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_USERNAME|'"$SFDC_POC_USERNAME_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_PASSWORD|'"$SFDC_POC_PASSWORD_DEV"'|g' $GITHUB_WORKSPACE/build.properties
+          sed -i 's|SFDC_POC_SERVERURL|'"$SFDC_POC_SERVERURL_DEV"'|g' $GITHUB_WORKSPACE/build.properties
         fi
         
         export MANIFEST_FOLDER=$(jq -r '.MANIFEST_FOLDER.FOLDER' devops/params.json)
@@ -107,9 +98,9 @@ jobs:
         
         echo "Validation of build file started"
         if [[ $BRANCH == development ]]; then
-          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
-        else
           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
+        else
+          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deployCodeCheckOnly 
         fi
         if [ $? != 0 ];  then
           echo "Validation failed"
@@ -117,9 +108,9 @@ jobs:
         
         echo "Deployment of components mentioned in manifest file started...."
         if [[ $BRANCH == development ]]; then
-          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
-        else
           ant -Dsf.username=${{ secrets.SFDC_POCPROD_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCPROD_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCPROD_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
+        else
+          ant -Dsf.username=${{ secrets.SFDC_POCDEV_USERNAME }} -Dhttps.protocols=TLSv1.1,TLSv1.2 -Dsf.password=${{ secrets.SFDC_POCDEV_PASSWORD }} -Dsf.serverurl=${{ secrets.SFDC_POCDEV_SERVERURL }} -buildfile $GITHUB_WORKSPACE/build/$MANIFEST_FOLDER/build.xml deploy_Sandbox
         fi
         if [ $? != 0 ];  then  
             echo "Deployment on sandbox failed"
