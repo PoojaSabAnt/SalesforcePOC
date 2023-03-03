@@ -35,19 +35,11 @@ jobs:
       with:
        java-version: '8'
        distribution: 'temurin'
-    - run: 
+    - run: |
        pwd
        ls      
        java -Dpackage-prefix=wsc -classpath tools.jar $GITHUB_WORKSPACE/ST4-4.0.8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar    
-        
 
-    - name: Check commit messages for jira issue key
-      uses: gsactions/commit-message-checker@v2
-      with:
-          pattern: '[A-Z]{2,}-\d+'
-          error: 'You need to mention jira issue key in commit message'
-          
-  
     
   deploy:
     needs: build
