@@ -54,14 +54,7 @@ jobs:
       with:
         fetch-depth: 2
         
-    - name: Install Java  
-      uses: actions/setup-java@main
-      with:
-       java-version: '8'
-       distribution: 'temurin'
-    - run: |
-        
-        java -Dpackage-prefix=wsc -classpath tools.jar ST4-4.0.8.jar force-wsc-57.0.0.jar antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc partner.wsdl.xml partner.jar    
+    
     - name: Authenticate sandbox, validate and deploy onto it
       env:
        SFDC_POC_USERNAME_DEV: ${{ secrets.SFDC_POCDEV_USERNAME }}
