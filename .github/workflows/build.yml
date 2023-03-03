@@ -36,7 +36,7 @@ jobs:
        java-version: '8'
        distribution: 'temurin'
     - run: |
-       "echo ${CLASSPATH}"
+       echo ${CLASSPATH}
        pwd
        ls      
        java -Dpackage-prefix=wsc $GITHUB_WORKSPACE/ST4-4.0.8.jar $GITHUB_WORKSPACE/force-wsc-57.0.0.jar $GITHUB_WORKSPACE/antlr-runtime-3.5.2.jar com.sforce.ws.tools.wsdlc $GITHUB_WORKSPACE/partner.wsdl.xml $GITHUB_WORKSPACE/partner.jar    
