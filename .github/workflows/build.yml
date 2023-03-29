@@ -1,5 +1,5 @@
 
-name: 20March23-updated-version
+name: 29March23-updated-version
 
 on:
   push:
@@ -14,7 +14,7 @@ on:
     
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
@@ -31,6 +31,12 @@ jobs:
       with:
           pattern: '[A-Z]{2,}-\d+'
           error: 'You need to mention jira issue key in commit message'
+          
+    - name: SonarQube Scan
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           
       
   deploy:
